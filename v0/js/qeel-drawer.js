@@ -104,7 +104,7 @@ $(document).ready(function () {
                 success: function (html) {
 
                   // Check if the specific HTML string is present in the desired div's text content
-                  var fieldContent = $(html).find('#field_id19 > dd > div.field_uneditable').text();
+                  var fieldContent = $(html).find('#field_id1 > dd > div.field_uneditable').text();
 
                   // Determine the status class based on the field content
                   var statusClass = '';
@@ -165,7 +165,7 @@ $(document).ready(function () {
                 success: function (html) {
 
                   // Check if the specific HTML string is present in the desired div's text content
-                  var fieldContent = $(html).find('#field_id19 > dd > div.field_uneditable').text();
+                  var fieldContent = $(html).find('#field_id1 > dd > div.field_uneditable').text();
 
                   // Determine the status class based on the field content
                   var statusClass = '';
