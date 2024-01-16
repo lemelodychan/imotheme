@@ -1,0 +1,81 @@
+/* ------ PAGE D'ACCUEIL ------ */
+#content-container #left,
+#content-container #right{
+  float: initial !important;
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+#content-container #container {
+  margin: auto !important;
+}
+#left.pa_widgets div.h3 { 
+  display: none;
+}
+
+/* ------ WIDGET DERNIER INSCRIT ------ */
+.pa_widgets #Statistiques > span:not(.mod-stats-user) {
+  display: none!important;
+}
+
+/* ------ WIDGET NEWS ------ */
+.pa_widgets #News {
+  width: 400px;
+  overflow: auto;
+}
+.pa_widgets #News .content {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+.pa_widgets #News .content > a {
+  width: 200px;
+}
+
+
+/* --- WIDGET FOOTER - PARTENAIRES --- */
+#f_widgets_col_0 {
+  align-items: center;
+}
+#f_widgets_col_0 > div {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 32px;
+  width: 100%;
+  max-width: 1016px !important;
+  margin: auto 32px;
+  padding: 24px 0;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+/* --- FOOTER --- */
+#page-footer > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  padding: 24px 32px;
+  margin: 0 auto;
+  width: 100%;
+}
+#page-footer.admin > div {
+  grid-template-columns: minmax(1px,188px) auto !important;
+}
+#page-footer > div > div.credits {
+  order: 1;
+}
+#page-footer.admin > div > div.credits {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#page-footer > div > div.copyright {
+  order: 2;
+  text-align: left;
+}
+#page-footer > div > ul.footerbar-system {
+  order: 3;
+  text-align: right;
+  padding: 0;
+}
