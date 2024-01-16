@@ -4,9 +4,6 @@
   z-index: 99;
   gap: 8px;
   padding: 4px 8px;
-  position: fixed;
-  right: 24px;
-  top: 6px;
   background: var(--bg1);
   border: 1px solid var(--bg2);
   border-radius: 8px;
