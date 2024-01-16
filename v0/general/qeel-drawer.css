@@ -3,6 +3,7 @@
   align-items: center;
   z-index: 99;
   gap: 8px;
+  width: auto;
   padding: 4px 8px;
   background: var(--bg1);
   border: 1px solid var(--bg2);
