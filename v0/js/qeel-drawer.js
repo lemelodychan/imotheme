@@ -69,12 +69,12 @@ $(document).ready(function () {
       // Append the content to the drawer
       $('#qeel_drawer').html(drawerContent);
       
-      $('#online_number').load('/ #stats1 > strong');
+      $('#online_number').load('/ #user_number > strong:first-of-type');
 
       // Load the initial content using jQuery.load for #qeel_online
       $('#qeel_online').load('/ div#loggedin', function () {
           // Find and replace "Utilisateurs enregistrés :"
-          var pifContents = $('#qeel_online div#loggedin div').contents();
+          var pifContents = $('#qeel_online div#loggedin').contents();
           pifContents.each(function () {
             if (this.nodeType === 3) { // Node.TEXT_NODE
               this.nodeValue = this.nodeValue.replace(/Utilisateurs enregistrés : /g, '');
@@ -135,7 +135,7 @@ $(document).ready(function () {
       // Load the initial content using jQuery.load for #qeel_48h
       $('#qeel_48h').load('/ div#latest', function () {
           // Find and replace "Utilisateurs enregistrés :"
-          var kaboumContents = $('#qeel_48h div#latest div').contents();
+          var kaboumContents = $('#qeel_48h div#latest').contents();
           kaboumContents.each(function () {
             if (this.nodeType === 3) { // Node.TEXT_NODE
               this.nodeValue = this.nodeValue.replace(/Membres connectés au cours des 48 dernières heures : /g, '');
