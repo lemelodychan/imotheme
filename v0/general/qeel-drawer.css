@@ -7,11 +7,12 @@
   background: var(--bg1);
   border: 1px solid var(--bg2);
   border-radius: 8px;
-  cursor:pointer;
+  cursor: pointer;
   transition: var(--transi);
   color: var(--text);
 }
-#qeel_button strong {
+#qeel_button > ion-icon,
+#qeel_button > span {
   font-size: 12px;
   font-weight: normal;
 }
