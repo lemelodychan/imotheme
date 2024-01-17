@@ -174,12 +174,12 @@ $(document).ready(function () {
         
             // Check if the drawer is visible
             var isDrawerVisible = drawer.is(':visible');
-            var divWidth = drawer.width();
+            var divWidth = 400;
         
             // Toggle the right property to slide the drawer in/out of view
             drawer.css({
                 display: 'grid',
-                right: isDrawerVisible ? '-400px' : '0'
+                right: isDrawerVisible ? -divWidth + 'px' : '0'
             });
         
             // Toggle the "open" class on the button
