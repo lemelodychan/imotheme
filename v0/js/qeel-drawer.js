@@ -178,7 +178,8 @@ $(document).ready(function () {
                 drawer.animate({
                     right: '-400px'
                 }, {
-                    duration: 400,
+                    duration: 300,
+                    easing: 'ease',
                     step: function (now, fx) {
                         if (fx.prop === 'right') {
                             drawer.css('right', now);
@@ -197,7 +198,8 @@ $(document).ready(function () {
                 drawer.show().animate({
                     right: '0'
                 }, {
-                    duration: 400,
+                    duration: 300,
+                    easing: 'ease',
                     step: function (now, fx) {
                         if (fx.prop === 'right') {
                             drawer.css('right', now);
