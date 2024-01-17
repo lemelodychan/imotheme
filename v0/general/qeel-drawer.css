@@ -24,6 +24,9 @@
 }
 
 /* --- QEEL - DRAWER --- */
+#qeel_drawer_container {
+    width: var(--drawer_width);
+}
 #qeel_drawer {
     display: grid;
     grid-template-rows: max-content auto;
