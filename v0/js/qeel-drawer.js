@@ -177,11 +177,11 @@ $(document).ready(function () {
         
             // Check if the drawer is visible
             var isDrawerVisible = drawer.is(':visible');
-            
+        
             // Toggle the right property to slide the drawer in/out of view
             drawer.css({
                 display: 'grid',
-                right: isDrawerVisible ? -drawer.outerWidth() + 'px' : '0'
+                right: isDrawerVisible ? '0' : '-400px'
             });
         
             // Toggle the "open" class on the button based on the drawer's visibility
@@ -190,13 +190,9 @@ $(document).ready(function () {
             // If the drawer was not visible, set it to visible after the animation
             if (!isDrawerVisible) {
                 drawer.show();
-            } else {
-                // If the drawer was visible, hide it after the animation completes
-                drawer.on('animationend', function() {
-                    drawer.hide();
-                });
             }
         }
+
     
     // Attach click event handler to the toggle button
     $('#qeel_button').on('click', toggleDrawer);
