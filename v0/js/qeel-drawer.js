@@ -162,18 +162,48 @@ $(document).ready(function () {
       }
       
       function toggleDrawer() {
-          var drawerContainer = $('#qeel_drawer_container');
-          var drawer = $('#qeel_drawer');
-          var button = $('#qeel_button');
-    
-          if (!drawer.length) {
-            drawer = $('<div id="qeel_drawer"></div>');
-            drawerContainer.append(drawer);
-            populateDrawerContent();
-          }
-          drawer.toggle();
-          button.toggleClass('open', drawer.is(':visible'));
-    }
+            var drawerContainer = $('#qeel_drawer_container');
+            var drawer = $('#qeel_drawer');
+            var button = $('#qeel_button');
+        
+            if (!drawer.length) {
+                drawer = $('<div id="qeel_drawer"></div>');
+                drawerContainer.append(drawer);
+                populateDrawerContent();
+            }
+        
+            // Check if the drawer is visible
+            var isDrawerVisible = drawer.is(':visible');
+        
+            if (isDrawerVisible) {
+                // If the drawer is visible, slide it out of view and hide
+                drawer.animate({
+                    right: '0px'
+                }, {
+                    duration: 400,
+                    complete: function () {
+                        drawer.css({
+                            display: 'none',
+                            right: '-400px'
+                        });
+                    }
+                });
+            } else {
+                // If the drawer is not visible, slide it into view
+                drawer.css({
+                    display: 'grid',
+                    right: '0px'
+                }); // Set initial position before animation
+                drawer.show().animate({
+                    right: '-400'
+                }, {
+                    duration: 400
+                });
+            }
+        
+            // Toggle the "open" class on the button
+            button.toggleClass('open', !isDrawerVisible);
+        }
     
     $('#qeel_button').on('click', toggleDrawer);
 
