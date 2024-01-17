@@ -15,6 +15,10 @@ a.switcher-img{
   gap: 4px;
   flex-direction: row-reverse;
   align-items: center;
+  transition: var(--transi);
+}
+a.switcher-img.open {
+  background: var(--bg3);
 }
 a.switcher-img .js-avatar{
   height: 20px;
