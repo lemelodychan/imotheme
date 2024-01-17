@@ -172,39 +172,17 @@ $(document).ready(function () {
                 populateDrawerContent();
             }
         
+            // Check if the drawer is visible
             var isDrawerVisible = drawer.is(':visible');
+            var divWidth = drawer.width();
         
-            if (isDrawerVisible) {
-                drawer.animate({
-                    right: '-400px'
-                }, {
-                    duration: 300,
-                    step: function (now, fx) {
-                        if (fx.prop === 'right') {
-                            drawer.css('right', now);
-                        }
-                    },
-                    complete: function () {
-                        drawer.css('display', 'none');
-                        drawer.css('right', '-400px');
-                    }
-                });
-            } else {
-                drawer.css({
-                    display: 'grid',
-                    right: '-400px'
-                }); 
-                drawer.show().animate({
-                    right: '0'
-                }, {
-                    duration: 300,
-                    step: function (now, fx) {
-                        if (fx.prop === 'right') {
-                            drawer.css('right', now);
-                        }
-                    }
-                });
-            }
+            // Toggle the right property to slide the drawer in/out of view
+            drawer.css({
+                display: 'grid',
+                right: isDrawerVisible ? -parentWidth + 'px' : '0'
+            });
+        
+            // Toggle the "open" class on the button
             button.toggleClass('open', !isDrawerVisible);
         }
 
