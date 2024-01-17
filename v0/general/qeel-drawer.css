@@ -34,7 +34,7 @@
     width: var(--drawer_width);
     background: var(--bg1);
     top: 42px;
-    right: 0px;
+    right: calc(-1*var(--drawer_width));
     z-index: 19999;
     height: calc(100vh - 42px);
     transition: var(--transi);
