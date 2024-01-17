@@ -216,16 +216,30 @@ $(document).ready(function () {
 
         // Populate the content for the drawer
         populateDrawerContent();
-      }
-
-      // Toggle the visibility of the drawer
-      drawer.toggle();
-
-      // Toggle the "open" class on the button
-      button.toggleClass('open', drawer.is(':visible'));
     }
 
-    // Attach click event handler to the toggle button
-    $('#qeel_button').on('click', toggleDrawer);
+    // Check if the drawer is visible
+    var isDrawerVisible = drawer.is(':visible');
 
-  });
+    // If the drawer is visible, slide it out of view and remove from DOM
+    if (isDrawerVisible) {
+      drawer.animate({
+        left: '-400px'
+      }, 400, function () {
+        drawer.remove();
+      });
+    } else {
+      // If the drawer is not visible, slide it into view
+      drawer.css('left', '-400px'); // Set initial position before animation
+      drawer.show().animate({
+        left: '0'
+      }, 400);
+    }
+
+    // Toggle the "open" class on the button
+    button.toggleClass('open', !isDrawerVisible);
+  }
+
+  // Attach click event handler to the toggle button
+  $('#qeel_button').on('click', toggleDrawer);
+});
