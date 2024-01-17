@@ -162,36 +162,41 @@ $(document).ready(function () {
       }
       
       function toggleDrawer() {
-        var drawerContainer = $('#qeel_drawer_container');
-        var drawer = $('#qeel_drawer');
-        var button = $('#qeel_button');
-    
-        // If the drawer is not in the DOM, create and append it
-        if (!drawer.length) {
-            drawer = $('<div id="qeel_drawer"></div>');
-            drawerContainer.append(drawer);
-    
-            // Populate the content for the drawer
-            populateDrawerContent();
-        }
-    
-        // Check if the drawer is visible
-        var isDrawerVisible = drawer.is(':visible');
+            var drawerContainer = $('#qeel_drawer_container');
+            var drawer = $('#qeel_drawer');
+            var button = $('#qeel_button');
         
-        // Toggle the right property to slide the drawer in/out of view
-        drawer.css({
-            display: 'grid',
-            right: isDrawerVisible ? -drawer.outerWidth() + 'px' : '0'
-        });
-    
-        // Toggle the "open" class on the button based on the drawer's visibility
-        button.toggleClass('open', isDrawerVisible);
-    
-        // If the drawer was not visible, set it to visible after the animation
-        if (!isDrawerVisible) {
-            drawer.show();
+            // If the drawer is not in the DOM, create and append it
+            if (!drawer.length) {
+                drawer = $('<div id="qeel_drawer"></div>');
+                drawerContainer.append(drawer);
+        
+                // Populate the content for the drawer
+                populateDrawerContent();
+            }
+        
+            // Check if the drawer is visible
+            var isDrawerVisible = drawer.is(':visible');
+            
+            // Toggle the right property to slide the drawer in/out of view
+            drawer.css({
+                display: 'grid',
+                right: isDrawerVisible ? -drawer.outerWidth() + 'px' : '0'
+            });
+        
+            // Toggle the "open" class on the button based on the drawer's visibility
+            button.toggleClass('open', !isDrawerVisible);
+        
+            // If the drawer was not visible, set it to visible after the animation
+            if (!isDrawerVisible) {
+                drawer.show();
+            } else {
+                // If the drawer was visible, hide it after the animation completes
+                drawer.on('animationend', function() {
+                    drawer.hide();
+                });
+            }
         }
-    }
     
     // Attach click event handler to the toggle button
     $('#qeel_button').on('click', toggleDrawer);
