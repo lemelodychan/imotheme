@@ -178,9 +178,14 @@ $(document).ready(function () {
             if (isDrawerVisible) {
                 // If the drawer is visible, slide it out of view and hide
                 drawer.animate({
-                    right: '0px'
+                    right: '-400px'
                 }, {
                     duration: 400,
+                    step: function (now, fx) {
+                        if (fx.prop === 'right') {
+                            drawer.css('right', now); // Update right property during animation
+                        }
+                    },
                     complete: function () {
                         drawer.css({
                             display: 'none',
@@ -192,18 +197,24 @@ $(document).ready(function () {
                 // If the drawer is not visible, slide it into view
                 drawer.css({
                     display: 'grid',
-                    right: '0px'
+                    right: '-400px'
                 }); // Set initial position before animation
                 drawer.show().animate({
-                    right: '-400'
+                    right: '0'
                 }, {
-                    duration: 400
+                    duration: 400,
+                    step: function (now, fx) {
+                        if (fx.prop === 'right') {
+                            drawer.css('right', now); // Update right property during animation
+                        }
+                    }
                 });
             }
-        
+
             // Toggle the "open" class on the button
             button.toggleClass('open', !isDrawerVisible);
         }
+
     
     $('#qeel_button').on('click', toggleDrawer);
 
