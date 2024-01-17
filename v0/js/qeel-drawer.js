@@ -182,10 +182,14 @@ $(document).ready(function () {
                 right: isDrawerVisible ? -divWidth + 'px' : '0'
             });
         
-            // Toggle the "open" class on the button
-            button.toggleClass('open', !isDrawerVisible);
+            // Toggle the "open" class on the button based on the drawer's visibility
+            button.toggleClass('open', isDrawerVisible);
+        
+            // If the drawer was not visible, set it to visible after the animation
+            if (!isDrawerVisible) {
+                drawer.show();
+            }
         }
-
 
     
     $('#qeel_button').on('click', toggleDrawer);
