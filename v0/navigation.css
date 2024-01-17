@@ -1,13 +1,17 @@
 /* ---- MINI-PROFIL ---- */
 div.switcher_drop{
   height: 32px;
-  position: absolute;
-  top: 10px;
-  right: 24px;
+  position: relative;
   z-index: 999999;
 }
 a.switcher-img{
   display: flex;
+  height: 28px;
+  background: var(--bg2);
+  border-radius: 16px;
+  padding: 8px;
+  margin: 2px 0;
+  border: 1px solid var(--bg3);
   gap: 8px;
   flex-direction: row-reverse;
   align-items: center;
@@ -24,7 +28,7 @@ a.switcher-img .js-avatar > img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: var(--neutral_2);
+  background-color: var(--bg2);
 }
 a.switcher-img .js-avatar:before{
   z-index: 0;
@@ -51,9 +55,9 @@ a.switcher-img .js-avatar.active{
   opacity: 0.7;
 }
 a.switcher-img .js-avatar.active:before{
-  background: linear-gradient(to left,var(--tx_content),var(--tx_content),var(--tx_content));
+  background: linear-gradient(to left,var(--text),var(--text),var(--text));
 }
-a.switcher-img ion-icon { color: var(--co2); }
+a.switcher-img ion-icon { color: var(--text-contrast); }
 
 div.user-switcher{
   display: flex;
@@ -68,8 +72,8 @@ div.user-switcher{
   transition: var(--transi);
   transform: scaleY(100%);
   opacity: 1;
-  background: var(--neutral_1);
-  border-radius: 0px 0px 0px var(--spacing-s);
+  background: var(--bg2);
+  border-radius: 0px 0px 0px 8px;
 }
 .switch-hide {
   transform: scaleY(0%)!important;
@@ -236,11 +240,8 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 
 /* -- SWITCHEROO - CUSTOM STYLES --*/
 .switcheroo_container{
-  box-shadow: var(--boxshadow);
-  position: fixed;
-  top: 0px;
-  right: 0px;
   z-index: 998;
+  width: auto !important;
 }
 .switcheroo {
   color: var(--blanc);
