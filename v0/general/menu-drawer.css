@@ -7,13 +7,16 @@
   transition: var(--transi);
   color: var(--text-contrast);
 }
+.sidemenu_button:hover {
+  color: var(--co1);
+}
 .sidemenu_button:after {
   display: block;
   position: absolute;
   left: 32px;
   line-height: 25px;
   content: "Menu";
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -36,6 +39,7 @@
   transform: rotateZ(0deg);
   transition: var(--transi);
 }
+.sidemenu_button:hover div b { background-color: var(--co1); } 
 .sidemenu_button div b:nth-child(1) { top: 25%; }
 .sidemenu_button div b:nth-child(2) { top: 50%; }
 .sidemenu_button div b:nth-child(3) { top: 75%; }
