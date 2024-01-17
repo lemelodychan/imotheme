@@ -61,7 +61,7 @@
   top: 42px;
   left: calc(-1*var(--drawer_width));
   transition: var(--transi);
-  z-index: 99;
+  z-index: 19999;
 }
 .drawer::-webkit-scrollbar-thumb { background: var(--gradient_vert); }
 .drawer.active{ left: 0px; }
