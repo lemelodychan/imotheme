@@ -224,15 +224,15 @@ $(document).ready(function () {
     // If the drawer is visible, slide it out of view and remove from DOM
     if (isDrawerVisible) {
       drawer.animate({
-        left: '-400px'
+        right: '-400px'
       }, 400, function () {
         drawer.remove();
       });
     } else {
       // If the drawer is not visible, slide it into view
-      drawer.css('left', '-400px'); // Set initial position before animation
+      drawer.css('right', '-400px'); // Set initial position before animation
       drawer.show().animate({
-        left: '0'
+        right: '0'
       }, 400);
     }
 
