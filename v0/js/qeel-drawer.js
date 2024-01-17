@@ -218,7 +218,6 @@ $(document).ready(function () {
         populateDrawerContent();
     }
 
-    // Check if the drawer is visible
     var isDrawerVisible = drawer.is(':visible');
 
     // If the drawer is visible, slide it out of view and remove from DOM
@@ -226,7 +225,7 @@ $(document).ready(function () {
       drawer.animate({
         right: '-400px'
       }, 400, function () {
-        drawer.remove();
+        drawer.hide(); // Hide instead of remove from DOM
       });
     } else {
       // If the drawer is not visible, slide it into view
