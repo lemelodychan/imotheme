@@ -1,3 +1,4 @@
+/* --- QEEL - BOUTON --- */
 #qeel_button{
   display: flex;
   align-items: center;
@@ -10,7 +11,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: var(--transi);
-  color: var(--text);
+  color: var(--text-contrast);
 }
 #qeel_button > ion-icon,
 #qeel_button > span {
@@ -19,10 +20,9 @@
 }
 #qeel_button.open {
   background: var(--bg2);
-  color: var(--text-contrast);
 }
 
-
+/* --- QEEL - DRAWER --- */
 #qeel_drawer {
     display: grid;
     grid-template-rows: max-content auto;
