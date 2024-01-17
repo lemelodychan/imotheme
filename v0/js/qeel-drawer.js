@@ -226,10 +226,7 @@ $(document).ready(function () {
       drawer.animate({
         right: '-400px'
       }, {
-        duration: 300,
-        complete: function () {
-          drawer.hide();
-        }
+        duration: 300
       });
     } else {
       // If the drawer is not visible, slide it into view
