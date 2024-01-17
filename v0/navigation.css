@@ -9,10 +9,10 @@ a.switcher-img{
   height: 28px;
   background: var(--bg2);
   border-radius: 16px;
-  padding: 8px;
+  padding: 4px 6px 4px 4px;
   margin: 2px 0;
   border: 1px solid var(--bg3);
-  gap: 8px;
+  gap: 4px;
   flex-direction: row-reverse;
   align-items: center;
 }
