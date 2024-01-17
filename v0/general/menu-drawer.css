@@ -239,7 +239,7 @@ body.light .drawer .shortcuts > a span:before {
   border-radius: 4px;
   border: 1px solid var(--bg2);
   background: rgba(var(--bg2_rgb), 0.7);
-  color: var(--text);
+  color: var(--text-contrast);
   font-size: 10px;
   font-style: normal;
   font-weight: 500;
@@ -275,7 +275,6 @@ body.light .drawer .shortcuts > a span:before {
 }
 .drawer .liens > a span { width: -webkit-fill-available; }
 .drawer .liens > a:hover {
-  color: var(--text-contrast);
   border: 1px solid rgba(var(--bg2_rgb),0);
   text-shadow: #ffffffcc 0px 0px 8px !important;
 }
