@@ -172,48 +172,42 @@ $(document).ready(function () {
                 populateDrawerContent();
             }
         
-            // Check if the drawer is visible
             var isDrawerVisible = drawer.is(':visible');
         
             if (isDrawerVisible) {
-                // If the drawer is visible, slide it out of view and hide
                 drawer.animate({
                     right: '-400px'
                 }, {
                     duration: 400,
                     step: function (now, fx) {
                         if (fx.prop === 'right') {
-                            drawer.css('right', now); // Update right property during animation
+                            drawer.css('right', now);
                         }
                     },
                     complete: function () {
-                        drawer.css({
-                            display: 'none',
-                            right: '-400px'
-                        });
+                        drawer.css('display', 'none');
+                        drawer.css('right', '-400px');
                     }
                 });
             } else {
-                // If the drawer is not visible, slide it into view
                 drawer.css({
                     display: 'grid',
                     right: '-400px'
-                }); // Set initial position before animation
+                }); 
                 drawer.show().animate({
                     right: '0'
                 }, {
                     duration: 400,
                     step: function (now, fx) {
                         if (fx.prop === 'right') {
-                            drawer.css('right', now); // Update right property during animation
+                            drawer.css('right', now);
                         }
                     }
                 });
             }
-
-            // Toggle the "open" class on the button
             button.toggleClass('open', !isDrawerVisible);
         }
+
 
     
     $('#qeel_button').on('click', toggleDrawer);
