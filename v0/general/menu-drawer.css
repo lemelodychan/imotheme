@@ -276,6 +276,7 @@ body.light .drawer .shortcuts > a span:before {
 .drawer .liens > a span { width: -webkit-fill-available; }
 .drawer .liens > a:hover {
   color: var(--text-contrast);
+  border: 1px solid rgba(var(--bg2_rgb),0);
   text-shadow: #ffffffcc 0px 0px 8px !important;
 }
 .drawer .liens > a:hover:before { opacity: 1; }
