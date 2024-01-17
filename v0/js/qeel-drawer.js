@@ -166,15 +166,18 @@ $(document).ready(function () {
             var drawer = $('#qeel_drawer');
             var button = $('#qeel_button');
         
+            // If the drawer is not in the DOM, create and append it
             if (!drawer.length) {
                 drawer = $('<div id="qeel_drawer"></div>');
                 drawerContainer.append(drawer);
+        
+                // Populate the content for the drawer
                 populateDrawerContent();
             }
         
             // Check if the drawer is visible
             var isDrawerVisible = drawer.is(':visible');
-            var divWidth = 400;
+            var divWidth = drawer.width();
         
             // Toggle the right property to slide the drawer in/out of view
             drawer.css({
@@ -191,7 +194,7 @@ $(document).ready(function () {
             }
         }
 
-    
+    // Attach click event handler to the toggle button
     $('#qeel_button').on('click', toggleDrawer);
 
   });
