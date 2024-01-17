@@ -179,7 +179,7 @@ $(document).ready(function () {
             // Toggle the right property to slide the drawer in/out of view
             drawer.css({
                 display: 'grid',
-                right: isDrawerVisible ? -parentWidth + 'px' : '0'
+                right: isDrawerVisible ? '-400px' : '0'
             });
         
             // Toggle the "open" class on the button
