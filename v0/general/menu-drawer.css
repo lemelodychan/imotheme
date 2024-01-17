@@ -78,6 +78,14 @@
     flex-direction: column;
     gap: 16px;
 }
+.drawer .module {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--text);
+  margin: 0 !important;
+}
+.drawer .module .h3 { display: none; }
 .drawer .titre {
     font-family: var(--font-titre);
     font-feature-settings: 'ss02' on;
