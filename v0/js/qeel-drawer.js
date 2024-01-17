@@ -179,7 +179,6 @@ $(document).ready(function () {
                     right: '-400px'
                 }, {
                     duration: 300,
-                    easing: 'easeInOutQuad',
                     step: function (now, fx) {
                         if (fx.prop === 'right') {
                             drawer.css('right', now);
@@ -199,7 +198,6 @@ $(document).ready(function () {
                     right: '0'
                 }, {
                     duration: 300,
-                    easing: 'easeInOutQuad',
                     step: function (now, fx) {
                         if (fx.prop === 'right') {
                             drawer.css('right', now);
