@@ -82,15 +82,15 @@ body.light #f_widgets_col_0 > div img {
 }
 #page-footer > div > div.credits {
   order: 1;
-}
-#page-footer.admin > div > div.credits {
-  grid-column-start: 1;
-  grid-column-end: 3;
   color: var(--text);
   font-size: 12px;
   text-align: center;
   max-width: 800px;
   margin: auto;
+}
+#page-footer.admin > div > div.credits {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 #page-footer > div > div.copyright {
   order: 2;
@@ -109,6 +109,14 @@ body.light #f_widgets_col_0 > div img {
   letter-spacing: var(--letter-space);
   text-transform: uppercase;
 }
+#page-footer:not(.admin) > div > ul.footerbar-system {
+  text-align: center;
+}
+#page-footer:not(.admin) > div > ul.footerbar-system .rightside {
+  text-align: center;
+  float: initial !important;
+}
+
 .footerbar-system a, .footerbar-user a, .copyright a {
   color: var(--text-contrast);
 }
