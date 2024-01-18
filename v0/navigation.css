@@ -47,7 +47,7 @@ div.user-switcher{
   position: fixed;
   top: 40px;
   right: 24px;
-  z-index: 100;
+  z-index: 19999;
   transform-origin: center top;
   transition: var(--transi);
   transform: scaleY(100%);
