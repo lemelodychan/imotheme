@@ -110,6 +110,6 @@ body.light #f_widgets_col_0 > div img {
   text-transform: uppercase;
 }
 .footerbar-system a, .footerbar-user a, .copyright a {
-  color: var(--text-contraste);
+  color: var(--text-contrast);
 }
 
