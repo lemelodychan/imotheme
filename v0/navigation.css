@@ -225,7 +225,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   width: auto !important;
 }
 .switcheroo {
-  color: var(--blanc);
+  color: var(--text-constrast);
   font-size: 12px;
   height: auto;
   z-index: 100;
@@ -235,11 +235,11 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   display: flex;
   margin: 0;
   list-style: none;
-  padding: var(--spacing-s);
-  gap: var(--spacing-s);
+  padding: 8px;
+  gap: 8px;
   width: 100%;
-  background-color: var(--neutral_1);
-  border-radius: 0px 0px var(--spacing-s) var(--spacing-s);
+  background-color: var(--bg1);
+  border-radius: 0px 0px 8px 8px);
 }
 .switcheroo[direction="vertical"] .switcheroo__squircles { 
   flex-direction: column;
@@ -256,7 +256,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   justify-content: center;
   width: 100%;
   height: 40px;
-  border-radius: var(--spacing-s);
+  border-radius: 50%;
   cursor: pointer;
   transition: var(--transi);
 }
@@ -275,7 +275,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   left: 8px;
 }
 .switcheroo .switcheroo__squircle:not(.active):hover{
-  background-color: var(--neutral_2);
+  background-color: var(--bg2);
 }
 .switcheroo .switcheroo__squircle:before {
   content: "";
@@ -283,7 +283,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   height: 4px;
   display: block;
   background-color: var(--co2);
-  border-radius: var(--spacing-xs);
+  border-radius: 50%;
   transition: var(--transi);
   pointer-events: none;
   position: relative;
@@ -344,7 +344,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   width: -webkit-fill-available;
   pointer-events: none;
   color: var(--text);
-  font-family: var(--main-font);
+  font-family: var(--font-texte);
   font-size: 13px;
   line-height: 24px;
   transition: var(--transi);
@@ -399,8 +399,8 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 }
 .monomer-modal__content:before{
   content: "Isekai Monogatari";
-  font-family: var(--font-titre);
-  background: var(--gradient_tit);
+  font-family: var(--font-texte);
+  background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -412,7 +412,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 }
 .switcheroo__form:before{
   content: "Connecter un nouveau compte";
-  font-family: var(--main-font);
+  font-family: var(--font-texte);
   color: var(--text);
   display: block;
   text-align: center;
@@ -442,7 +442,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   font-size: 12px !important;
   border-radius: var(--spacing-xs) !important;
   width: calc(100% - 16px)!important;
-  background-color: var(--neutral_2)!important;
+  background-color: var(--bg2)!important;
   color: var(--text)!important;
   border: 0px!important;
   cursor: text!important;
@@ -451,14 +451,14 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   font-weight: 600;
   letter-spacing: 0.5px;
   border-radius: var(--spacing-xs);
-  padding: var(--spacing-s);
+  padding: 8px;
   border: none;
   outline: none;
   box-shadow: none;
   text-transform: uppercase;
   font-size: 10px;
   align-self: flex-start;
-  color: var(--blanc);
+  color: var(--text-contrast);
   background-color: var(--co2);
   margin: auto;
 }
@@ -484,14 +484,14 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   transition: 0.2s opacity ease;
   transform: translate(-50%, -50%);
   border-radius: var(--spacing-s);
-  background: var(--neutral_1);
+  background: var(--bg1);
   color: var(--text);
 }
 .monomer-modal.monomer-open.monomer-anchored { top: 20px; transform: translate(-50%, 0); }
 .monomer-modal.monomer-open { opacity: 1; }
 .monomer-overlay.monomer-open { opacity: 1; }
 .monomer-close {
-  font-family: var(--main-font);
+  font-family: var(--font-texte);
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
