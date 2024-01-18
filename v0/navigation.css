@@ -408,14 +408,14 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   color: var(--text-contrast);
   display: block;
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 40px;
-  margin: 0px 0px 16px 0px;
+  margin: 16px 0px 16px;
 }
 .switcheroo__form:before{
   content: "Connecter un nouveau compte";
   font-family: var(--font-texte);
-  color: var(--text-contrast);
+  color: var(--text);
   display: block;
   text-align: center;
   font-size: 12px;
@@ -431,7 +431,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   margin-bottom: 16px;
 }
 .switcheroo__form-row input[name="username"], 
-.switcheroo__form-row input[name="password"]{ width: 100%!important; }
+.switcheroo__form-row input[name="password"]{ width: 100% !important; }
 .switcheroo__form-label {
   margin-bottom: 8px;
   font-size: 12px;
@@ -441,7 +441,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 }
 .switcheroo__form-input {
   padding: 8px !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
   border-radius: 4px !important;
   width: calc(100% - 16px)!important;
   background-color: var(--bg2)!important;
@@ -458,10 +458,10 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   outline: none;
   box-shadow: none;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   align-self: flex-start;
   color: var(--text-contrast);
-  background-color: var(--co2);
+  background-color: var(--co1);
   margin: auto;
 }
 .monomer-overlay {
