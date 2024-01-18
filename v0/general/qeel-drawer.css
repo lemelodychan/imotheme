@@ -124,11 +124,16 @@
   border-radius: 4px;
   border: 1px var(--co2) solid;
 }
+
 #qeel_drawer a > span {
   display: flex;
   align-items: center;
   gap: 12px;
   position: relative;
+}
+#qeel_drawer a > span > strong {
+  font-size: 14px;
+  font-weight: 600;
 }
 #qeel_drawer a > span > img {
   width: 32px;
@@ -137,55 +142,16 @@
   border-radius: 50%;
 }
 
-div.liste_container#loggedin div a .status,
-div.liste_container#latest div a .status {
-    width: 8px;
-    height: 8px;
-    margin-left: 3px;
-    position: relative;
-    border-radius: 50%;
-    content: " ";
-    display: inline-block;
-}
-div.liste_container#loggedin div a .status.present,
-div.liste_container#latest div a .status.present {
-    background: #009b54;
-    border: 1px solid var(--bg1);
-}
-div.liste_container#loggedin div a .status.presred,
-div.liste_container#latest div a .status.presred {
-    background: #ff3940;
-    border: 1px solid var(--bg1);
-}
-div.liste_container#loggedin div a .status.presred:after,
-div.liste_container#latest div a .status.presred:after {
-    width: 3px;
-    height: 2px;
-    background: var(--bg1);
-    display: block;
-    content: " ";
-    position: absolute;
-    top: 2px;
-    left: 1.5px;
-    border-radius: 1px;
-}
-div.liste_container#loggedin div a .status.absent,
-div.liste_container#latest div a .status.absent{
-    background: #f6a93e;
-}
-div.liste_container#loggedin div a .status.absent:after,
-div.liste_container#latest div a .status.absent:after {
-    width: 5.5px;
-    height: 5.5px;
-    background: var(--bg1);
-    display: block;
-    content: " ";
-    border-radius: 50%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+#qeel_drawer #qeel_48h a { opacity: 0.5 !important; }
+
+#qeel_drawer #qeel_48h {
+  text-align: center;
+  color: var(--tx_content);
+  font-size: 12px;
 }
 
+
+/* --- STATUTS STYLES --- */
 #qeel_drawer a > span > span.status {
   z-index: 2;
   border: 3px solid var(--bg2) !important;
@@ -194,9 +160,29 @@ div.liste_container#latest div a .status.absent:after {
   left: 20px;
   width: 14px;
   height: 14px;
+  border-radius: 50%;
+}
+#qeel_drawer a > span > span.status.present {
+    background: #009b54;
+    border: 1px solid var(--bg1);
+}
+#qeel_drawer a > span > span.status.absent{
+    background: #f6a93e;
 }
 #qeel_drawer a > span > span.status.absent:after {
-  background: var(--bg2) !important;
+    width: 5.5px;
+    height: 5.5px;
+    background: var(--bg2) !important;
+    display: block;
+    content: " ";
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#qeel_drawer a > span > span.status.presred {
+    background: #ff3940;
+    border: 1px solid var(--bg1);
 }
 #qeel_drawer div#loggedin a .status.presred:after, 
 #qeel_drawer div#latest a .status.presred:after {
@@ -209,15 +195,4 @@ div.liste_container#latest div a .status.absent:after {
   top: 3px;
   left: 1.5px;
   border-radius: 1px;
-}
-#qeel_drawer a > span > strong {
-  font-size: 14px;
-  font-weight: 600;
-}
-#qeel_drawer #qeel_48h a { opacity: 0.5 !important; }
-
-#qeel_drawer #qeel_48h {
-  text-align: center;
-  color: var(--tx_content);
-  font-size: 12px;
 }
