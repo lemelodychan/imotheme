@@ -397,6 +397,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 .monomer-modal {
   padding: 24px;
   border-radius: 16px;
+  z-index: 21000;
 }
 .switcheroo__form {
   padding-top: 0px;
