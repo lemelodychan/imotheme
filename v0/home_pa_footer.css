@@ -65,6 +65,9 @@ body.light #f_widgets_col_0 > div img {
 }
 
 /* --- FOOTER --- */
+#page-footer {
+  background: var(--bg2);
+}
 #page-footer > div {
   display: grid;
   grid-template-columns: 1fr;
@@ -72,10 +75,10 @@ body.light #f_widgets_col_0 > div img {
   padding: 24px 32px;
   margin: 0 auto;
   width: 100%;
+  background: transparent;
 }
 #page-footer.admin > div {
   grid-template-columns: minmax(1px,188px) auto !important;
-  background: var(--bg2);
 }
 #page-footer > div > div.credits {
   order: 1;
