@@ -104,8 +104,8 @@
   background: var(--bg2) !important;
   border-radius: 8px !important;
 }
-#qeel_drawer .liste_container > div > br { display: none; }
-#qeel_drawer .liste_container > div > a {
+#qeel_drawer div > br { display: none; }
+#qeel_drawer div > a {
   display: grid;
   align-items: center;
   grid-template-columns: auto max-content;
@@ -114,6 +114,7 @@
 #qeel_drawer .tag {
   font-size: 10px;
   line-height: 13px;
+  height: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 500;
@@ -135,6 +136,56 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+div.liste_container#loggedin div a .status,
+div.liste_container#latest div a .status {
+    width: 8px;
+    height: 8px;
+    margin-left: 3px;
+    position: relative;
+    border-radius: 50%;
+    content: " ";
+    display: inline-block;
+}
+div.liste_container#loggedin div a .status.present,
+div.liste_container#latest div a .status.present {
+    background: #009b54;
+    border: 1px solid var(--bg1);
+}
+div.liste_container#loggedin div a .status.presred,
+div.liste_container#latest div a .status.presred {
+    background: #ff3940;
+    border: 1px solid var(--bg1);
+}
+div.liste_container#loggedin div a .status.presred:after,
+div.liste_container#latest div a .status.presred:after {
+    width: 3px;
+    height: 2px;
+    background: var(--bg1);
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: 1.5px;
+    border-radius: 1px;
+}
+div.liste_container#loggedin div a .status.absent,
+div.liste_container#latest div a .status.absent{
+    background: #f6a93e;
+}
+div.liste_container#loggedin div a .status.absent:after,
+div.liste_container#latest div a .status.absent:after {
+    width: 5.5px;
+    height: 5.5px;
+    background: var(--bg1);
+    display: block;
+    content: " ";
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 #qeel_drawer a > span > span.status {
   z-index: 2;
   border: 3px solid var(--bg2) !important;
