@@ -1,10 +1,16 @@
 /* ---- MINI-PROFIL ---- */
-div.switcher_drop{
+div.switcheroo_container {
+  z-index: 998;
+  width: auto !important;
+}
+div.switcheroo_container > div.switcher_drop {
   height: 32px;
   position: relative;
   z-index: 999999;
 }
-a.switcher-img{
+
+/* -- BOUTON -- */
+div.switcher_drop > a.switcher-img {
   display: flex;
   height: 28px;
   background: var(--bg2);
@@ -17,10 +23,10 @@ a.switcher-img{
   align-items: center;
   transition: var(--transi);
 }
-a.switcher-img.open {
+div.switcher_drop > a.switcher-img.open {
   background: var(--bg3);
 }
-a.switcher-img .js-avatar{
+div.switcher_drop > a.switcher-img .js-avatar {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -28,18 +34,19 @@ a.switcher-img .js-avatar{
   transition: var(--transi);
   opacity: 1;
 }
-a.switcher-img .js-avatar > img{
+div.switcher_drop > a.switcher-img .js-avatar > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   background-color: var(--bg2);
 }
-a.switcher-img .js-avatar.active{
+div.switcher_drop > a.switcher-img .js-avatar.active {
   opacity: 0.7;
 }
-a.switcher-img ion-icon { color: var(--text-contrast); }
+div.switcher_drop > a.switcher-img ion-icon { color: var(--text-contrast); }
 
-div.user-switcher{
+/* -- DRAWER --*/
+div.switcher_drop > div.user-switcher {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -56,20 +63,20 @@ div.user-switcher{
   border-radius: 0px 0px 8px 8px;
   overflow: hidden;
 }
-.switch-hide {
+div.switcher_drop > div.user-switcher.switch-hide {
   transform: scaleY(0%)!important;
   opacity: 0!important;
 }
 
-.mini-profil {
+/* -- USERNAME ET LIENS UTILES --*/
+div.switcher_drop > div.user-switcher > div.mini-profil {
   padding: 8px;
   display: grid;
   grid-gap: 1px;
 }
-.mini-profil a#profil_id{color:var(--text)}
-.mini-profil a#profil_id:hover{color:var(--text-contrast)}
 
-.mini-profil > span{
+/* -- USERNAME --*/
+div.switcher_drop > div.user-switcher > div.mini-profil > span {
   margin-bottom: 8px;
   font-size: 16px;
   font-family: var(--font-titre);
@@ -77,15 +84,23 @@ div.user-switcher{
   line-height: 24px;
   padding: 0px 2px;
 }
-.mini-profil .side-profile-infos {
+div.switcher_drop > div.user-switcher > div.mini-profil a#profil_id {
+  color: var(--co2);
+}
+div.switcher_drop > div.user-switcher > div.mini-profil a#profil_id:hover {
+  color: var(--text-contrast);
+}
+
+/* -- MESSAGES ET POINTS --*/
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 8px 8px 0px 0px;
   overflow: hidden;
   grid-gap: 1px;
 }
-.mini-profil .side-profile-infos > span,
-.mini-profil .side-profile-infos > a{
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > span,
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > a {
   color: var(--text-contrast);
   background: var(--bg2);
   padding: 8px;
@@ -99,22 +114,18 @@ div.user-switcher{
   flex-direction: column;
   align-items: center;
 }
-.mini-profil .side-profile-infos > a{
-  display: flex;
-  flex-direction: column;
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > a {
   gap: 4px;
-  text-transform: uppercase;
   font-weight: 600;
-  align-items: center;
 }
-.mini-profil .side-profile-infos > a ion-icon{
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > a ion-icon{
   color: var(--co2);
   font-size: 16px;
 }
-.mini-profil .side-profile-infos > a:hover{
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > a:hover {
   background: rgba(var(--co3_rgb),0.3);
 }
-.mini-profil .side-profile-infos > span nb{
+div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > span nb {
   font-weight: normal;
   font-family: var(--font-titre);
   font-style: normal;
@@ -122,10 +133,11 @@ div.user-switcher{
   font-size: 20px;
   margin: 0;
 }
-body.dark .mini-profil .side-profile-infos > span nb{ color: var(--co2)!important; }
-body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!important; }
+body.dark div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > span nb { color: var(--co2) !important; }
+body.light div.switcher_drop > div.user-switcher > div.mini-profil div.side-profile-infos > span nb { color: var(--co1) !important; }
 
-.mini-profil-links{
+/* -- RACCOURCIS UTILES --*/
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1px;
@@ -136,7 +148,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   overflow: hidden;
   justify-items: center;
 }
-.mini-profil-links a{
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links a {
   position: relative;
   align-self: center;
   font-size: 16px;
@@ -148,14 +160,14 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   transition: var(--transi);
   overflow: hidden;
 }
-.mini-profil-links a ion-icon{
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links a ion-icon {
   position: relative;
-  z-index: 2!important;
+  z-index: 2 !important;
   color: var(--text-contrast);
   transition: var(--transi);
 }
-.mini-profil-links a:hover ion-icon{ color: white!important; }
-.mini-profil-links a:after {
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links a:hover ion-icon { color: white !important; }
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links a:after {
   display: inline-block;
   content: " ";
   opacity: 0;
@@ -170,23 +182,23 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   z-index: 1;
   border-radius: 50%;
 }
-.mini-profil-links a:hover:after {
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links a:hover:after {
   transform: scaleX(7000%) scaleY(7000%);
   opacity: 1;
 }
-.mini-profil-links a:hover .ion-icon{
+div.switcher_drop > div.user-switcher > div.mini-profil div.mini-profil-links a:hover .ion-icon {
   color: white;
 }
 
-.user-switcher_header{
+/* -- USER SWITCHER & SWITCHEROO CUSTOM --*/
+div.switcher_drop > div.user-switcher > div.user-switcher_header {
   height: 28px;
   grid-template-columns: auto max-content;
   justify-content: space-between;
   display: grid;
   padding: 8px 8px 0px 12px;
 }
-
-.user-switcher_header > span{
+div.switcher_drop > div.user-switcher > div.user-switcher_header > span {
   display: inline-block;
   width: -webkit-fill-available;
   font-weight: 600;
@@ -196,7 +208,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   text-transform: uppercase;
   color: #90847C;
 }
-.user-switcher_header a:link{
+div.switcher_drop > div.user-switcher > div.user-switcher_header a:link {
   font-size: 10px;
   text-align: center;
   align-self: flex-end;
@@ -215,23 +227,19 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   transition: var(--transi);
   opacity: 1;
 }
-.user-switcher_header a:hover{
+div.switcher_drop > div.user-switcher > div.user-switcher_header a:hover {
   opacity: 0.5;
 }
 
 /* -- SWITCHEROO - CUSTOM STYLES --*/
-.switcheroo_container{
-  z-index: 998;
-  width: auto !important;
-}
-.switcheroo {
+nav.switcheroo {
   color: var(--text-constrast);
   font-size: 12px;
   height: auto;
   z-index: 100;
   opacity: 1;
 }
-.switcheroo__squircles {
+nav.switcheroo > ul.switcheroo__squircles {
   display: flex;
   margin: 0;
   list-style: none;
@@ -241,12 +249,12 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   background-color: var(--bg1);
   border-radius: 0px 0px 8px 8px);
 }
-.switcheroo[direction="vertical"] .switcheroo__squircles { 
+nav.switcheroo[direction="vertical"] > ul.switcheroo__squircles { 
   flex-direction: column;
 }
 
 /* --- LISTE DES COMPTES - LIGNES INDIVIDUELLES --- */
-.switcheroo .switcheroo__squircle {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle {
   position: relative;
   display: grid;
   grid-template-columns: 4px 24px minmax(0,100%) 16px;
@@ -260,24 +268,24 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   cursor: pointer;
   transition: var(--transi);
 }
-.switcheroo .switcheroo__squircle.active {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle.active {
   cursor: default;
   position: relative;
 }
-.switcheroo .switcheroo__squircle:not(.active) .switcheroo__avatar,
-.switcheroo .switcheroo__squircle:not(.active) .switcheroo__popper{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:not(.active) .switcheroo__avatar,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:not(.active) .switcheroo__popper {
   position: relative;
   left: 0px;
   transition: var(--transi);
 }
-.switcheroo .switcheroo__squircle:not(.active):hover .switcheroo__avatar,
-.switcheroo .switcheroo__squircle:not(.active):hover .switcheroo__popper{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:not(.active):hover .switcheroo__avatar,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:not(.active):hover .switcheroo__popper {
   left: 8px;
 }
-.switcheroo .switcheroo__squircle:not(.active):hover{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:not(.active):hover {
   background-color: var(--bg2);
 }
-.switcheroo .switcheroo__squircle:before {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:before {
   content: "";
   width: 4px;
   height: 4px;
@@ -290,22 +298,22 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   opacity: 0;
   left: -16px;
 }
-.switcheroo .switcheroo__squircle:hover:before{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:hover:before {
   opacity: 1;
   left: 8px;
 }
-.switcheroo .switcheroo__squircle.active:before,
-.switcheroo .switcheroo__squircle.active:hover:before{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle.active:before,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle.active:hover:before {
   opacity: 1;
   left: 0px;
 }
-.switcheroo .switcheroo__squircle.active .switcheroo__avatar,
-.switcheroo .switcheroo__squircle.active .switcheroo__popper{
-  left: 0px!important;
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle.active .switcheroo__avatar,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle.active .switcheroo__popper {
+  left: 0px !important;
 }
 
 /* ---- BOUTON ASSOCIER UN PERSONNAGE --- */
-.switcheroo .switcheroo__squircle:last-child{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child{
   gap: 0px;
   display: flex;
   font-size: 0px;
@@ -315,17 +323,17 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   background-position: center left;
   border-radius: 8px !important;
 }
-.switcheroo .switcheroo__squircle:last-child:hover{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child:hover{
   background-position: center right;
 }
-.switcheroo .switcheroo__squircle:last-child:before{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child:before{
   display: inline-block;
   margin-right: 16px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-solid);
   content: "\f234";
-  color: var(--text-contrast)!important;
+  color: var(--text-contrast) !important;
   font-size: 12px;
   line-height: 12px;
   height: 12px;
@@ -334,14 +342,14 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   left: 0px!important;
   background-color: transparent;
 }
-.switcheroo .switcheroo__squircle:last-child .switcheroo__avatar,
-.switcheroo .switcheroo__squircle:last-child .switcheroo__popper,
-.switcheroo .switcheroo__squircle:last-child:hover:before{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child .switcheroo__avatar,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child .switcheroo__popper,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child:hover:before{
   left: 0px!important;
 }
 
 /* NOM DU COMPTE */
-.switcheroo__popper {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle .switcheroo__popper {
   width: -webkit-fill-available;
   pointer-events: none;
   color: var(--text);
@@ -351,12 +359,12 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   transition: var(--transi);
   font-weight: normal;
 }
-.switcheroo__squircle.active .switcheroo__popper,
-.switcheroo__squircle:hover .switcheroo__popper{
-  color: var(--text-contrast)!important;
-  font-weight: 600!important;
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle.active .switcheroo__popper,
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:hover .switcheroo__popper{
+  color: var(--text-contrast) !important;
+  font-weight: 600 !important;
 }
-.switcheroo__squircle:last-child .switcheroo__popper{
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child .switcheroo__popper{
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -367,29 +375,29 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 }
 
 /* AVATAR */
-.switcheroo .switcheroo__avatar {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle .switcheroo__avatar {
   position: relative;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   overflow: hidden;
 }
-.switcheroo .switcheroo__avatar img {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle .switcheroo__avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* BOUTON SUPPRIMER */
-.switcheroo .switcheroo__delete {
+nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle .switcheroo__delete {
   display: flex;
   justify-content: center;
   width: 20px;
   line-height: 20px;
-  font-size: 20px!important;
+  font-size: 20px !important;
   height: 20px;
   opacity: 1;
-  cursor: pointer!important;
+  cursor: pointer !important;
   color: var(--co2);
 }
 
@@ -398,6 +406,15 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   padding: 24px;
   border-radius: 16px;
   z-index: 21000 !important;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  width: 94%;
+  transition: 0.2s opacity ease;
+  transform: translate(-50%, -50%);
+  background: var(--bg1);
+  color: var(--text);
 }
 .switcheroo__form {
   padding-top: 0px;
@@ -469,7 +486,6 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   margin: auto;
   position: relative;
 }
-
 .monomer-overlay {
   position: fixed;
   z-index: 20999;
@@ -481,18 +497,6 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   transition: 0.2s opacity ease;
   background: rgba(var(--bg1_rgb), 0.6);
   backdrop-filter: blur(4px);
-}
-.monomer-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  width: 94%;
-  transition: 0.2s opacity ease;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  background: var(--bg1);
-  color: var(--text);
 }
 .monomer-modal.monomer-open.monomer-anchored { top: 20px; transform: translate(-50%, 0); }
 .monomer-modal.monomer-open { opacity: 1; }
