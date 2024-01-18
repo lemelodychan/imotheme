@@ -357,7 +357,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   font-weight: 600!important;
 }
 .switcheroo__squircle:last-child .switcheroo__popper{
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
