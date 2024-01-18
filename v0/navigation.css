@@ -466,7 +466,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 }
 .monomer-overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 20999;
   top: 0;
   left: 0;
   opacity: 0;
