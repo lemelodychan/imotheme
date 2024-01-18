@@ -71,7 +71,7 @@ body.light #f_widgets_col_0 > div img {
 #page-footer > div {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 16px;
+  grid-gap: 32px 16px;
   padding: 24px 32px;
   margin: 0 auto;
   width: 100%;
@@ -104,7 +104,7 @@ body.light #f_widgets_col_0 > div img {
   order: 3;
   text-align: right;
   padding: 0;
-
+  color: var(--text-contrast);
   font-size: 11px;
   letter-spacing: var(--letter-space);
   text-transform: uppercase;
