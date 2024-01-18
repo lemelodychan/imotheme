@@ -87,7 +87,7 @@ div.user-switcher{
 .mini-profil .side-profile-infos > span,
 .mini-profil .side-profile-infos > a{
   color: var(--text-contrast);
-  background: var(--transp_2);
+  background: var(--bg2);
   padding: 8px;
   line-height: 20px;
   font-size: 10px;
@@ -141,7 +141,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   align-self: center;
   font-size: 16px;
   padding: 8px;
-  background: var(--transp_2);
+  background: var(--bg2);
   width: 100%;
   width: -webkit-fill-available;
   text-align: center;
@@ -161,7 +161,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   opacity: 0;
   width: 1px;
   height: 1px;
-  background: linear-gradient(to right, var(--co1_light), var(--co1), var(--co1_dark));
+  background: linear-gradient(to right, var(--co3), var(--co1), var(--co3));
   position: absolute;
   top: 50%;
   left: 50%;
