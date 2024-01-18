@@ -454,6 +454,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   font-weight: 600;
   letter-spacing: 0.5px;
   border-radius: 4px;
+  width: 100%;
   padding: 8px;
   border: none;
   outline: none;
@@ -461,10 +462,14 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   text-transform: uppercase;
   font-size: 12px;
   align-self: flex-start;
+  font-family: var(--font-texte);
+  line-height: 20px;
   color: var(--text-contrast);
-  background-color: var(--co1);
+  background-image: linear-gradient(to right, rgba(var(--co2_rgb),0.5), rgba(var(--co3_rgb),0.5));
   margin: auto;
+  position: relative;
 }
+
 .monomer-overlay {
   position: fixed;
   z-index: 20999;
