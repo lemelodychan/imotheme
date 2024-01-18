@@ -327,20 +327,7 @@ nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child:h
   background-position: center right;
 }
 nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child:before{
-  display: inline-block;
-  margin-right: 16px;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font: var(--fa-font-solid);
-  content: "\f234";
-  color: var(--text-contrast) !important;
-  font-size: 12px;
-  line-height: 12px;
-  height: 12px;
-  width: 12px;
-  opacity: 1;
-  left: 0px!important;
-  background-color: transparent;
+  display: none !important;
 }
 nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child .switcheroo__avatar,
 nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle:last-child .switcheroo__popper,
