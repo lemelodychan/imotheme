@@ -313,6 +313,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   background: linear-gradient(90deg, rgba(var(--co2_rgb), 0.2) 0%, rgba(var(--co1_rgb), 0.4) 50%, rgba(var(--co2_rgb), 0.4) 100%);
   background-size: 200% 200%;
   background-position: center left;
+  border-radius: 8px !important;
 }
 .switcheroo .switcheroo__squircle:last-child:hover{
   background-position: center right;
@@ -393,54 +394,55 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 }
 
 /* MODALE CONNEXION */
+.monomer-modal {
+  padding: 24px;
+  border-radius: 16px;
+}
 .switcheroo__form {
-  padding: var(--spacing-md);
   padding-top: 0px;
 }
 .monomer-modal__content:before{
   content: "Isekai Monogatari";
-  font-family: var(--font-texte);
-  background: var(--gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  text-transform: uppercase;
+  font-family: var(--font-titre);
+  color: var(--text-contrast);
   display: block;
   text-align: center;
   font-size: 32px;
   line-height: 40px;
-  margin: var(--spacing-l) 0px var(--spacing-s) 0px;
+  margin: 0px 0px 16px 0px;
 }
 .switcheroo__form:before{
   content: "Connecter un nouveau compte";
   font-family: var(--font-texte);
-  color: var(--text);
+  color: var(--text-contrast);
   display: block;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   line-height: 16px;
   letter-spacing: 0.5px;
-  margin: 0px 0px var(--spacing-md) 0px;
+  margin: 0px 0px 16px 0px;
 }
 .switcheroo__form-row {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  margin-bottom: var(--spacing);
+  margin-bottom: 16px;
 }
 .switcheroo__form-row input[name="username"], 
 .switcheroo__form-row input[name="password"]{ width: 100%!important; }
 .switcheroo__form-label {
-  margin-bottom: var(--spacing-s);
-  font-size: 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--text) !important;
+  color: var(--text-contrast) !important;
 }
 .switcheroo__form-input {
-  padding: var(--spacing-s) !important;
+  padding: 8px !important;
   font-size: 12px !important;
-  border-radius: var(--spacing-xs) !important;
+  border-radius: 4px !important;
   width: calc(100% - 16px)!important;
   background-color: var(--bg2)!important;
   color: var(--text)!important;
@@ -450,7 +452,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
 .switcheroo__form-button {
   font-weight: 600;
   letter-spacing: 0.5px;
-  border-radius: var(--spacing-xs);
+  border-radius: 4px;
   padding: 8px;
   border: none;
   outline: none;
@@ -471,7 +473,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   width: 100%;
   height: 100%;
   transition: 0.2s opacity ease;
-  background: rgba(var(--neutral_1_rgb), 0.6);
+  background: rgba(var(--bg1_rgb), 0.6);
   backdrop-filter: blur(4px);
 }
 .monomer-modal {
@@ -483,7 +485,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   width: 94%;
   transition: 0.2s opacity ease;
   transform: translate(-50%, -50%);
-  border-radius: var(--spacing-s);
+  border-radius: 8px;
   background: var(--bg1);
   color: var(--text);
 }
@@ -499,8 +501,8 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   width: 24px;
   height: 24px;
   position: absolute;
-  top: var(--spacing-xs);
-  right: var(--spacing-xs);
+  top: 4px;
+  right: 4px;
   padding: 5px;
   cursor: pointer;
   color: var(--co2);
