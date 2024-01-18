@@ -161,7 +161,7 @@ body.light .mini-profil .side-profile-infos > span nb{ color: var(--co1)!importa
   opacity: 0;
   width: 1px;
   height: 1px;
-  background: linear-gradient(to right, var(--co3), var(--co1), var(--co3));
+  background: linear-gradient(to right, var(--co3), var(--co2));
   position: absolute;
   top: 50%;
   left: 50%;
