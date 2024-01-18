@@ -100,6 +100,9 @@ body.light #f_widgets_col_0 > div img {
   letter-spacing: var(--letter-space);
   text-transform: uppercase;
 }
+#page-footer > div > div.copyright > br {
+  display: none !important;
+}
 #page-footer > div > ul.footerbar-system {
   order: 3;
   text-align: right;
