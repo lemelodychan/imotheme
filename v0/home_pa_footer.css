@@ -75,6 +75,7 @@ body.light #f_widgets_col_0 > div img {
   padding: 24px 32px;
   margin: 0 auto;
   width: 100%;
+  max-width: 1048px;
   background: transparent;
 }
 #page-footer.admin > div {
@@ -84,14 +85,43 @@ body.light #f_widgets_col_0 > div img {
   order: 1;
   color: var(--text);
   font-size: 12px;
-  text-align: center;
-  max-width: 800px;
+  max-width: 1048px;
   margin: auto;
+  grid-template-columns: 240px auto;
+  display: inline-grid;
+  grid-gap: 32px;
+  max-width: 1048px;
 }
 #page-footer.admin > div > div.credits {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+#page-footer > div > div.credits > div.liens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: -webkit-fill-available;
+}
+#page-footer > div > div.credits > div.liens > a {
+  display: block;
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transi);
+}
+#page-footer > div > div.credits > div.liens > a:hover {
+  border: 1px solid var(--text-contrast);
+  color: var(--text-contrast);
+}
+#page-footer > div > div.credits > span.disclaimer {
+  text-align: left;
+  font-size: 14px;
+}
+
 #page-footer > div > div.copyright {
   order: 2;
   text-align: left;
