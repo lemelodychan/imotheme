@@ -123,6 +123,14 @@ body.light #f_widgets_col_0 > div img {
   text-align: left;
   font-size: 14px;
 }
+#page-footer > div > div.credits > span.disclaimer a {
+  border-bottom: 1px solid var(--co2);
+  color: var(--co2);
+}
+#page-footer > div > div.credits > span.disclaimer a:hover {
+  border-bottom: 1px solid var(--text-contrast);
+  color: var(--text-contrast);
+}
 
 #page-footer > div > div.copyright {
   order: 2;
