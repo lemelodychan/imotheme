@@ -85,8 +85,8 @@ body.light #f_widgets_col_0 > div img {
   order: 1;
   color: var(--text);
   font-size: 12px;
-  max-width: 1048px;
   margin: auto;
+  margin-bottom: 40px;
   grid-template-columns: 240px auto;
   display: inline-grid;
   grid-gap: 32px;
