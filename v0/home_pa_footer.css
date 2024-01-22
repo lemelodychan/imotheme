@@ -37,6 +37,7 @@
 #footer_widgets {
   border: 1px var(--bg2) solid;
   background-color: rgba(var(--bg2_rgb),0.5);
+  backdrop-filter: blur(4px);
 }
 #f_widgets_col_0 {
   align-items: center;
