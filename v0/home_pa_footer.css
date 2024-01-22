@@ -22,13 +22,15 @@
 .pa_widgets #News {
   width: 400px;
   overflow: auto;
+  background: var(--bg1);
+  border-radius: 16px;
 }
-.pa_widgets #News .content {
+.pa_widgets #News .content > div {
   display: flex;
   gap: 16px;
   width: max-content;
 }
-.pa_widgets #News .content > a {
+.pa_widgets #News .content > div > a {
   width: 200px;
 }
 
