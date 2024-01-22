@@ -198,6 +198,7 @@ ul.forums li.row:hover {
   border: 1px solid var(--bg2) !important;
   border-radius: 16px !important;
   position: relative;
+  backdrop-filter: blur(4px);
 }
 ul.forums li.row dl { background: none !important; }
 
