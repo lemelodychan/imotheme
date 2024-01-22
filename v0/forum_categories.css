@@ -192,7 +192,8 @@ ul.forums li.row dl {
 }
 ul.forums li.row,
 ul.forums li.row:hover { 
-  background: var(--bg1_transp_7);
+  transition: var(--transi);
+  background: var(--bg1_transp_5);
   color: var(--text);
   padding: 16px !important;
   border: 1px solid var(--bg2) !important;
@@ -201,6 +202,9 @@ ul.forums li.row:hover {
   backdrop-filter: blur(4px);
 }
 ul.forums li.row dl { background: none !important; }
+ul.forums li.row:hover {
+  background: var(--bg2_transp_5) !important;
+}
 
 /* ---- STATE - NOUVEAUX MESSAGES ---- */
 ul.forums li.row[title="Nouveaux messages"] {
