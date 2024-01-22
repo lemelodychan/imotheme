@@ -186,7 +186,7 @@ ul.navbar {
   gap: 8px;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg1_transp_5);
+  background-color: var(--bg1_transp_7);
   padding: 8px 0;
 }
 ul.navbar img, .login-for img {
