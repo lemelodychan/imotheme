@@ -192,21 +192,24 @@ ul.forums li.row dl {
 }
 ul.forums li.row,
 ul.forums li.row:hover { 
-  background: var(--bg2);
+  background: var(--bg1_transp_7);
   color: var(--text);
   padding: 16px !important;
-  border: none !important;
+  border: 1px solid var(--bg2) !important;
   border-radius: 16px !important;
   position: relative;
 }
 ul.forums li.row dl { background: none !important; }
 
 /* ---- STATE - NOUVEAUX MESSAGES ---- */
+ul.forums li.row[title="Nouveaux messages"] {
+   border: 0px !important;
+}
 ul.forums li.row[title="Nouveaux messages"] dl a.forumtitle:before {
   width: 4px;
   height: 4px;
   display: block;
-  border-radius: 50%;
+  border-radius: 16px;
   background: var(--co2);
   content: " ";
 }
