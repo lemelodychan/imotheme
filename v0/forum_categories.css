@@ -135,6 +135,8 @@ body.light .grid_big ul.forums li.row > dl > img { filter: grayscale(1) brightne
   border-radius: 0 0 8px 8px;
   display: flex;
   gap: 8px;
+  min-height: 37px;
+  max-height: 37px;
 }
 .grid_big ul.forums li.row dl div.sousforums_container > a.gensmall {
   width: fit-content;
