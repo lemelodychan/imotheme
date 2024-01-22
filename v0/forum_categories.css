@@ -276,6 +276,7 @@ ul.forums li.row dd.titre h3 {
 ul.forums li.row dl a.forumtitle {
   font-size: 21px;
   color: var(--text-contrast);
+  text-shadow: var(--bg1) 1px 1px 0px;
 }
 ul.forums li.row dd.titre span.hover-icon {
   transition: var(--transi);
