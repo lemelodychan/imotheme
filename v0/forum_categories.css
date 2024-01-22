@@ -446,7 +446,7 @@ ul.forums li.row div.metadata span.sousforums_container > a.bookmark:hover {
   justify-content: center;
   height: 32px;
   width: 32px;
-  background: var(--bg1_transp_5);
+  background: var(--bg1);
   border-radius: 8px;
 }
 #categorie_1 ul.forums li:first-child dd.titre { order: 2; }
