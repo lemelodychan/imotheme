@@ -35,9 +35,7 @@
     padding: 24px;
     position: fixed;
     width: var(--drawer_width);
-    background: 
-      radial-gradient(circle at top right,rgba(var(--co2_rgb),0.3),var(--bg1) 40%), 
-      var(--bg1) !important;
+    background: radial-gradient(circle at top right,rgba(var(--co2_rgb),0.3),var(--bg1) 40%), var(--bg1);
     top: 42px;
     right: calc(-1*var(--drawer_width));
     display: none;
