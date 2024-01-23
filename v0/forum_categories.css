@@ -303,7 +303,7 @@ ul.forums li.row dd.lastupdate { display: none; }
 ul.forums li.row dl > br,
 dd.lastupdate > br, dd.lastupdate > strong:not(:first-of-type),
 dd.lastupdate > a { display: none; }
-ul.topiclist dd { padding: 0 !important; float: initial !important; }
+ul.forums dd { padding: 0 !important; float: initial !important; }
 ul.forums li.row div.metadata {
   display: grid;
   grid-template-columns: auto 144px;
