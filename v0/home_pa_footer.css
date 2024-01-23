@@ -37,6 +37,7 @@
 
 /* --- WIDGET FOOTER - PARTENAIRES --- */
 #footer_widgets {
+  margin-top: 48px;
   border: 0px;
   border-top: 1px var(--bg2) solid !important;
   background-color: var(--bg1_transp_5);
