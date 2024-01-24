@@ -1,4 +1,5 @@
 /* ------ PAGE D'ACCUEIL ------ */
+/* -- RESET STYLE -- */
 #content-container #left,
 #content-container #right{
   float: initial !important;
@@ -12,18 +13,172 @@
 #left.pa_widgets div.h3 { 
   display: none;
 }
+.module {
+  background: transparent;
+  color: unset;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 14px;
+  overflow: auto;
+}
+.mod-stats-user {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+
+/* -- PA STRUCTURE -- */
+.pa_widgets {
+  max-width: 100%;
+  margin: 0px 0 40px 0;
+  display: grid !important;
+  padding: 24px 32px;
+  grid-gap: 24px !important;
+  margin-top: -3px;
+  background: var(--bg1_transp_5);
+  border-bottom: 1px var(--bg2) solid;
+}
 
 /* ------ WIDGET DERNIER INSCRIT ------ */
 .pa_widgets #Statistiques > span:not(.mod-stats-user) {
   display: none!important;
 }
+.pa_widgets #Statistiques .mod-stats-user {
+  padding: 8px 0;
+  font-size: 0px;
+  line-height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: -12px;
+}
+.pa_widgets #Statistiques .mod-stats-user:after {
+  width: fit-content;
+  content: "Dernier.e Arrivant.e";
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  line-height: 16px;
+  font-size: 12px;
+  letter-spacing: var(--letter-space);
+  font-weight: 600;
+  transition: var(--transi);
+  border-radius: 4px;
+  border: 1px solid var(--co2);
+  background: rgba(var(--co2_rgb), 0.4);
+  color: var(--light_1);
+}
+.pa_widgets #Statistiques .mod-stats-user a {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  align-items: flex-end;
+  gap: 0px;
+}
+.pa_widgets #Statistiques .mod-stats-user a:before {
+  display: inline-block;
+  content: "Bienvenue à";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: normal;
+  color: var(--text-contrast);
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 1px;
+  order: 2;
+}
+.pa_widgets #Statistiques .mod-stats-user a > span.avatar {
+  width: 72px;
+  height: 108px;
+  border-radius: 8px;
+  order: 1;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: visible;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.pa_widgets #Statistiques .mod-stats-user a > span.avatar img {
+  width: 72px;
+  height: 108px;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  border: 4px var(--bg1) solid;
+}
+.pa_widgets #Statistiques .mod-stats-user a > span.avatar:before {
+  transition: var(--transi);
+  background: var(--gradient_vert);
+  opacity: 1;
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.pa_widgets #Statistiques .mod-stats-user a > span {
+  text-align: right;
+  order: 3;
+}
+.pa_widgets #Statistiques .mod-stats-user a > span > strong {
+  font-family: var(--font-titre);
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 24px;
+  color: var(--text-contrast) !important;
+  text-shadow: var(--bg1) 1px 1px 0px;
+}
 
 /* ------ WIDGET NEWS ------ */
 .pa_widgets #News {
-  width: 400px;
-  overflow: auto;
-  background: var(--bg1);
+  padding: 16px 0px 16px 16px;
+  overflow: hidden !important;
+  height: max-content;
+  background-color: var(--bg1_transp_5) !important;
+  border: 1px var(--bg2) solid;
+  min-width: 320px;
+  max-width: 100%;
   border-radius: 16px;
+  width: 100% !important;
+}
+.pa_widgets #News > .content {
+  padding-bottom: 16px;
+  overflow: auto !important;
+}
+.pa_widgets #News > .content::-webkit-scrollbar {
+  background: transparent !important;
+  border-radius: 4px !important;
+}
+.pa_widgets #News > .content::-webkit-scrollbar-track {
+  border-radius: 4px !important;
+}
+.pa_widgets #News > .content::-webkit-scrollbar-thumb {
+  background-image: var(--gradient) !important;
+}
+.pa_widgets #News > .content::-webkit-scrollbar-button:end:decrement {
+  width: 16px;
+  display: block;
+  background: transparent !important;
 }
 .pa_widgets #News .content > div {
   display: flex;
@@ -31,9 +186,343 @@
   width: max-content;
 }
 .pa_widgets #News .content > div > a {
-  width: 200px;
+  width: 150px !important;
+  height: 216px !important;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-end;
+  padding: 24px 16px;
+  background-color: var(--bg1);
+}
+.pa_widgets #News .content > div > a:last-child { margin-right: 16px; }
+.pa_widgets #News .content > div > a > img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.5;
+  transition: var(--transi);
+}
+body.dark .pa_widgets #News .content > div > a > img { filter: grayscale(1) brightness(0.8); }
+body.light .pa_widgets #News .content > div > a > img { filter: grayscale(1) brightness(1.2); }
+.pa_widgets #News .content > div > a:hover > img { 
+  opacity: 0.3;
+  filter: grayscale(1) brightness(1); 
+}
+.pa_widgets #News .content > div > a > span.news_titre {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: var(--font-titre);
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--text-contrast);
+  text-shadow: var(--bg1) 1px 1px 0px;
+}
+.pa_widgets #News .content > div > a > span.news_text {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-contrast);
+}
+.pa_widgets #News .content > div > a:after {
+  display: block;
+  height: 1px;
+  width: 32px;
+  content: " ";
+  background: var(--gradient);
+  z-index: 2;
 }
 
+/* ------ WIDGET NAVIGATION ------ */
+.pa_widgets #Navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0px;
+  padding: 8px;
+  background: var(--bg1_transp_5);
+  border: 1px solid var(--bg2);
+  border-radius: 16px;
+}
+.pa_widgets #Navigation > a {
+  gap: 8px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  font-size: 14px;
+  justify-content: space-between;
+  color: var(--text-contrast);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  justify-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center;
+  background: transparent;
+  transition: var(--transi);
+  position: relative;
+}
+.pa_widgets #Navigation > a span,
+.pa_widgets #Navigation > a ion-icon {
+  position: relative;
+  z-index: 2;
+}
+.pa_widgets #Navigation > a:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  content: " ";
+  position: absolute;
+  transition: var(--transi);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: var(--gradient);
+  opacity: 0;
+}
+.pa_widgets #Navigation > a:hover {
+  color: var(--light_1);
+}
+.pa_widgets #Navigation > a:hover:before {
+  opacity: 0.5;
+}
+/* ------ WIDGET TOP SITES SEULS ------ */
+.pa_widgets #Top-sites {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pa_widgets #Top-sites > a {
+  transition: var(--transi);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 8px;
+  border-radius: 8px;
+  color: var(--text-contrast);
+}
+.pa_widgets #Top-sites > a:nth-of-type(odd) {
+  background-color: rgba(var(--co1_rgb),0.3);
+  border: 1px solid var(--co1);
+}
+.pa_widgets #Top-sites > a:nth-of-type(odd):hover {
+  background-color: rgba(var(--co1_rgb),1);
+  color: var(--light_1);
+}
+.pa_widgets #Top-sites > a:nth-of-type(even) {
+  background-color: rgba(var(--co2_rgb),0.3);
+  border: 1px solid var(--co2);
+}
+.pa_widgets #Top-sites > a:nth-of-type(even):hover {
+  background-color: rgba(var(--co2_rgb),1);
+  color: var(--light_1);
+}
+
+/* ------ WIDGET INTRODUCTION, TOP SITES, METEO ------ */
+.pa_widgets #Introduction {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  grid-gap: 16px;
+  grid-template-rows: 64px auto 32px;
+  align-content: space-between;
+}
+.pa_widgets #Introduction div.title {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  font-size: 24px;
+  display: flex;
+  font-family: var(--font-titre);
+  flex-direction: column;
+  line-height: 28px;
+  color: var(--text-contrast);
+  height: 64px !important;
+  max-height: 64px;
+}
+.pa_widgets #Introduction div.title span:last-of-type {
+  font-size: 36px;
+  line-height: 40px;
+  text-shadow: var(--bg1) 1px 1px 0px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.pa_widgets #Introduction div.title span:last-of-type ruby rt {
+  font-size: 10px;
+  line-height: 16px;
+  margin-bottom: 4px;
+  color: var(--text);
+  text-shadow: none !important;
+}
+.pa_widgets #Introduction div.title span:last-of-type:before {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--gradient);
+  content: " ";
+}
+.pa_widgets #Introduction div.topsites {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  align-content: start;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 8px 0;
+  
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.pa_widgets #Introduction div.topsites > a {
+  transition: var(--transi);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 8px;
+  border-radius: 8px;
+  color: var(--light_1);
+}
+.pa_widgets #Introduction div.topsites > a {
+  background-color: rgba(var(--co1_rgb),0.3);
+  border: 1px solid var(--co1);
+}
+.pa_widgets #Introduction div.topsites > a:hover {
+  background-color: rgba(var(--co1_rgb),1);
+}
+.pa_widgets #Introduction div.topsites > a:nth-of-type(2),
+.pa_widgets #Introduction div.topsites > a:nth-of-type(3),
+.pa_widgets #Introduction div.topsites > a:nth-of-type(6){
+  background-color: rgba(var(--co2_rgb),0.3);
+  border: 1px solid var(--co2);
+}
+.pa_widgets #Introduction div.topsites > a:nth-of-type(2):hover,
+.pa_widgets #Introduction div.topsites > a:nth-of-type(3):hover,
+.pa_widgets #Introduction div.topsites > a:nth-of-type(6):hover{
+  background-color: rgba(var(--co2_rgb),1);
+}
+.pa_widgets #Introduction > a.button {
+  grid-column: 1/3;
+  width: 100% !important;
+  justify-content: center;
+}
+
+.pa_widgets #Introduction div.meteo {
+  background: var(--bg1);
+  padding: 8px;
+  border-radius: 8px;
+  
+  grid-column: 2/3;
+  grid-row: 2/3;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+}
+body.dark .pa_widgets #Introduction div.meteo {
+  border: 1px solid var(--bg2);
+}
+body.light .pa_widgets #Introduction div.meteo {
+  border: 1px solid var(--bg1);
+}
+.pa_widgets #Introduction div.meteo span.saison {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-contrast);
+  border-radius: 4px;
+  line-height: 20px;
+  background: var(--bg2);
+  grid-column: 1/3;
+}
+.pa_widgets #Introduction div.meteo span.max {
+  color: var(--text-contrast);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-gap: 4px;
+  grid-column: 1/3;
+  align-items: center;
+  justify-content: center;
+}
+.pa_widgets #Introduction div.meteo span.max > ion-icon {
+  grid-row: 1/3;
+  font-size: 32px;
+  color: var(--co2);
+}
+.pa_widgets #Introduction div.meteo span.max > span:first-of-type {
+  line-height: 24px;
+  font-size: 24px;
+}
+.pa_widgets #Introduction div.meteo span.max > span:last-of-type {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pa_widgets #Introduction > div.meteo span.hum,
+.pa_widgets #Introduction > div.meteo span.min {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-contrast);
+  border-radius: 4px;
+  line-height: 20px;
+  font-size: 12px;
+  background: var(--bg2);
+}
+
+/* ------ WIDGET PERSONNAGES ATTENDUS ------ */
+.pa_widgets #Personnages_attendus {
+  background: var(--bg1);
+  border-radius: 16px;
+}
+.pa_widgets #Personnages_attendus div.h3 {
+  position: relative;
+  
+  display: flex !important;
+  margin: 0 !important;
+  width: 100%;
+  padding: 4px 12px;
+  line-height: 24px;
+  
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pa_widgets #Personnages_attendus > .content {
+  background-color: var(--bg1);
+  padding: 16px;
+  height: calc(100% - 32px);
+}
 
 /* --- WIDGET FOOTER - PARTENAIRES --- */
 #footer_widgets {
