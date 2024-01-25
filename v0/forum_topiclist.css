@@ -86,19 +86,19 @@ div.topic-actions {
   margin: 0 !important;
 }
 div.topic-actions:after { display: none; }
-div.topic-actions > div.pagination,
+div.pagination,
 div.topic-bottom strong.pagination {
   float: initial;
   display: grid;
   justify-content: flex-end;
 }
-div.topic-actions > div.pagination > a { display: none !important; }
-div.topic-actions > div.pagination > span {
+div.pagination > a { display: none !important; }
+div.pagination > span {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-div.topic-actions > div.pagination > span > strong {
+div.pagination > span > strong {
   width: 24px;
   height: 24px;
   font-size: 12px;
@@ -107,7 +107,7 @@ div.topic-actions > div.pagination > span > strong {
   box-shadow: none;
   background: transparent;
 }
-div.topic-actions > div.pagination > span > a:not(.pag-img),
+div.pagination > span > a:not(.pag-img),
 div.topic-bottom strong.pagination > span > a {
   transition: var(--transi);
   background: var(--bg1) !important;
@@ -123,12 +123,12 @@ div.topic-bottom strong.pagination > span > a {
 div.topic-bottom strong.pagination > span > a {
   background: var(--bg2) !important;
 }
-div.topic-actions > div.pagination > span > a:not(.pag-img):hover,
+div.pagination > span > a:not(.pag-img):hover,
 div.topic-bottom strong.pagination > span > a:hover {
   background: var(--co2) !important;
   color: var(--light_1) !important;
 }
-div.topic-actions > div.pagination > span > a.pag-img {
+div.pagination > span > a.pag-img {
   margin: 0;
   display: flex;
   width: 24px;
@@ -136,7 +136,7 @@ div.topic-actions > div.pagination > span > a.pag-img {
   align-items: center;
   justify-content: center;
 }
-div.topic-actions > div.pagination > span > a.pag-img > img { margin: 0; }
+div.pagination > span > a.pag-img > img { margin: 0; }
 
 div.topic-actions > div.actions-right {
   display: flex;
