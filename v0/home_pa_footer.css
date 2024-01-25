@@ -578,7 +578,7 @@ body.light #f_widgets_col_0 > div img {
   background: transparent;
 }
 #page-footer.admin > div {
-  grid-template-columns: minmax(1px,188px) auto !important;
+  grid-template-columns: minmax(240px,268px) auto !important;
 }
 #page-footer > div > div.credits {
   order: 1;
@@ -586,9 +586,9 @@ body.light #f_widgets_col_0 > div img {
   font-size: 12px;
   margin: auto;
   margin-bottom: 40px;
-  grid-template-columns: 240px auto;
+  grid-template-columns: minmax(240px,268px) auto;
   display: inline-grid;
-  grid-gap: 32px;
+  grid-gap: 16px;
   max-width: 1048px;
 }
 #page-footer.admin > div > div.credits {
