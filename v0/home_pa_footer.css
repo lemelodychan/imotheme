@@ -570,7 +570,7 @@ body.light #f_widgets_col_0 > div img {
 #page-footer > div {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 32px 16px;
+  grid-gap: 32px;
   padding: 24px 32px;
   margin: 0 auto;
   width: 100%;
@@ -578,7 +578,7 @@ body.light #f_widgets_col_0 > div img {
   background: transparent;
 }
 #page-footer.admin > div {
-  grid-template-columns: minmax(240px,268px) auto !important;
+  grid-template-columns: minmax(240px,280px) auto !important;
 }
 #page-footer > div > div.credits {
   order: 1;
@@ -586,9 +586,9 @@ body.light #f_widgets_col_0 > div img {
   font-size: 12px;
   margin: auto;
   margin-bottom: 40px;
-  grid-template-columns: minmax(240px,268px) auto;
+  grid-template-columns: minmax(240px,280px) auto;
   display: inline-grid;
-  grid-gap: 16px;
+  grid-gap: 32px;
   max-width: 1048px;
 }
 #page-footer.admin > div > div.credits {
