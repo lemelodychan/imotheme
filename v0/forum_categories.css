@@ -151,7 +151,7 @@
   letter-spacing: var(--letter-space);
   font-weight: 600;
   transition: var(--transi);
-  color: var(--light_2);
+  color: var(--light_1);
 }
 .grid_big ul.forums li.row dl div.sousforums_container > a.gensmall:nth-child(even) { background: rgba(var(--co1_rgb),0.5); }
 .grid_big ul.forums li.row dl div.sousforums_container > a.gensmall:nth-child(odd) { background: rgba(var(--co1_rgb),0.7); }
