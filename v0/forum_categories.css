@@ -383,8 +383,6 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-au
   font-weight: normal;
   color: var(--text);
 }
-ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a.last-post-icon,
-ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a:last-child { display: none; }
 ul.forums li.row div.metadata span.sousforums_container {
   display: flex;
   flex-direction: column;
