@@ -532,6 +532,9 @@ body.light .pa_widgets #Introduction div.meteo {
   background-color: var(--bg1_transp_5);
   backdrop-filter: blur(4px);
 }
+#footer_widgets .column {
+  padding: 16px 24px !important;
+}
 #f_widgets_col_0 {
   align-items: center;
 }
