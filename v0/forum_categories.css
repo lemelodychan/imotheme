@@ -352,6 +352,7 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos {
   display: flex;
   flex-direction: column;
   order: 1;
+  position: relative;
 }
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a:first-child {
   padding: 8px 12px 0px 12px;
@@ -383,6 +384,24 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-au
   font-weight: normal;
   color: var(--text);
 }
+ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a.last-post-icon,
+ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a:last-child {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+  color: var(--text);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  line-height: 32px;
+  transition: var(--transi);
+}
+ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a:last-child:hover {
+  color: var(--text-contrast);
+}
+
 ul.forums li.row div.metadata span.sousforums_container {
   display: flex;
   flex-direction: column;
