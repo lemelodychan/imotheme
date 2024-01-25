@@ -532,18 +532,19 @@ body.light .pa_widgets #Introduction div.meteo {
   background-color: var(--bg1_transp_5);
   backdrop-filter: blur(4px);
 }
-#footer_widgets .column {
-  padding: 16px 24px !important;
-}
-#f_widgets_col_0 {
+#footer_widgets #f_widgets_col_0.column {
+  padding: 16px 0px !important;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  max-width: 1048px;
+  margin: auto;
 }
 #f_widgets_col_0 > div {
   display: grid;
   grid-template-columns: repeat(5,1fr);
   grid-gap: 32px;
   width: 100%;
-  max-width: 1016px !important;
   margin: auto 32px;
   padding: 24px 0;
   align-items: center;
@@ -552,6 +553,7 @@ body.light .pa_widgets #Introduction div.meteo {
   align-content: center;
 }
 #f_widgets_col_0 > div img {
+  width: 100%;
   transition: var(--transi);
   filter: invert(0);
   opacity: 1;
