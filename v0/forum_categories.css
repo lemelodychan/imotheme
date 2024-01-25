@@ -76,9 +76,13 @@
   object-fit: cover;
   border-radius: 8px;
   transition: var(--transi);
+}
+body.dark .grid_big ul.forums li.row > dl > img {
   filter: grayscale(1) brightness(0.8);
 }
-
+body.light .grid_big ul.forums li.row > dl > img {
+  filter: grayscale(1) brightness(1);
+}
 .grid_big ul.forums li.row:hover > dl > img { 
   filter: grayscale(0) brightness(1) !important;
 }
