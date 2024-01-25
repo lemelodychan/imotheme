@@ -505,7 +505,7 @@ body.light .pa_widgets #Introduction div.meteo {
   display: flex !important;
   margin: 0 !important;
   width: 100%;
-  padding: 4px 12px;
+  padding: 8px 16px;
   line-height: 24px;
   
   font-size: 12px;
@@ -520,9 +520,24 @@ body.light .pa_widgets #Introduction div.meteo {
 }
 .pa_widgets #Personnages_attendus > .content {
   background-color: var(--bg1);
-  padding: 16px;
-  height: calc(100% - 32px);
+  padding: 0px 16px 16px 16px;
+  height: calc(100% - 40px);
 }
+.pa_widgets #Personnages_attendus > .content > div {
+  max-height: 217px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 8px;
+}
+.pa_widgets #Personnages_attendus > .content > div > a.widget-pa {
+  display: block;
+  padding: 8px;
+  background: var(--bg2_transp_5);
+  border-radius: 8px;
+}
+
 
 /* --- WIDGET FOOTER - PARTENAIRES --- */
 #footer_widgets {
