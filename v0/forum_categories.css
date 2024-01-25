@@ -337,7 +337,12 @@ ul.forums li.row div.metadata dd.lastpost .lastpost-avatar img {
   width: 100%;
   z-index: 1;
   transition: var(--transi);
+}
+body.dark ul.forums li.row div.metadata dd.lastpost .lastpost-avatar img {
   filter: grayscale(1) brightness(0.8);
+}
+body.light ul.forums li.row div.metadata dd.lastpost .lastpost-avatar img {
+  filter: grayscale(1) brightness(1);
 }
 ul.forums li.row:hover div.metadata dd.lastpost .lastpost-avatar img {
   filter: brightness(1) grayscale(0) !important;
