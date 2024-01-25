@@ -112,7 +112,7 @@ body.light .grid_big ul.forums li.row > dl > img {
   grid-column: 2/3;
   grid-row: 2/5;
   background-color: var(--bg1);
-  padding: 8px 8px 8px 8px;
+  padding: 8px 8px 0px 8px;
   border-radius: 0;
 }
 .grid_big ul.forums li.row dl > div.description span {
@@ -120,10 +120,16 @@ body.light .grid_big ul.forums li.row > dl > img {
   display: block;
   padding: 0 8px 8px 8px;
   overflow: auto;
-  min-height: 75px;
-  max-height: 75px;
+  min-height: 83px;
+  max-height: 83px;
   font-size: 14px;
 }
+.grid_big ul.forums li.row dl > div.description span::-webkit-scrollbar-button:end:decrement {
+  height: 4px;
+  display: block;
+  background: var(--bg1);
+}
+
 .grid_big ul.forums li.row dl div.metadata { 
   display: block;
   grid-column: 1/2;
