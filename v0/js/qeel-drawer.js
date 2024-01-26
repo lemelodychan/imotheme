@@ -7,36 +7,25 @@ $(document).ready(function () {
     if (!drawer.length) {
         drawer = $('<div id="qeel_drawer"></div>');
         drawerContainer.append(drawer);
-
-        // Initially hide the drawer
         drawer.css({
             display: 'grid',
             right: '-400px'
         });
-
-        // Populate the content for the drawer
         populateDrawerContent();
     }
-
-    // Attach click event handler to the toggle button
     $('#qeel_button').on('click', toggleDrawer);
 
     function toggleDrawer() {
-        // Check if the drawer is visible
         var isDrawerVisible = drawer.css('right') === '0px';
-
-        // Toggle the right property to slide the drawer in/out of view
         drawer.css({
             display: 'grid',
             right: isDrawerVisible ? '-400px' : '0px'
         });
-
-        // Toggle the "open" class on the button based on the drawer's visibility
         button.toggleClass('open', !isDrawerVisible);
     }
 
     function addStatusAndAvatar(userLink, statusClass, avatarUrl, hoverText) {
-        var strongElement = userLink.find('strong');
+        var strongElement = userLink.find('a');
 
         if (strongElement.length) {
             var avatarImg = $('<img>').attr('src', avatarUrl).addClass('avatar_qeel');
