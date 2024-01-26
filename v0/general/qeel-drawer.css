@@ -118,11 +118,12 @@
 #qeel_drawer div > a {
   display: grid;
   align-items: center;
-  grid-template-columns: auto max-content;
+  grid-template-columns: 24px auto max-content;
   gap: 4px;
   padding: 8px;
   border-radius: 8px;
   transition: var(--transi);
+  position: relative;
 }
 #qeel_drawer div > a:hover {
   background-color: rgba(var(--bg1_rgb),0.5);
@@ -141,18 +142,12 @@
   border: 1px var(--co2) solid;
 }
 
-#qeel_drawer a > span {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-}
 #qeel_drawer a > span > strong {
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
 }
-#qeel_drawer a > span > img {
+#qeel_drawer a > img {
   width: 32px;
   height: 32px;
   object-fit: cover;
@@ -169,7 +164,7 @@
 
 
 /* --- STATUTS STYLES --- */
-#qeel_drawer a > span > span.status {
+#qeel_drawer a > span.status {
   z-index: 2;
   border: 3px solid var(--bg2) !important;
   position: absolute;
@@ -179,14 +174,14 @@
   height: 14px;
   border-radius: 50%;
 }
-#qeel_drawer a > span > span.status.present {
+#qeel_drawer a > span.status.present {
     background: #009b54;
     border: 1px solid var(--bg1);
 }
-#qeel_drawer a > span > span.status.absent{
+#qeel_drawer a > span.status.absent{
     background: #f6a93e;
 }
-#qeel_drawer a > span > span.status.absent:after {
+#qeel_drawer a > span.status.absent:after {
     width: 5.5px;
     height: 5.5px;
     background: var(--bg2) !important;
@@ -197,7 +192,7 @@
     top: 0px;
     left: 0px;
 }
-#qeel_drawer a > span > span.status.presred {
+#qeel_drawer a > span.status.presred {
     background: #ff3940;
     border: 1px solid var(--bg1);
 }
