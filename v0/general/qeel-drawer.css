@@ -146,6 +146,8 @@
 #qeel_drawer a > span:first-of-type:not(.status) {
   order: 2;
   text-align: left;
+  line-height: 24px;
+  height: fit-content;
 }
 #qeel_drawer a > span > strong {
   font-size: 14px;
