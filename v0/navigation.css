@@ -64,22 +64,20 @@ div.nav_ancres > span {
     border-radius: 50%;
     transition: var(--transi);
 }
-body.light #fa_right > #fa_notifications { filter: invert(1); }
 #fa_toolbar > #fa_right.notification > #fa_notifications {
   background-color: var(--bg3) !important;
 }
 #fa_right > #fa_notifications:hover {
-  background-color: var(--bg3) !important;
+  background-color: var(--bg2_transp_7) !important;
 }
 
 #fa_right #fa_notifications ion-icon { font-size: 14px !important; }
 #fa_toolbar #fa_right #fa_notifications #notif_unread {
     display: inline-block;
-    filter: invert(0);
     margin-left: 0px;
     font-size: 7px;
     background: var(--co2);
-    color: white!important;
+    color: white !important;
     line-height: 14px;
     width: 14px;
     height: 14px;
@@ -88,8 +86,8 @@ body.light #fa_right > #fa_notifications { filter: invert(1); }
     padding: 0;
     border-radius: 100px;
     position: absolute;
-    right: 4px;
-    top: 8px;
+    right: -2px;
+    top: 0px;
     transition: var(--transi);
     box-shadow: 0 0 0 0 rgba(var(--co2_rgb), 1);
     transform: scale(1);
