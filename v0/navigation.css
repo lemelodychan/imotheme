@@ -53,8 +53,9 @@ div.nav_ancres > span {
     height: 28px;
     width: 28px;
     padding: 0 6px;
+    font-size: 0px;
     margin: 4px 0px!important;
-    color: var(--text-contrast);
+    color: rgba(0,0,0,0);
     border-radius: 50%;
     transition: var(--transi);
     background-color: var(--bg2_transp_7) !important;
