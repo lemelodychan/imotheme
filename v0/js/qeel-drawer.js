@@ -3,7 +3,6 @@ $(document).ready(function () {
     var drawer = $('#qeel_drawer');
     var button = $('#qeel_button');
 
-    // If the drawer is not in the DOM, create and append it
     if (!drawer.length) {
         drawer = $('<div id="qeel_drawer"></div>');
         drawerContainer.append(drawer);
@@ -13,6 +12,7 @@ $(document).ready(function () {
         });
         populateDrawerContent();
     }
+
     $('#qeel_button').on('click', toggleDrawer);
 
     function toggleDrawer() {
@@ -25,22 +25,28 @@ $(document).ready(function () {
     }
 
     function addStatusAndAvatar(userLink, statusClass, avatarUrl, hoverText) {
-        var strongElement = userLink.find('a');
+        var usernameElement = userLink.find('span[style^="color"], span[class^="style"]');
+        var username = usernameElement.length ? usernameElement.text().trim() : userLink.text().trim();
 
-        if (strongElement.length) {
-            var avatarImg = $('<img>').attr('src', avatarUrl).addClass('avatar_qeel');
-            var statusSpan = $('<span></span>').addClass('status ' + statusClass);
-            strongElement.before(avatarImg, statusSpan);
+        var strongElement = userLink.find('strong');
 
-            var userId = userLink.attr('href').replace('/u', '');
-            if (isStaffUser(userId)) {
-                userLink.append('<span class="tag">staff</span>');
-            }
+        var avatarImg = $('<img>').attr('src', avatarUrl).addClass('avatar_qeel');
+        var statusSpan = $('<span></span>').addClass('status ' + statusClass);
+        userLink.append(avatarImg, statusSpan);
+
+        var userId = getUserIdFromHref(userLink.attr('href'));
+        if (isStaffUser(userId)) {
+            userLink.append('<span class="tag">staff</span>');
         }
     }
 
+    function getUserIdFromHref(href) {
+        var matches = href.match(/\/u(\d+)/);
+        return matches ? matches[1] : null;
+    }
+
     function getAvatarUrl(userLink, callback) {
-        var userId = userLink.attr('href').replace('/u', '');
+        var userId = getUserIdFromHref(userLink.attr('href'));
         var userPageUrl = '/u' + userId;
 
         $.ajax({
@@ -98,9 +104,9 @@ $(document).ready(function () {
 
             userLinksOnline.each(function () {
                 var userLink = $(this);
-                var userId = userLink.attr('href').replace('/u', '');
 
                 getAvatarUrl(userLink, function (avatarUrl) {
+                    var userId = getUserIdFromHref(userLink.attr('href'));
                     $.ajax({
                         url: '/u' + userId,
                         method: 'GET',
@@ -143,9 +149,9 @@ $(document).ready(function () {
 
             userLinks48h.each(function () {
                 var userLink = $(this);
-                var userId = userLink.attr('href').replace('/u', '');
 
                 getAvatarUrl(userLink, function (avatarUrl) {
+                    var userId = getUserIdFromHref(userLink.attr('href'));
                     $.ajax({
                         url: '/u' + userId,
                         method: 'GET',
