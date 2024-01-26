@@ -27,19 +27,23 @@ $(document).ready(function () {
     function addStatusAndAvatar(userLink, statusClass, avatarUrl, hoverText) {
         var usernameElement = userLink.find('span[style^="color"], span[class^="style"]');
         var username = usernameElement.length ? usernameElement.text().trim() : userLink.text().trim();
-
+    
         var strongElement = userLink.find('strong');
-
+    
         var avatarImg = $('<img>').attr('src', avatarUrl).addClass('avatar_qeel');
         var statusSpan = $('<span></span>').addClass('status ' + statusClass);
         userLink.append(avatarImg, statusSpan);
-
+    
         var userId = getUserIdFromHref(userLink.attr('href'));
         if (isStaffUser(userId)) {
             userLink.append('<span class="tag">staff</span>');
         }
+        
+        userLink.contents().filter(function () {
+            return this.nodeType === 3;
+        }).wrap('<span class="username"></span>');
     }
-
+    
     function getUserIdFromHref(href) {
         var matches = href.match(/\/u(\d+)/);
         return matches ? matches[1] : null;
