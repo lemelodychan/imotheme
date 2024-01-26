@@ -142,8 +142,9 @@
   border-radius: 4px;
   border: 1px var(--co2) solid;
 }
-#qeel_drawer a > span:first-of-type {
-  order: 1;
+#qeel_drawer a > span:first-of-type:not(.tag),
+#qeel_drawer a > span:first-of-type:not(.status) {
+  order: 2;
 }
 #qeel_drawer a > span > strong {
   font-size: 14px;
