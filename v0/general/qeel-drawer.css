@@ -145,6 +145,7 @@
 #qeel_drawer a > span:first-of-type:not(.tag),
 #qeel_drawer a > span:first-of-type:not(.status) {
   order: 2;
+  text-align: left;
 }
 #qeel_drawer a > span > strong {
   font-size: 14px;
@@ -172,6 +173,7 @@
 #qeel_drawer a > span.status {
   z-index: 2;
   border: 3px solid var(--bg2) !important;
+  background: #009b54;
   position: absolute;
   bottom: 6px;
   left: 30px;
