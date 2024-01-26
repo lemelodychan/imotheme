@@ -48,30 +48,32 @@ div.nav_ancres > span {
 #fa_menu, #fa_hide, a.rightHeaderLink:not(#fa_notifications) { display: none !important; }
 
 #fa_right > #fa_notifications {
+    display: grid !important;
     line-height: 28px;
     height: 28px;
     width: 28px;
     padding: 0 6px;
     margin: 4px 0px!important;
-    font-size: 0px !important;
-  
-    background: url("https://lemelodychan.github.io/imotheme/v0/assets/icon_notifications.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 14px 14px;
-  
-    filter: invert(0);
+    color: var(--text-contrast);
     border-radius: 50%;
     transition: var(--transi);
+    background-color: var(--bg2_transp_7) !important;
+    border: 1px solid var(--bg3);
 }
 #fa_toolbar > #fa_right.notification > #fa_notifications {
-  background-color: var(--bg3) !important;
-}
-#fa_right > #fa_notifications:hover {
   background-color: var(--bg2_transp_7) !important;
 }
-
-#fa_right #fa_notifications ion-icon { font-size: 14px !important; }
+#fa_right > #fa_notifications:hover {
+  background-color: var(--bg2) !important;
+}
+#fa_right #fa_notifications ion-icon { 
+  font-size: 16px !important;
+  color: var(--text-contrast);
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  left: -1px;
+}
 #fa_toolbar #fa_right #fa_notifications #notif_unread {
     display: inline-block;
     margin-left: 0px;
@@ -86,8 +88,8 @@ div.nav_ancres > span {
     padding: 0;
     border-radius: 100px;
     position: absolute;
-    right: -2px;
-    top: 0px;
+    right: 2px;
+    top: 8px;
     transition: var(--transi);
     box-shadow: 0 0 0 0 rgba(var(--co2_rgb), 1);
     transform: scale(1);
