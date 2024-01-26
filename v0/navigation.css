@@ -144,6 +144,8 @@ div.nav_ancres > span {
 }
 .toolbar_right:not(.guest) > a#annonces {
   margin-right: 36px;
+  background-color: var(--bg2_transp_7) !important;
+  border: 1px solid var(--bg3);
 }
 .toolbar_right > a#annonces ion-icon {
   border-radius: 50%;
@@ -160,7 +162,8 @@ div.nav_ancres > span {
     border-radius: 50%;
     display: block;
     content: " ";
-    background: var(--co1);
+    background: var(--co2);
+    color: white !important;
     animation: pulse1 2s infinite;
     position: absolute;
     top: 0px;
