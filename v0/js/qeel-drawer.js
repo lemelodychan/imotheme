@@ -111,52 +111,40 @@ $(document).ready(function () {
 
                 getAvatarUrl(userLink, function (avatarUrl) {
                     var userId = getUserIdFromHref(userLink.attr('href'));
-                    $.ajax({
-                        url: '/u' + userId,
-                        method: 'GET',
-                        success: function (html) {
-                            var fieldContent = $(html).find('#field_id14 > dd > div.field_uneditable').text();
-                            var secondUrl = 'https://imolab.forumotion.asia' + '/u' + userId;
-                            console.log(fieldContent);
-
-                            if(userId === "0" || userId === 0) {
-                                $.ajax({
-                                    url: secondUrl,
-                                    method: 'GET',
-                                    success: function (html) {
-                                        var fieldContent2 = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
-                                        console.log(fieldContent2);
-                                        var statusClass = '';
-                                        if (fieldContent2.includes('Présent.e')) {
-                                            statusClass = 'present';
-                                        } else if (fieldContent2.includes('Présence réduite')) {
-                                            statusClass = 'presred';
-                                        } else if (fieldContent2.includes('Absent.e')) {
-                                            statusClass = 'absent';
-                                        }
-                                        addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent2);
-                                    },
-                                    error: function (error) {
-                                        console.error('Error fetching user page:', error);
-                                    }
-                                });
-                            } else {
-                                var fieldContent2 = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
-                                var statusClass = '';
-                                if (fieldContent2.includes('Présent.e')) {
-                                    statusClass = 'present';
-                                } else if (fieldContent2.includes('Présence réduite')) {
-                                    statusClass = 'presred';
-                                } else if (fieldContent2.includes('Absent.e')) {
-                                    statusClass = 'absent';
+                    var userUrl = '/u' + userId;
+                    
+                    $.get(userUrl, function(data) {
+                        var sourceField = $(data).find('#field_id14 > dd > div.field_uneditable');
+                        var mainuserIDContent = sourceField.html().trim();
+                        
+                        if (mainuserIDContent === '0') {
+                              var presField = $(data).find('#field_id1 > dd > div.field_uneditable').clone();
+                              var trimmedHtml = presField.html().trim();
+                              if (trimmedHtml === 'Présent.e') {
+                                  statusClass = 'pres';
+                                } else if (trimmedHtml === 'Présence réduite') {
+                                  statusClass = 'presred';
+                                } else if (trimmedHtml === 'Absent.e') {
+                                  statusClass = 'abs';
                                 }
-                                addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent2);
-                            }
-                        },
-                        error: function (error) {
-                            console.error('Error fetching user page:', error);
+                              addStatusAndAvatar(userLink, statusClass, avatarUrl, presField);
+                        } else {
+                            var mainuserUrl = '/u' + mainuserIDContent;
+                            $.get(mainuserUrl, function(data) {
+                                var presField = $(data).find('#field_id1 > dd > div.field_uneditable').clone();
+                                var trimmedHtml = presField.html().trim();
+                                if (trimmedHtml === 'Présent.e') {
+                                  statusClass = 'pres';
+                                } else if (trimmedHtml === 'Présence réduite') {
+                                  statusClass = 'presred';
+                                } else if (trimmedHtml === 'Absent.e') {
+                                  statusClass = 'abs';
+                                }
+                                addStatusAndAvatar(userLink, statusClass, avatarUrl, presField);
+                              });
                         }
-                    });
+                        
+                      });
                 });
             });
 
