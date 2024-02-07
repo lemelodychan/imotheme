@@ -115,22 +115,30 @@ $(document).ready(function () {
                         url: '/u' + userId,
                         method: 'GET',
                         success: function (html) {
-                            var fieldContent = $(html).find('.irl-contact > div.statut > div').text();
+                            var fieldContent = $(html).find('#field_id14 > dd > div.uneditable').text();
                             console.log(fieldContent);
-                            var statusClass = '';
-                            if (fieldContent.includes('Présent.e')) {
-                                statusClass = 'present';
-                            } else if (fieldContent.includes('Présence Réduite')) {
-                                statusClass = 'presred';
-                            } else if (fieldContent.includes('Absent.e')) {
-                                statusClass = 'absent';
-                            }
-                            addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent);
-                        },
-                        error: function (error) {
-                            console.error('Error fetching user page:', error);
-                        }
-                    });
+                            var secondUrl = '/u' + userIdContent;
+                            $.ajax({
+                                url: secondUrl,
+                                method: 'GET',
+                                success: function (html) {
+                                    var fieldContent = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
+                                    var statusClass = '';
+                                    if (fieldContent.includes('Présent.e')) {
+                                        statusClass = 'present';
+                                    } else if (fieldContent.includes('Présence Réduite')) {
+                                        statusClass = 'presred';
+                                    } else if (fieldContent.includes('Absent.e')) {
+                                        statusClass = 'absent';
+                                    }
+                                    
+                                    addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent);
+                                },
+                                error: function (error) {
+                                    console.error('Error fetching user page:', error);
+                                }
+                            });
+
                 });
             });
 
