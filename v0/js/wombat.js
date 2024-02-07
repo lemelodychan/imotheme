@@ -141,12 +141,13 @@ var Wombat = function () {
 
     Wombat.prototype.clear = function () {
         var elements = Array.from(arguments);
-
+    
         elements.forEach(element => {
             element.addEventListener(this.transitionEnd, function () {
                 if (element.parentNode) {
                     element.parentNode.removeChild(element);
                 }
+                element.removeEventListener(this.transitionEnd, arguments.callee);
             });
         });
     };
