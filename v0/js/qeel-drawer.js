@@ -111,13 +111,13 @@ $(document).ready(function () {
 
                 getAvatarUrl(userLink, function (avatarUrl) {
                     var userId = getUserIdFromHref(userLink.attr('href'));
+                    var siteURL = 'https://imolab.forumotion.asia';
                     $.ajax({
                         url: '/u' + userId,
                         method: 'GET',
                         success: function (html) {
                             var fieldContent = $(html).find('#field_id14 > dd > div.field_uneditable').text();
-                            console.log(fieldContent);
-                            var secondUrl = '/u' + userId;
+                            var secondUrl = siteURL + '/u' + userId;
                             $.ajax({
                                 url: secondUrl,
                                 method: 'GET',
