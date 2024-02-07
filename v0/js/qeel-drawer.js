@@ -111,28 +111,27 @@ $(document).ready(function () {
 
                 getAvatarUrl(userLink, function (avatarUrl) {
                     var userId = getUserIdFromHref(userLink.attr('href'));
-                    var siteURL = 'https://imolab.forumotion.asia';
                     $.ajax({
                         url: '/u' + userId,
                         method: 'GET',
                         success: function (html) {
                             var fieldContent = $(html).find('#field_id14 > dd > div.field_uneditable').text();
-                            var secondUrl = siteURL + '/u' + userId;
+                            var secondUrl = 'https://imolab.forumotion.asia' + '/u' + userId;
                             $.ajax({
                                 url: secondUrl,
                                 method: 'GET',
                                 success: function (html) {
-                                    var fieldContent = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
+                                    var fieldContent2 = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
+                                    console.log(fieldContent2);
                                     var statusClass = '';
-                                    if (fieldContent.includes('Présent.e')) {
+                                    if (fieldContent2.includes('Présent.e')) {
                                         statusClass = 'present';
-                                    } else if (fieldContent.includes('Présence Réduite')) {
+                                    } else if (fieldContent2.includes('Présence Réduite')) {
                                         statusClass = 'presred';
-                                    } else if (fieldContent.includes('Absent.e')) {
+                                    } else if (fieldContent2.includes('Absent.e')) {
                                         statusClass = 'absent';
                                     }
-
-                                    addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent);
+                                    addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent2);
                                 },
                                 error: function (error) {
                                     console.error('Error fetching user page:', error);
