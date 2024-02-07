@@ -119,7 +119,7 @@ $(document).ready(function () {
                             var secondUrl = 'https://imolab.forumotion.asia' + '/u' + userId;
                             console.log(fieldContent);
 
-                            if(fieldContent === "0" || fieldContent === 0) {
+                            if(userId === "0" || userId === 0) {
                                 $.ajax({
                                     url: secondUrl,
                                     method: 'GET',
