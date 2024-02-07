@@ -126,7 +126,7 @@ $(document).ready(function () {
                                     var statusClass = '';
                                     if (fieldContent2.includes('Présent.e')) {
                                         statusClass = 'present';
-                                    } else if (fieldContent2.includes('Présence Réduite')) {
+                                    } else if (fieldContent2.includes('Présence réduite')) {
                                         statusClass = 'presred';
                                     } else if (fieldContent2.includes('Absent.e')) {
                                         statusClass = 'absent';
