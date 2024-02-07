@@ -115,7 +115,8 @@ $(document).ready(function () {
                         url: '/u' + userId,
                         method: 'GET',
                         success: function (html) {
-                            var fieldContent = $(html).find('.irl-contact > div.statut').text();
+                            var fieldContent = $(html).find('.irl-contact > div.statut > div').text();
+                            console.log(fieldContent);
                             var statusClass = '';
                             if (fieldContent.includes('Présent.e')) {
                                 statusClass = 'present';
