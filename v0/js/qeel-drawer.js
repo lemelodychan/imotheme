@@ -117,6 +117,7 @@ $(document).ready(function () {
                         success: function (html) {
                             var fieldContent = $(html).find('#field_id14 > dd > div.field_uneditable').text();
                             var secondUrl = 'https://imolab.forumotion.asia' + '/u' + userId;
+                            console.log(fieldContent);
 
                             if(fieldContent === "0" || fieldContent === "") {
                                 $.ajax({
