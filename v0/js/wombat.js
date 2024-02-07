@@ -59,7 +59,6 @@ var Wombat = function () {
         this.overlay && this.overlay.classList.add("open");
 
         this.updateColor();
-        this.updateBackgroundColor();
 
         if (typeof this.options.afterLoad === "function") {
             this.options.afterLoad(this.aside, this.overlay);
@@ -122,8 +121,6 @@ var Wombat = function () {
                 if (profileContent === null) {
                     throw new Error("Profile content not found");
                 }
-
-                this.addStatus(profileContent);
 
                 var fragment = document.createDocumentFragment();
                 fragment.appendChild(profileContent);
