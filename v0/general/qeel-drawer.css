@@ -183,6 +183,9 @@
   height: 14px;
   border-radius: 50%;
 }
+#qeel_drawer #qeel_48h a > span.status {
+  display: none;
+}
 #qeel_drawer a > span.status.present {
     background: #009b54;
     border: 1px solid var(--bg1);
