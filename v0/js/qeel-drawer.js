@@ -117,26 +117,40 @@ $(document).ready(function () {
                         success: function (html) {
                             var fieldContent = $(html).find('#field_id14 > dd > div.field_uneditable').text();
                             var secondUrl = 'https://imolab.forumotion.asia' + '/u' + userId;
-                            $.ajax({
-                                url: secondUrl,
-                                method: 'GET',
-                                success: function (html) {
-                                    var fieldContent2 = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
-                                    console.log(fieldContent2);
-                                    var statusClass = '';
-                                    if (fieldContent2.includes('Présent.e')) {
-                                        statusClass = 'present';
-                                    } else if (fieldContent2.includes('Présence réduite')) {
-                                        statusClass = 'presred';
-                                    } else if (fieldContent2.includes('Absent.e')) {
-                                        statusClass = 'absent';
+
+                            if(fieldContent === "0" || fieldContent === "") {
+                                $.ajax({
+                                    url: secondUrl,
+                                    method: 'GET',
+                                    success: function (html) {
+                                        var fieldContent2 = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
+                                        console.log(fieldContent2);
+                                        var statusClass = '';
+                                        if (fieldContent2.includes('Présent.e')) {
+                                            statusClass = 'present';
+                                        } else if (fieldContent2.includes('Présence réduite')) {
+                                            statusClass = 'presred';
+                                        } else if (fieldContent2.includes('Absent.e')) {
+                                            statusClass = 'absent';
+                                        }
+                                        addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent2);
+                                    },
+                                    error: function (error) {
+                                        console.error('Error fetching user page:', error);
                                     }
-                                    addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent2);
-                                },
-                                error: function (error) {
-                                    console.error('Error fetching user page:', error);
+                                });
+                            } else {
+                                var fieldContent2 = $(html).find('#field_id1 > dd > div.field_uneditable').text().trim();
+                                var statusClass = '';
+                                if (fieldContent2.includes('Présent.e')) {
+                                    statusClass = 'present';
+                                } else if (fieldContent2.includes('Présence réduite')) {
+                                    statusClass = 'presred';
+                                } else if (fieldContent2.includes('Absent.e')) {
+                                    statusClass = 'absent';
                                 }
-                            });
+                                addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent2);
+                            }
                         },
                         error: function (error) {
                             console.error('Error fetching user page:', error);
