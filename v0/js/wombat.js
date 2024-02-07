@@ -65,9 +65,9 @@ var Wombat = function () {
         }
     };
 
-    Wombat.prototype.binds = function () {
-        this.overlay && this.overlay.addEventListener("click", this.close.bind(this));
-    };
+    //Wombat.prototype.binds = function () {
+    //    this.overlay && this.overlay.addEventListener("click", this.close.bind(this));
+    //};
 
     Wombat.prototype.onClick = function () {
         var excludes = this.options.excludes.join(",");
