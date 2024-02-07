@@ -257,7 +257,7 @@ div.topic-actions > div.sub-header-buttons > a {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 2px 8px 2px 4px;
+  padding: 2px 8px 2px 8px;
   border: 0px !important;
   border-radius: 16px;
   width: fit-content;
@@ -288,18 +288,18 @@ div.topic-actions > div.sub-header-buttons > a {
   border-radius: 1px;
 }
 .post div.statut.abs:before {
-  background-color: #ff3940;
+  background-color: #f6a93e;
 }
 .post div.statut.abs:after {
-  width: 7px;
-  height: 7px;
+  width: 5.5px;
+  height: 5.5px;
   background: var(--bg1);
   display: block;
   content: " ";
   border-radius: 50%;
   position: absolute;
   top: 7px;
-  left: 9px;
+  left: 8px;
 }
 .post > div.postprofile div.postprofile-avatar > .profile-hover > .faceclaim,
 .post > div.postprofile div.postprofile-avatar > .profile-hover > .credits {
