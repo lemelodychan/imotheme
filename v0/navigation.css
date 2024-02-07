@@ -536,7 +536,7 @@ nav.switcheroo > ul.switcheroo__squircles > li.switcheroo__squircle {
   justify-content: center;
   width: 100%;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 8px;
   cursor: pointer;
   transition: var(--transi);
 }
