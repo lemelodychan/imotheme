@@ -281,14 +281,14 @@ div.topic-actions > div.sub-header-buttons > a {
   background-color: #ff3940;
 }
 .post div.statut.presred:after {
-  width: 7px;
+  width: 5px;
   height: 2px;
   background: var(--bg1);
   display: block;
   content: " ";
   position: absolute;
-  top: 11px;
-  left: 10.5px;
+  top: 10px;
+  left: 9.5px;
   border-radius: 1px;
 }
 .post div.statut.abs:before {
