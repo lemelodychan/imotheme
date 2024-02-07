@@ -115,7 +115,7 @@ $(document).ready(function () {
                         url: '/u' + userId,
                         method: 'GET',
                         success: function (html) {
-                            var fieldContent = $(html).find('#field_id14 > dd > div.uneditable').text();
+                            var fieldContent = $(html).find('#field_id14 > dd > div.field_uneditable').text();
                             console.log(fieldContent);
                             var secondUrl = '/u' + userId;
                             $.ajax({
