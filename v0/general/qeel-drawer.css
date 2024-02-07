@@ -186,14 +186,14 @@
 #qeel_drawer #qeel_48h a > span.status {
   display: none;
 }
-#qeel_drawer a > span.status.present {
+#qeel_drawer a > span.status.pres {
     background: #009b54;
     border: 1px solid var(--bg1);
 }
-#qeel_drawer a > span.status.absent{
+#qeel_drawer a > span.status.abs {
     background: #f6a93e;
 }
-#qeel_drawer a > span.status.absent:after {
+#qeel_drawer a > span.status.abs:after {
     width: 5.5px;
     height: 5.5px;
     background: var(--bg2) !important;
