@@ -98,7 +98,8 @@ $(document).ready(function () {
             pifContents.each(function () {
                 if (this.nodeType === 3) {
                     this.nodeValue = this.nodeValue.replace(/Utilisateurs enregistrés : Aucun/g, 'Aucun.e membre connecté.e');
-                } else if (this.nodeType === 3) {
+                } 
+                if (this.nodeType === 3) {
                     this.nodeValue = this.nodeValue.replace(/Utilisateurs enregistrés : /g, '');
                 }
                 if (this.nodeType === 3) {
