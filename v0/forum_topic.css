@@ -264,6 +264,10 @@ div.topic-actions > div.sub-header-buttons > a {
   font-size: 12px;
   background: var(--bg1);
 }
+.post .profile-hover div.statut,
+.post > div.postprofile div.postprofile-avatar > .profile-hover > .tags > div.couleur-dia {
+  padding: 2px 8px 2px 6px;
+}
 .post div.statut:before,
 .post div.statut.pres:before {
   display: block;
@@ -300,6 +304,10 @@ div.topic-actions > div.sub-header-buttons > a {
   position: absolute;
   top: 7px;
   left: 8px;
+}
+.post .profile-hover div.statut.abs:after {
+  top: 5px;
+  left: 6px;
 }
 .post > div.postprofile div.postprofile-avatar > .profile-hover > .faceclaim,
 .post > div.postprofile div.postprofile-avatar > .profile-hover > .credits {
