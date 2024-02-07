@@ -27,23 +27,23 @@ $(document).ready(function () {
     function addStatusAndAvatar(userLink, statusClass, avatarUrl, hoverText) {
         var usernameElement = userLink.find('span[style^="color"], span[class^="style"]');
         var username = usernameElement.length ? usernameElement.text().trim() : userLink.text().trim();
-    
+
         var strongElement = userLink.find('strong');
-    
+
         var avatarImg = $('<img>').attr('src', avatarUrl).addClass('avatar_qeel');
         var statusSpan = $('<span></span>').addClass('status ' + statusClass);
         userLink.append(avatarImg, statusSpan);
-    
+
         var userId = getUserIdFromHref(userLink.attr('href'));
         if (isStaffUser(userId)) {
             userLink.append('<span class="tag">staff</span>');
         }
-        
+
         userLink.contents().filter(function () {
             return this.nodeType === 3;
         }).wrap('<span class="username"></span>');
     }
-    
+
     function getUserIdFromHref(href) {
         var matches = href.match(/\/u(\d+)/);
         return matches ? matches[1] : null;
@@ -117,7 +117,7 @@ $(document).ready(function () {
                         success: function (html) {
                             var fieldContent = $(html).find('#field_id14 > dd > div.uneditable').text();
                             console.log(fieldContent);
-                            var secondUrl = '/u' + userIdContent;
+                            var secondUrl = '/u' + userId;
                             $.ajax({
                                 url: secondUrl,
                                 method: 'GET',
@@ -131,14 +131,18 @@ $(document).ready(function () {
                                     } else if (fieldContent.includes('Absent.e')) {
                                         statusClass = 'absent';
                                     }
-                                    
+
                                     addStatusAndAvatar(userLink, statusClass, avatarUrl, fieldContent);
                                 },
                                 error: function (error) {
                                     console.error('Error fetching user page:', error);
                                 }
                             });
-
+                        },
+                        error: function (error) {
+                            console.error('Error fetching user page:', error);
+                        }
+                    });
                 });
             });
 
