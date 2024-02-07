@@ -139,6 +139,18 @@ var Wombat = function () {
         this.clear(this.aside, this.overlay);
     };
 
+    Wombat.prototype.onClickOutside = function () {
+        var self = this;
+        document.addEventListener("click", function (event) {
+            if (!self.aside.contains(event.target)) {
+                self.close();
+                console.log("Clicked outside of the drawer. Closing...");
+            } else {
+                console.log("Clicked inside the drawer.");
+            }
+        });
+    };
+
     Wombat.prototype.clear = function () {
         var elements = Array.from(arguments);
     
@@ -155,6 +167,8 @@ var Wombat = function () {
     Wombat.prototype.open = function () {
         this.build();
         this.binds();
+        this.onClickOutside();
+        console.log("Event listener for clicking outside attached.");
     };
 
     return Wombat;
