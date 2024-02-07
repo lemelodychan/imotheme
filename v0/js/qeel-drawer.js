@@ -97,6 +97,9 @@ $(document).ready(function () {
             var pifContents = $('#qeel_online div#loggedin').contents();
             pifContents.each(function () {
                 if (this.nodeType === 3) {
+                    this.replace(/Aucun/g, 'Aucun.e membre connecté.e');
+                }
+                if (this.nodeType === 3) {
                     this.nodeValue = this.nodeValue.replace(/Utilisateurs enregistrés : /g, '');
                 }
                 if (this.nodeType === 3) {
