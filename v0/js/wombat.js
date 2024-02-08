@@ -169,7 +169,7 @@ var Wombat = function () {
 
     Wombat.prototype.colorDia = function () {
         var colorContainer = jQuery('#wombat').find('span.couleur-dia');
-        var couleurSpan = jQuery('#wombat').find('#field_id2 div.field_uneditable');
+        var couleurSpan = jQuery('#wombat').find('#wombat #field_id2 div.field_uneditable');
         var couleurWrite = couleurSpan.text().trim();
         var clonedContent = couleurSpan.clone();
         colorContainer.append(clonedContent);
@@ -204,7 +204,7 @@ var Wombat = function () {
   
         } else {
           $.get(userUrl, function(data) {
-                var mpField = $(data).find('#field_id12 div.field_uneditable');
+                var mpField = $(data).find('#wombat #field_id12 div.field_uneditable');
                 var targetMPContainer = jQuery('#wombat').find('.irl-contact > .mp');
                 var clonedMPContent = mpField.clone();
                 var trimmedMPHtml = clonedMPContent.html().trim();
@@ -218,7 +218,7 @@ var Wombat = function () {
                   targetMPContainer.append(closedIcon);
                 }
   
-                var discField = $(data).find('#field_id13 div.field_uneditable');
+                var discField = $(data).find('#wombat #field_id13 div.field_uneditable');
                 var targetdiscContainer = jQuery('#wombat').find('.irl-contact > .discord');
                 var cloneddiscContent = discField.clone();
                 var trimmeddiscHtml = cloneddiscContent.html().trim();
@@ -232,7 +232,7 @@ var Wombat = function () {
                   targetdiscContainer.append(closedIcon);
                 }
   
-                var sourceField = $(data).find('#field_id1 div.field_uneditable').clone();
+                var sourceField = $(data).find('#wombat #field_id1 div.field_uneditable').clone();
                 var statutContainer = jQuery('#wombat').find('.irl-contact > .statut');
                 statutContainer.append(sourceField);
                 var trimmedHtml = sourceField.html().trim();
