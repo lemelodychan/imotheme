@@ -473,12 +473,12 @@ div.profil > div.profil-irl > div.irl-bottom {
   grid-template-columns: 144px auto;
   gap: 32px;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact {
+div.profil > div.profil-irl div.irl-contact {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div {
+div.profil > div.profil-irl div.irl-contact > div {
   display: flex;
   gap: 8px;
   padding: 2px 12px !important;
@@ -491,18 +491,18 @@ div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div {
   width: 100%;
   position: relative;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.mp,
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.discord {
+div.profil > div.profil-irl div.irl-contact > div.mp,
+div.profil > div.profil-irl div.irl-contact > div.discord {
   justify-content: space-between;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.open > ion-icon {
+div.profil > div.profil-irl div.irl-contact > div.open > ion-icon {
   color: var(--doj);
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.closed > ion-icon {
+div.profil > div.profil-irl div.irl-contact > div.closed > ion-icon {
   color: var(--hii);
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut:before,
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.pres:before {
+div.profil > div.profil-irl div.irl-contact > div.statut:before,
+div.profil > div.profil-irl div.irl-contact > div.statut.pres:before {
   display: block;
   width: 8px;
   height: 8px;
@@ -510,10 +510,10 @@ div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.pres
   background-color: #009b54;
   content: " ";
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.presred:before {
+div.profil > div.profil-irl div.irl-contact > div.statut.presred:before {
   background-color: #ff3940;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.presred:after {
+div.profil > div.profil-irl div.irl-contact > div.statut.presred:after {
   width: 5px;
   height: 2px;
   background: var(--bg1);
@@ -524,10 +524,10 @@ div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.pres
   left: 9.5px;
   border-radius: 1px;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.abs:before {
+div.profil > div.profil-irl div.irl-contact > div.statut.abs:before {
   background-color: #f6a93e;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.abs:after {
+div.profil > div.profil-irl div.irl-contact > div.statut.abs:after {
   width: 5.5px;
   height: 5.5px;
   background: var(--bg1);
@@ -538,7 +538,7 @@ div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.abs:
   top: 10px;
   left: 12px;
 }
-div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > .profile-hover div.statut.abs:after {
+div.profil > div.profil-irl div.irl-contact > .profile-hover div.statut.abs:after {
   top: 5px;
   left: 6px;
 }
