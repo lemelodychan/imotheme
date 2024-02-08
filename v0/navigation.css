@@ -124,7 +124,7 @@ div.nav_ancres > span {
   padding: 0 8px;
   background: var(--bg1);
   font-size: 16px;
-  z-index: 99999999;
+  z-index: 999999 !important;
 }
 .toolbar_right {
   display: flex;
