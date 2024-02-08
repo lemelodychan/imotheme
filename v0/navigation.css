@@ -43,6 +43,7 @@ div.nav_ancres > span {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999999999 !important;
 }
 #fa_left, #fa_search, #fa_share,
 #fa_menu, #fa_hide, a.rightHeaderLink:not(#fa_notifications) { display: none !important; }
