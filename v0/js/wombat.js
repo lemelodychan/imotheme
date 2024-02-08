@@ -108,8 +108,7 @@ var Wombat = function () {
             if (matches && matches[1]) {
                 var rgbValues = matches[1].split(',').map(Number);
                 jQuery('#wombat > div').attr('style', 
-                    `--co2_rgb: ${rgbValues.join(',')} !important; 
-                     --co2: rgb(${rgbValues.join(',')}) !important;`);
+                    `--co2_rgb: ${rgbValues.join(',')} !important; --co2: rgb(${rgbValues.join(',')}) !important;`);
             } else {
                 console.error('Color not found in the style attribute.');
             }
@@ -117,7 +116,7 @@ var Wombat = function () {
     };
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
-        var sourceContainer = $(this.content);
+        var sourceContainer = jQuery('#wombat');
         var sourceField = sourceContainer.find(sourceSelector);
         var targetContainer = sourceContainer.find(targetSelector);
         var clonedContent = sourceField.clone();
