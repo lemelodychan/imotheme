@@ -59,6 +59,13 @@ var Wombat = function () {
         this.overlay && this.overlay.classList.add("open");
 
         this.updateColor();
+        this.cloneContent('#field_id-6 div.field_uneditable', 'div.profil-msg > dd');
+        this.cloneContent('#field_id-13 div.field_uneditable', 'div.profil-points > dd');
+        this.cloneContent('#field_id11 div.field_uneditable', '#content_tab2 > span');
+        this.cloneContent('#field_id-8 div.field_uneditable', '#pseudo');
+        this.cloneContent('#field_id4 div.field_uneditable', '#pronoms');
+        this.cloneContent('#field_id-11 div.field_uneditable', '.faceclaim > span');
+        this.cloneContent('#field_id-9 div.field_uneditable', '.credits > span');
 
         if (typeof this.options.afterLoad === "function") {
             this.options.afterLoad(this.aside, this.overlay);
@@ -108,6 +115,15 @@ var Wombat = function () {
             }
         }
     };
+
+    Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
+      this.find(sourceSelector).each(function() {
+        var sourceField = $(this);
+        var targetContainer = this.find(targetSelector);
+        var clonedContent = sourceField.clone();
+        targetContainer.append(clonedContent);
+      });
+    }
 
     Wombat.prototype.load = function (userId) {
         var url = "/u" + userId;
