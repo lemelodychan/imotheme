@@ -61,6 +61,7 @@ var Wombat = function () {
         this.updateColor();
         this.replaceIcons();
         this.tabClickHandler();
+        this.addIcon();
         this.cloneContent('#field_id-6 div.field_uneditable', 'div.profil-msg > dd');
         this.cloneContent('#field_id-13 div.field_uneditable', 'div.profil-points > dd');
         this.cloneContent('#field_id11 div.field_uneditable', '#content_tab2 > span');
@@ -152,6 +153,16 @@ var Wombat = function () {
             profilContainer.attr('data-active-tab', tabId);
         });
     };
+
+    Wombat.prototype.addIcon = function () {
+        var champIonIcon = jQuery('#wombat').find('#field_id9 div.field_uneditable');
+        var profilName = jQuery('#wombat').find('.profil-name-title');
+        if (champIonIcon) {
+          var ionIconName = champIonIcon.text().trim();
+          var newIonIcon = $('<ion-icon></ion-icon>').attr('name', ionIconName);
+          profilName.append(newIonIcon);
+        }
+    }
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
         var sourceContainer = jQuery('#wombat');
