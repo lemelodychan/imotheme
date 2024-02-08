@@ -21,6 +21,9 @@ div.sub-header > div.sub-header-info > h1 a {
   color: var(--text);
   font-size: 14px !important;
   transition: var(--transi);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .sub-header-path > a.nav:hover {
   color: var(--text-contrast);
