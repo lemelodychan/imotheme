@@ -340,9 +340,6 @@ var Wombat = function () {
         document.addEventListener("click", function (event) {
             if (!self.aside.contains(event.target)) {
                 self.close();
-                console.log("Clicked outside of the drawer. Closing...");
-            } else {
-                console.log("Clicked inside the drawer.");
             }
         });
     };
@@ -364,7 +361,6 @@ var Wombat = function () {
         this.build();
         this.binds();
         this.onClickOutside();
-        console.log("Event listener for clicking outside attached.");
     };
 
     return Wombat;
