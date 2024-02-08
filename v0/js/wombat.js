@@ -190,16 +190,16 @@ var Wombat = function () {
           contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
   
           var sourceField = jQuery('#wombat').find('#field_id1 div.field_uneditable').clone();
-          var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
-          statusContainer.append(sourceField);
+          var statutContainer = jQuery('#wombat').find('.irl-contact > .statut');
+          statutContainer.append(sourceField);
   
           var trimmedHtml = sourceField.html().trim();
           if (trimmedHtml === 'Présent.e') {
-            statusContainer.addClass('pres');
+            statutContainer.addClass('pres');
           } else if (trimmedHtml === 'Présence réduite') {
-            statusContainer.addClass('presred');
+            statutContainer.addClass('presred');
           } else if (trimmedHtml === 'Absent.e') {
-            statusContainer.addClass('abs');
+            statutContainer.addClass('abs');
           }
   
         } else {
@@ -233,15 +233,15 @@ var Wombat = function () {
                 }
   
                 var sourceField = $(data).find('#field_id1 div.field_uneditable').clone();
-                var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
-                statusContainer.append(sourceField);
+                var statutContainer = jQuery('#wombat').find('.irl-contact > .statut');
+                statutContainer.append(sourceField);
                 var trimmedHtml = sourceField.html().trim();
                 if (trimmedHtml === 'Présent.e') {
-                  statusContainer.addClass('pres');
+                  statutContainer.addClass('pres');
                 } else if (trimmedHtml === 'Présence réduite') {
-                  statusContainer.addClass('presred');
+                  statutContainer.addClass('presred');
                 } else if (trimmedHtml === 'Absent.e') {
-                  statusContainer.addClass('abs');
+                  statutContainer.addClass('abs');
                 }
           });
         }
