@@ -1,0 +1,625 @@
+/* ---- PROFIL - WOMBAT DRAWER FIRST ---- */
+/* DRAWER POSITIONING */
+.wombat-aside.open {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  background: var(--bg1_transp_5);
+}
+.wombat-aside {
+  position: fixed;
+  inset: 1;
+  top: 42px;
+  right: 0!important;
+  margin: 0px;
+  z-index: 99999999 !important;
+  transition: 0.2s all ease;
+  visibility: hidden;
+  opacity: 0;
+  width: 720px;
+  max-width: 720px;
+  height: calc(100vh - 42px);
+  transform: translateX(20%);
+  background: transparent;
+}
+
+/* ---- CONTENT ---- */
+div.panel.profil#wombat {
+  background: var(--bg1_transp_5);
+  color: var(--text);
+  padding: 24px !important;
+  border: 1px solid var(--bg2) !important;
+  border-radius: 16px !important;
+  position: relative;
+  backdrop-filter: blur(4px);
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+div.panel.profil#wombat {
+  max-width: 720px;
+  height: 100%;
+  justify-content: space-between;
+  border-radius: 0px !important;
+  border: 0px !important;
+  z-index: 99999999 !important;
+}
+
+/* ---- HEADER ---- */
+div.profil > div.profil-header {
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-gap: 16px;
+}
+div.profil > div.profil-header > div.profil-name {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+div.profil > div.profil-header > div.profil-name > div.profil-name-title {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+  width: 100%;
+}
+div.profil > div.profil-header > div.profil-name > div.profil-name-title > ion-icon {
+  font-size: 24px;
+  color: var(--co2);
+}
+div.profil > div.profil-header > div.profil-name > div.profil-name-title > span#username {
+  display: flex;
+  width: -webkit-fill-available;
+  font-size: 28px;
+  line-height: 44px;
+  color: var(--text-contrast);
+  font-family: var(--font-titre);
+}
+div.profil-name-title > span#username > span > strong {
+  color: var(--text-contrast) !important;
+  font-weight: normal !important;
+}
+div.profil > div.profil-header > div.profil-name > div.tags {
+  display: flex;
+  gap: 8px;
+}
+div.profil > div.profil-header > div.profil-name > div.tags > dd.rank,
+div.profil > div.profil-header > div.profil-name > div.tags > span.couleur-dia {
+  display: flex;
+  gap: 4px;
+  width: fit-content !important;
+  padding: 2px 12px !important;
+  background: var(--bg1);
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+}
+div.profil > div.profil-header > div.profil-name > div.tags > span.couleur-dia:before {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  content: " ";
+  background-color: var(--co3);
+  margin-right: 4px;
+}
+
+div.profil > div.profil-header > div.profil-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+}
+div.profil > div.profil-header > div.profil-stats > div {
+  justify-content: flex-end;
+  display: flex;
+  width: 85px;
+  height: 78px;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg1);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+div.profil > div.profil-header > div.profil-stats > div > strong {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+div.profil > div.profil-header > div.profil-stats > div > dd {
+  font-size: 20px;
+  color: var(--co2);
+  font-family: var(--font-titre);
+  line-height: 20px;
+}
+div.profil > div.profil-header > div.profil-stats > div > dd:empty:before {
+  content: "12 345"; /* Data test */
+}
+
+
+div.profil > div.profil-content {
+  display: grid;
+  grid-template-columns: 200px auto;
+  gap: 16px;
+}
+
+div.profil > div.profil-content > div.profil-col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+div.profil > div.profil-content > div.profil-col1 > #avQEEL > img {
+  width: 248px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(39px, 1fr));
+  max-width: 200px;
+  grid-column-gap: 1px;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  min-width: 200px;
+  position: relative;
+  transition: var(--transi);
+}
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable {
+  text-align: center!important;
+  background: var(--bg1)!important;
+  padding: 8px 4px!important;
+  margin: 0!important;
+  height: 32px !important;
+  overflow: hidden;
+  position: relative;
+  color: var(--text-contrast);
+  transition: var(--transi);
+  position: relative;
+}
+div.profil:not(#wombat) > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:first-of-type,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:nth-child(2)[href*="mode=email"] {
+  display: none !important;
+}
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:after,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:after{
+  display: inline-block;
+  content: " ";
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--co3), var(--co2));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: var(--transi);
+  transform-origin: center center;
+  z-index: 1;
+  border-radius: 50%;
+}
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a > ion-icon,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable > a > ion-icon {
+  position: relative;
+  color: var(--text-contrast);
+  z-index: 2;
+  font-size: 16px;
+}
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:hover,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:hover > a {
+  color: var(--light_1);
+}
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:hover:after,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:hover:after {
+  transform: scaleX(5000%) scaleY(5000%);
+  opacity: 1;
+}
+div.profil > div.profil-content > div.profil-col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a {
+  transition: var(--transi);
+  display: block;
+  text-align: center;
+  background: var(--bg1);
+  border-radius: 8px;
+  padding: 4px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: var(--text-contrast);
+  line-height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a:after{
+  display: inline-block;
+  content: " ";
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--co3), var(--co2));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: var(--transi);
+  transform-origin: center center;
+  z-index: 1;
+  border-radius: 50%;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a > span {
+  position: relative;
+  transition: var(--transi);
+  color: var(--text-contrast);
+  z-index: 2;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a:hover > span {
+  color: var(--light_1);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a:hover:after {
+  transform: scaleX(10000%) scaleY(10000%);
+  opacity: 1;
+}
+
+div.profil > div.profil-content > div.profil-col2 > div.profil-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  background: var(--bg2);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background: var(--bg2);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs > dd.tab {
+  padding: 4px 16px !important;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 32px;
+  display: block;
+  background: var(--bg2);
+  position: relative;
+  cursor: pointer;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs > dd.tab.active {
+  background: var(--bg1);
+  color: var(--text-contrast);
+  font-weight: 600;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs > dd.tab:first-child {
+  border-radius: 16px 16px 0 0;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs > dd.tab:first-child:after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  bottom: -16px;
+  right: calc(-1*16px);
+  border-radius: 0 0 0 calc(16px*2);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs > dd.tab:not(.active):first-child:after {
+  transform: rotate(267deg);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-tabs > dd#tab2.active {
+  border-radius: 16px 16px 0 0;
+}
+
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container {
+  background: var(--bg1);
+  height: calc(320px - 40px);
+  overflow-x: auto;
+  position: relative;
+  border-top: 16px solid var(--bg1);
+  border-bottom: 16px solid var(--bg1);
+  border-right: 8px solid var(--bg1);
+  border-left: 8px solid var(--bg1);
+  z-index: 2;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, var(--co1), var(--co2), var(--co3)) !important;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container[data-active-tab="tab1"] {
+  border-radius: 0 16px 16px 16px;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container[data-active-tab="tab2"] {
+  border-radius: 16px 0px 16px 16px;
+}
+
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 1;
+  height: fit-content;
+  padding: 0px 8px;
+  position: absolute;
+  transition: height 0.3s ease, opacity 0.3s ease, display 0s linear 0.3s;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.hidden { 
+  transition: height 0.3s ease, opacity 0.3s ease, display 0s linear 0.3s;
+  display: none !important;
+  opacity: 0;
+  width: 100%;
+  height: 0px !important;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.tab-content#content_tab1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.tab-content > dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 8px 12px;
+  background: var(--bg2_transp_7);
+  border-radius: 8px;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.tab-content > dl > dt {
+  font-size: 0px;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.tab-content > dl > dt > span {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--text-contrast) !important;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.tab-content > dl > dd > div {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.tab-content#content_tab2 > span > div {
+  padding: 8px 12px;
+  background: var(--bg2_transp_7);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+div.profil > div.profil-irl {
+  background: var(--bg1);
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+div.profil > div.profil-irl > div.irl-header {
+  display: flex;
+  gap: 4px;
+  font-size: 21px;
+  font-family: var(--font-titre);
+  color: var(--text-contrast);
+  align-content: end;
+  align-items: baseline;
+  line-height: 24px;
+}
+div.profil > div.profil-irl > div.irl-header > span#pseudo {
+  color: var(--co2);
+}
+div.profil > div.profil-irl > div.irl-header > span#pronoms {
+  display: flex;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: var(--font-texte);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+div.profil > div.profil-irl > div.irl-header > span#pronoms:before {
+  content: "(";
+}
+div.profil > div.profil-irl > div.irl-header > span#pronoms:after {
+  content: ")";
+}
+div.profil > div.profil-irl > div.irl-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+}
+div.profil > div.profil-irl > div.irl-info > div {
+  display: flex;
+  gap: 16px;
+  background: var(--bg2);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+div.profil > div.profil-irl > div.irl-info > div > strong {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: var(--text-contrast);
+}
+div.profil > div.profil-irl > div.irl-info > div > span {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 24px;
+}
+div.profil > div.profil-irl > div.irl-bottom {
+  display: grid;
+  grid-template-columns: 144px auto;
+  gap: 32px;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div {
+  display: flex;
+  gap: 8px;
+  padding: 2px 12px !important;
+  background: var(--bg1);
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  border: 1px solid var(--bg2);
+  width: 100%;
+  position: relative;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.mp,
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.discord {
+  justify-content: space-between;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.open > ion-icon {
+  color: var(--doj);
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.closed > ion-icon {
+  color: var(--hii);
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut:before,
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.pres:before {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #009b54;
+  content: " ";
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.presred:before {
+  background-color: #ff3940;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.presred:after {
+  width: 5px;
+  height: 2px;
+  background: var(--bg1);
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 10px;
+  left: 9.5px;
+  border-radius: 1px;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.abs:before {
+  background-color: #f6a93e;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > div.statut.abs:after {
+  width: 5.5px;
+  height: 5.5px;
+  background: var(--bg1);
+  display: block;
+  content: " ";
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.irl-contact > .profile-hover div.statut.abs:after {
+  top: 5px;
+  left: 6px;
+}
+
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes {
+  display: flex;
+  gap: 24px;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > strong {
+  font-family: var(--font-titre);
+  color: var(--text-contrast);
+  font-weight: normal !important;
+  font-size: 16px;
+  text-wrap: nowrap;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list {
+  background: var(--bg2);
+  width: 100%;
+  border-radius: 16px;
+  padding: 16px 0 8px 16px;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 8px solid var(--bg2);
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list::-webkit-scrollbar {
+  background-color: var(--bg1) !important;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list::-webkit-scrollbar-thumb {
+  border: 2px solid var(--bg2) !important;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list::-webkit-scrollbar-track {
+  border: 3px solid var(--bg2) !important;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list::-webkit-scrollbar-button:start:increment,
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list::-webkit-scrollbar-button:end:decrement {
+  width: 16px;
+  display: block;
+  background: var(--bg2);
+}
+
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span {
+  display: flex;
+  gap: 16px;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a {
+  height: 74px;
+  display: block;
+  aspect-ratio: 1;
+}
+div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* FIELD SPECIFIC - A MODIFIER AVEC LES BONS ID */
+/* Aesthetic */
+div.profil-container > div.tab-content#content_tab1 > dl#field_id5 {
+  grid-column: 1/3;
+}
+div.profil-container > div.tab-content#content_tab1 > dl#field_id5 > dt {
+  display: none;
+}
+/* Champs à cacher */
+div.profil-container > div.tab-content#content_tab1 > dl#field_id2,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id3,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id11,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-6,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-13,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id9,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-8,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id4,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-9,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-11,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id1,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id10,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id12,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id13,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id14,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-4 {
+  display: none;
+}
