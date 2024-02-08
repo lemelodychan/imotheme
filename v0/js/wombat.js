@@ -60,6 +60,7 @@ var Wombat = function () {
 
         this.updateColor();
         this.replaceIcons();
+        this.tabClickHandler();
         this.cloneContent('#field_id-6 div.field_uneditable', 'div.profil-msg > dd');
         this.cloneContent('#field_id-13 div.field_uneditable', 'div.profil-points > dd');
         this.cloneContent('#field_id11 div.field_uneditable', '#content_tab2 > span');
@@ -136,6 +137,22 @@ var Wombat = function () {
             });
         });
     };
+    
+    Wombat.prototype.tabClickHandler = function () {
+        var tabs = jQuery('#wombat').find('.tab');
+        var contentDivs = jQuery('#wombat').find('.tab-content');
+        var profilContainer = jQuery('#wombat').find('.profil-container');
+    
+        tabs.on('click', function() {
+            var tabId = $(this).attr('id');
+            tabs.removeClass('active');
+            $(this).addClass('active');
+            contentDivs.addClass('hidden');
+            $('#content_' + tabId).removeClass('hidden');
+            profilContainer.data('activeTab', tabId);
+        });
+    };
+
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
         var sourceContainer = jQuery('#wombat');
