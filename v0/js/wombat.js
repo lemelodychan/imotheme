@@ -117,15 +117,12 @@ var Wombat = function () {
     };
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
-        var profilBox = $(this);
-        var sourceField = profilBox.find(sourceSelector);
-        console.log(sourceField);
-        var targetContainer = profilBox.find(targetSelector);
-        console.log(targetContainer);
+        var sourceContainer = $(this.content);
+        var sourceField = sourceContainer.find(sourceSelector);
+        var targetContainer = sourceContainer.find(targetSelector);
         var clonedContent = sourceField.clone();
         targetContainer.append(clonedContent);
-    }
-
+    };
 
     Wombat.prototype.load = function (userId) {
         var url = "/u" + userId;
