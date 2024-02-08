@@ -125,20 +125,15 @@ var Wombat = function () {
             { source: 'https://i.imgur.com/q7sw2M1.png', replacement: '<ion-icon name="heart-circle"></ion-icon>' },
         ];
         
-        var posts = $(this.content).find('.profil');
-        posts.each(function () {
-            var postProfileContact = $(this).find('.profil-contact a');
-            if (postProfileContact.length) {
-                postProfileContact.each(function () {
-                    var contactLink = $(this);
-                    replacements.forEach(function (replacement) {
-                        var targetImg = contactLink.find('img[src="' + replacement.source + '"]');
-                        if (targetImg.length) {
-                            targetImg.replaceWith(replacement.replacement);
-                        }
-                    });
-                });
-            }
+        var postProfileContact = jQuery('#wombat').find('.profil-contact a');
+        postProfileContact.each(function () {
+            var contactLink = $(this);
+            replacements.forEach(function (replacement) {
+                var targetImg = contactLink.find('img[src="' + replacement.source + '"]');
+                if (targetImg.length) {
+                    targetImg.replaceWith(replacement.replacement);
+                }
+            });
         });
     };
 
