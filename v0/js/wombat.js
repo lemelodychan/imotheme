@@ -149,10 +149,9 @@ var Wombat = function () {
             $(this).addClass('active');
             contentDivs.addClass('hidden');
             $('#content_' + tabId).removeClass('hidden');
-            profilContainer.data('activeTab', tabId);
+            profilContainer.attr('data-active-tab', tabId);
         });
     };
-
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
         var sourceContainer = jQuery('#wombat');
