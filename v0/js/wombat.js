@@ -59,6 +59,7 @@ var Wombat = function () {
         this.overlay && this.overlay.classList.add("open");
 
         this.updateColor();
+        this.replaceIcons();
         this.cloneContent('#field_id-6 div.field_uneditable', 'div.profil-msg > dd');
         this.cloneContent('#field_id-13 div.field_uneditable', 'div.profil-points > dd');
         this.cloneContent('#field_id11 div.field_uneditable', '#content_tab2 > span');
@@ -113,6 +114,32 @@ var Wombat = function () {
                 console.error('Color not found in the style attribute.');
             }
         }
+    };
+
+    Wombat.prototype.replaceIcons = function () {
+        var replacements = [
+            { source: 'https://2img.net/images2.imgbox.com/fd/40/a84fgaVp_o.png', replacement: '<ion-icon name="mail"></ion-icon>' },
+            { source: 'https://2img.net/images2.imgbox.com/94/db/dbgG5XaY_o.png', replacement: '<ion-icon name="person-circle"></ion-icon>' },
+            { source: 'https://i.imgur.com/TqXDBUX.png', replacement: '<ion-icon name="document-text"></ion-icon>' },
+            { source: 'https://i.imgur.com/dqeB3t2.png', replacement: '<ion-icon name="logo-instagram"></ion-icon>' },
+            { source: 'https://i.imgur.com/q7sw2M1.png', replacement: '<ion-icon name="heart-circle"></ion-icon>' },
+        ];
+        
+        var posts = $(this.content).find('.profil');
+        posts.each(function () {
+            var postProfileContact = $(this).find('.profil-contact a');
+            if (postProfileContact.length) {
+                postProfileContact.each(function () {
+                    var contactLink = $(this);
+                    replacements.forEach(function (replacement) {
+                        var targetImg = contactLink.find('img[src="' + replacement.source + '"]');
+                        if (targetImg.length) {
+                            targetImg.replaceWith(replacement.replacement);
+                        }
+                    });
+                });
+            }
+        });
     };
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
