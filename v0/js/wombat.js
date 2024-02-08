@@ -62,6 +62,8 @@ var Wombat = function () {
         this.replaceIcons();
         this.tabClickHandler();
         this.addIcon();
+        this.colorDia();
+        this.contactInfo();
         this.cloneContent('#field_id-6 div.field_uneditable', 'div.profil-msg > dd');
         this.cloneContent('#field_id-13 div.field_uneditable', 'div.profil-points > dd');
         this.cloneContent('#field_id11 div.field_uneditable', '#content_tab2 > span');
@@ -161,6 +163,105 @@ var Wombat = function () {
           var ionIconName = champIonIcon.text().trim();
           var newIonIcon = $('<ion-icon></ion-icon>').attr('name', ionIconName);
           profilName.append(newIonIcon);
+        }
+    }
+
+    Wombat.prototype.colorDia = function () {
+        var colorContainer = jQuery('#wombat').find('span.couleur-dia');
+        var couleurSpan = jQuery('#wombat').find('#field_id2 div.field_uneditable');
+        var couleurWrite = couleurSpan.text().trim();
+        var clonedContent = couleurSpan.clone();
+        colorContainer.append(clonedContent);
+        if (!couleurWrite || couleurWrite === '&nbsp;' || couleurWrite === '-') {
+          colorContainer[0].style.setProperty('--co3', 'var(--co3)');
+        } else {
+          colorContainer[0].style.setProperty('--co3', couleurWrite);
+        }
+    }
+
+    Wombat.prototype.contactInfo = function() {
+        var mainuserId = jQuery('#wombat').find("#field_id14 div.field_uneditable");
+        if (mainuserId.length > 0) {
+            var mainuserIDContent = mainuserId.text().trim();
+            var userUrl = '/u' + mainuserIDContent;
+      
+            if (mainuserIDContent === '0') {
+              contactStatut('#field_id12 div.field_uneditable', '.irl-contact > .mp');
+              contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
+      
+              var sourceField = jQuery('#wombat').find('#field_id1 div.field_uneditable').clone();
+              var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
+              statusContainer.append(sourceField);
+      
+              var trimmedHtml = sourceField.html().trim();
+              if (trimmedHtml === 'Présent.e') {
+                statusContainer.addClass('pres');
+              } else if (trimmedHtml === 'Présence réduite') {
+                statusContainer.addClass('presred');
+              } else if (trimmedHtml === 'Absent.e') {
+                statusContainer.addClass('abs');
+              }
+      
+            } else {
+              $.get(userUrl, function(data) {
+                var mpField = $(data).find('#field_id12 div.field_uneditable');
+                var targetMPContainer = jQuery('#wombat').find('.irl-contact > .mp');
+                var clonedMPContent = mpField.clone();
+                var trimmedMPHtml = clonedMPContent.html().trim();
+                if (trimmedMPHtml === 'Ouverts') {
+                  targetMPContainer.addClass('open');
+                  var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
+                  targetMPContainer.append(openIcon);
+                } else if (trimmedMPHtml === 'Fermés') {
+                  targetMPContainer.addClass('closed');
+                  var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
+                  targetMPContainer.append(closedIcon);
+                }
+      
+                var discField = $(data).find('#field_id13 div.field_uneditable');
+                var targetdiscContainer = jQuery('#wombat').find('.irl-contact > .discord');
+                var cloneddiscContent = discField.clone();
+                var trimmeddiscHtml = cloneddiscContent.html().trim();
+                if (trimmeddiscHtml === 'Ouvert') {
+                  targetdiscContainer.addClass('open');
+                  var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
+                  targetdiscContainer.append(openIcon);
+                } else if (trimmeddiscHtml === 'Fermé') {
+                  targetdiscContainer.addClass('closed');
+                  var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
+                  targetdiscContainer.append(closedIcon);
+                }
+      
+                var sourceField = $(data).find('#field_id1 div.field_uneditable').clone();
+                var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
+                statusContainer.append(sourceField);
+                var trimmedHtml = sourceField.html().trim();
+                if (trimmedHtml === 'Présent.e') {
+                  statusContainer.addClass('pres');
+                } else if (trimmedHtml === 'Présence réduite') {
+                  statusContainer.addClass('presred');
+                } else if (trimmedHtml === 'Absent.e') {
+                  statusContainer.addClass('abs');
+                }
+              });
+            }
+          }
+        });
+    }
+
+    Wombat.prototype.contactStatut = function(sourceSelector, targetSelector) {
+        var sourceField = jQuery('#wombat').find(sourceSelector);
+        var targetContainer = jQuery('#wombat').find(targetSelector);
+        var clonedContent = sourceField.clone();
+        var trimmedHtml = clonedContent.html().trim();
+        if (trimmedHtml === 'Ouverts' || trimmedHtml === 'Ouvert') {
+          targetContainer.addClass('open');
+          var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
+          targetContainer.append(openIcon);
+        } else if (trimmedHtml === 'Fermés' || trimmedHtml === 'Fermé') {
+          targetContainer.addClass('closed');
+          var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
+          targetContainer.append(closedIcon);
         }
     }
 
