@@ -117,13 +117,15 @@ var Wombat = function () {
     };
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
-      this.find(sourceSelector).each(function() {
-        var sourceField = $(this);
-        var targetContainer = this.find(targetSelector);
-        var clonedContent = sourceField.clone();
-        targetContainer.append(clonedContent);
-      });
+        this.each(function() {
+            var profilBox = $(this);
+            var sourceField = profilBox.find(sourceSelector);
+            var targetContainer = profilBox.find(targetSelector);
+            var clonedContent = sourceField.clone();
+            targetContainer.append(clonedContent);
+        });
     }
+
 
     Wombat.prototype.load = function (userId) {
         var url = "/u" + userId;
