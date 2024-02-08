@@ -119,7 +119,9 @@ var Wombat = function () {
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
         var profilBox = $(this);
         var sourceField = profilBox.find(sourceSelector);
+        console.log(sourceField);
         var targetContainer = profilBox.find(targetSelector);
+        console.log(targetContainer);
         var clonedContent = sourceField.clone();
         targetContainer.append(clonedContent);
     }
