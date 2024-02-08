@@ -181,7 +181,6 @@ div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.fie
   transition: var(--transi);
   position: relative;
 }
-div.profil:not(#wombat) > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:first-of-type,
 div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:nth-child(2)[href*="mode=email"] {
   display: none !important;
 }
