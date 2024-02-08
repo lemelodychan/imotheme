@@ -181,29 +181,28 @@ var Wombat = function () {
 
     Wombat.prototype.contactInfo = function() {
         var mainuserId = jQuery('#wombat').find("#field_id14 div.field_uneditable");
-        if (mainuserId.length > 0) {
-            var mainuserIDContent = mainuserId.text().trim();
-            var userUrl = '/u' + mainuserIDContent;
+        var mainuserIDContent = mainuserId.text().trim();
+        var userUrl = '/u' + mainuserIDContent;
       
-            if (mainuserIDContent === '0') {
-              contactStatut('#field_id12 div.field_uneditable', '.irl-contact > .mp');
-              contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
-      
-              var sourceField = jQuery('#wombat').find('#field_id1 div.field_uneditable').clone();
-              var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
-              statusContainer.append(sourceField);
-      
-              var trimmedHtml = sourceField.html().trim();
-              if (trimmedHtml === 'Présent.e') {
-                statusContainer.addClass('pres');
-              } else if (trimmedHtml === 'Présence réduite') {
-                statusContainer.addClass('presred');
-              } else if (trimmedHtml === 'Absent.e') {
-                statusContainer.addClass('abs');
-              }
-      
-            } else {
-              $.get(userUrl, function(data) {
+        if (mainuserIDContent === '0') {
+          contactStatut('#field_id12 div.field_uneditable', '.irl-contact > .mp');
+          contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
+  
+          var sourceField = jQuery('#wombat').find('#field_id1 div.field_uneditable').clone();
+          var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
+          statusContainer.append(sourceField);
+  
+          var trimmedHtml = sourceField.html().trim();
+          if (trimmedHtml === 'Présent.e') {
+            statusContainer.addClass('pres');
+          } else if (trimmedHtml === 'Présence réduite') {
+            statusContainer.addClass('presred');
+          } else if (trimmedHtml === 'Absent.e') {
+            statusContainer.addClass('abs');
+          }
+  
+        } else {
+          $.get(userUrl, function(data) {
                 var mpField = $(data).find('#field_id12 div.field_uneditable');
                 var targetMPContainer = jQuery('#wombat').find('.irl-contact > .mp');
                 var clonedMPContent = mpField.clone();
@@ -217,7 +216,7 @@ var Wombat = function () {
                   var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
                   targetMPContainer.append(closedIcon);
                 }
-      
+  
                 var discField = $(data).find('#field_id13 div.field_uneditable');
                 var targetdiscContainer = jQuery('#wombat').find('.irl-contact > .discord');
                 var cloneddiscContent = discField.clone();
@@ -231,7 +230,7 @@ var Wombat = function () {
                   var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
                   targetdiscContainer.append(closedIcon);
                 }
-      
+  
                 var sourceField = $(data).find('#field_id1 div.field_uneditable').clone();
                 var statusContainer = jQuery('#wombat').find('.irl-contact > .statut');
                 statusContainer.append(sourceField);
@@ -243,10 +242,8 @@ var Wombat = function () {
                 } else if (trimmedHtml === 'Absent.e') {
                   statusContainer.addClass('abs');
                 }
-              });
-            }
-          }
-        });
+          });
+        }
     }
 
     Wombat.prototype.contactStatut = function(sourceSelector, targetSelector) {
