@@ -67,6 +67,7 @@ var Wombat = function () {
         this.addMulticomptes();
         this.cloneContent('#field_id-6 div.field_uneditable', 'div.profil-msg > dd');
         this.cloneContent('#field_id-13 div.field_uneditable', 'div.profil-points > dd');
+        this.cloneContent('#field_id17 div.field_uneditable', 'div.profil-dama > dd');
         this.cloneContent('#field_id11 div.field_uneditable', '#content_tab2 > span');
         this.cloneContent('#field_id-8 div.field_uneditable', '#pseudo');
         this.cloneContent('#field_id4 div.field_uneditable', '#pronoms');
