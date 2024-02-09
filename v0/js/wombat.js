@@ -274,8 +274,8 @@ var Wombat = function () {
                 var userUrl = '/u' + userNumber;
                 var profileLink = $('<a>').attr('href', userUrl);
                 $.get(userUrl, function(data) {
-                  var imgSrc = $(data).find('#field_id3 > dd img').attr('src');
-                  var altText = $(data).find('#username').text().trim();
+                  var imgSrc = $(data).find('#wombat #field_id3 > dd img').attr('src');
+                  var altText = $(data).find('#wombat #username').text().trim();
                   var profileImage = $('<img>').attr('src', imgSrc).attr('alt', altText);
                   profileLink.append(profileImage);
                   if (altText !== '') {
