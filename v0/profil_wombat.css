@@ -207,9 +207,9 @@ div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.fie
   z-index: 2;
   font-size: 16px;
 }
-div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:hover,
-div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:hover > a {
-  color: var(--light_1);
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:hover > ion-icon,
+div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:hover > a > ion-icon {
+  color: var(--light_1) !important;
 }
 div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:hover:after,
 div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:hover:after {
