@@ -238,6 +238,11 @@ div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a {
   position: relative;
   overflow: hidden;
 }
+div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > a,
+div.profil#wonbat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span > a {
+  font-size: 10px;
+}
+
 div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a:after{
   display: inline-block;
   content: " ";
