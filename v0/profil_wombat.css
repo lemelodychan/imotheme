@@ -244,11 +244,11 @@ div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a {
   overflow: hidden;
 }
 div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > a,
-div.profil#wonbat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span {
+div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span {
   background: var(--bg2);
 }
 div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > a,
-div.profil#wonbat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span > a {
+div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span > a {
   font-size: 10px;
 }
 
