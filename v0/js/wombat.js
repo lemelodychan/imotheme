@@ -79,6 +79,12 @@ var Wombat = function () {
         } else {
             jQuery('#wombat').find('.profil-liens').addClass('admin');
         }
+        
+        var adminLink = jQuery('#wombat').find('span#admin_link > a');
+        var adminText = adminLink.text().trim();
+        if (adminLink.length > 0) {
+            adminLink.empty().text('Modifier le profil');
+        } 
 
         if (typeof this.options.afterLoad === "function") {
             this.options.afterLoad(this.aside, this.overlay);
