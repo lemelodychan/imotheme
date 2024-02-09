@@ -411,6 +411,10 @@ div.profil > div.profil-irl {
   flex-direction: column;
   gap: 16px;
 }
+div.profil > div.profil-irl > div {
+  position: relative;
+  z-index: 1;
+}
 div.profil > div.profil-irl > div.irl-header {
   display: flex;
   gap: 4px;
