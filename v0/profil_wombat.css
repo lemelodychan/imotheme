@@ -619,6 +619,7 @@ div.profil-container > div.tab-content#content_tab1 > dl#field_id10,
 div.profil-container > div.tab-content#content_tab1 > dl#field_id12,
 div.profil-container > div.tab-content#content_tab1 > dl#field_id13,
 div.profil-container > div.tab-content#content_tab1 > dl#field_id14,
-div.profil-container > div.tab-content#content_tab1 > dl#field_id-4 {
+div.profil-container > div.tab-content#content_tab1 > dl#field_id-4,
+div.profil-container > div.tab-content#content_tab1 > dl#field_id17 {
   display: none;
 }
