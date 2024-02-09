@@ -74,6 +74,12 @@ var Wombat = function () {
         this.cloneContent('#field_id-11 div.field_uneditable', '.faceclaim > span');
         this.cloneContent('#field_id-9 div.field_uneditable', '.credits > span');
 
+        if (_userdata.user_level !== 1) {
+            jQuery('#wombat').find('.profil-liens').removeClass('admin');
+        } else {
+            jQuery('#wombat').find('.profil-liens').addClass('admin');
+        }
+
         if (typeof this.options.afterLoad === "function") {
             this.options.afterLoad(this.aside, this.overlay);
         }
