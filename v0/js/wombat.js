@@ -169,7 +169,7 @@ var Wombat = function () {
 
     Wombat.prototype.colorDia = function () {
         var colorContainer = jQuery('#wombat').find('span.couleur-dia');
-        var couleurSpan = jQuery('#wombat').find('#wombat #field_id2 div.field_uneditable');
+        var couleurSpan = jQuery('#wombat').find('#field_id2 div.field_uneditable');
         var couleurWrite = couleurSpan.text().trim();
         var clonedContent = couleurSpan.clone();
         colorContainer.append(clonedContent);
