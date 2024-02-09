@@ -771,12 +771,12 @@ div.topic-actions > div.sub-header-buttons > a {
   position: relative;
   background: var(--bg1);
   border-radius: 8px;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 .post div.postprofile > dl > div.profile-stats > .messages > span,
 .post div.postprofile > dl > div.profile-stats > .points > span {
   font-family: var(--font-titre);
-  font-size: 24px;
+  font-size: 21px;
   line-height: 24px;
   color: var(--co2);
   font-weight: normal;
