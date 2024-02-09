@@ -203,6 +203,7 @@ div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.fie
 div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a > ion-icon,
 div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable > a > ion-icon {
   position: relative;
+  transition: var(--transi);
   color: var(--text-contrast);
   z-index: 2;
   font-size: 16px;
