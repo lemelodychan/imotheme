@@ -177,6 +177,10 @@ div.profil > div.profil-content > div.profil-col1 > div.profil-contact > div.fie
   transition: var(--transi);
   position: relative;
 }
+div.profil#wombat > div.profil-content > div.profil-col1 > div.profil-contact > a,
+div.profil#wombat > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable {
+  background: var(--bg2)!important;
+}
 div.profil > div.profil-content > div.profil-col1 > div.profil-contact > a:nth-child(2)[href*="mode=email"] {
   display: none !important;
 }
@@ -237,6 +241,10 @@ div.profil > div.profil-content > div.profil-col2 > div.profil-liens > a {
   line-height: 24px;
   position: relative;
   overflow: hidden;
+}
+div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > a,
+div.profil#wonbat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span {
+  background: var(--bg2);
 }
 div.profil#wombat > div.profil-content > div.profil-col2 > div.profil-liens.admin > a,
 div.profil#wonbat > div.profil-content > div.profil-col2 > div.profil-liens.admin > span > a {
