@@ -371,6 +371,7 @@ div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-
   padding: 0px 8px;
   position: absolute;
   transition: height 0.3s ease, opacity 0.3s ease, display 0s linear 0.3s;
+  width: 100%;
 }
 div.profil > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container > div.hidden { 
   transition: height 0.3s ease, opacity 0.3s ease, display 0s linear 0.3s;
