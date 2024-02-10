@@ -175,7 +175,7 @@ div.topic-actions a.button1 {
   background-color: transparent !important;
   background-size: 200% 100%;
   background-position: center left;
-  background-image: linear-gradient(to right, var(--bg1) 50%, var(--co2) 100%);
+  background-image: linear-gradient(to right, var(--bg1) 0%, var(--co1) 50%, var(--co2) 100%);
 }
 div.topic-actions a.button1:hover {
   background-position: center right;
