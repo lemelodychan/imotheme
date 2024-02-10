@@ -589,7 +589,7 @@ div.topic-actions > div.sub-header-buttons > a {
   font-size: 16px;
   color: var(--text);
   line-height: 28px;
-  background: var(--bg1);
+  background-color: var(--bg1);
   padding: 24px;
   border-radius: 12px;
   min-height: 100%;
