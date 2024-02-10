@@ -175,16 +175,9 @@ div.topic-actions a.button1 {
   background-color: transparent !important;
   background-size: 200% 100%;
   background-position: center left;
-}
-body.dark div.topic-actions a.button1 {
-  background-image: linear-gradient(to right, rgba(var(--light_2_rgb),0.3) 0%, rgba(var(--co2_rgb),0.3) 50%,var(--co2) 50.1%, var(--light_2) 100%);
-}
-body.light div.topic-actions a.button1 {
-  background-color: var(--bg1_transp_7) !important;
-  background-image: linear-gradient(to right, rgba(var(--light_2_rgb),0.3) 0%, rgba(var(--co2_rgb),0.3) 50%,var(--co2) 50.1%, var(--light_2) 100%);
+  background-image: linear-gradient(to right, var(--bg1) 50%, var(--co2) 100%);
 }
 div.topic-actions a.button1:hover {
-  color: var(--dark_1);
   background-position: center right;
 }
 div.topic-actions a.button1 > ion-icon,
