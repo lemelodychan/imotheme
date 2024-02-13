@@ -422,6 +422,9 @@ div.topic-actions > div.sub-header-buttons > a {
 .post.readmode > div.post-head {
   z-index: 0;
 }
+.post > div.post-head a, .post > div.post-head a:link, .post > div.post-head a:active, .post > div.post-head a:visited {
+  color: var(--text);
+}
 .post > div.post-head > div.head-left {
   display: flex;
   flex-direction: column;
