@@ -171,12 +171,21 @@ var Wombat = function () {
     };
 
     Wombat.prototype.addIcon = function () {
-        var champIonIcon = jQuery('#wombat').find('#field_id9 div.field_uneditable');
+        var iconType = jQuery('#wombat').find('#field_id18 div.field_uneditable');
+        var champIcon = jQuery('#wombat').find('#field_id9 div.field_uneditable');
         var profilName = jQuery('#wombat').find('.profil-name-title');
-        if (champIonIcon) {
-          var ionIconName = champIonIcon.text().trim();
-          var newIonIcon = $('<ion-icon></ion-icon>').attr('name', ionIconName);
-          profilName.append(newIonIcon);
+        if (iconType === 'Ionicons' && champIcon) {
+          var iconName = champIcon.text().trim();
+          var newIcon = $('<ion-icon></ion-icon>').attr('name', iconName);
+          profilName.append(newIcon);
+        } else if (iconType === 'Feather' && champIcon) {
+          var iconName = champIcon.text().trim();
+          var newIcon = $('<i></i>').attr('data-feather', iconName);
+          profilName.append(newIcon);
+        } else if (iconType === 'Bootstrap' && champIcon) {
+          var iconName = champIcon.text().trim();
+          var newIcon = $('<i></i>').attr('class', 'bi-' + iconName);
+          profilName.append(newIcon);
         }
     }
 
