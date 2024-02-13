@@ -171,21 +171,22 @@ var Wombat = function () {
     };
 
     Wombat.prototype.addIcon = function () {
-        var iconType = jQuery('#wombat').find('#field_id18 div.field_uneditable');
-        var champIcon = jQuery('#wombat').find('#field_id9 div.field_uneditable');
+        var iconType = jQuery('#wombat').find('#field_id18 div.field_uneditable').text().trim();
+        var champIcon = jQuery('#wombat').find('#field_id9 div.field_uneditable').text().trim();
         var profilName = jQuery('#wombat').find('.profil-name-title');
+    
         if (iconType === 'Ionicons') {
-          var iconName = champIcon.text().trim();
-          var newIcon = $('<ion-icon></ion-icon>').attr('name', iconName);
-          profilName.append(newIcon);
+            var iconName = champIcon;
+            var newIcon = $('<ion-icon></ion-icon>').attr('name', iconName);
+            profilName.append(newIcon);
         } else if (iconType === 'Feather') {
-          var iconName = champIcon.text().trim();
-          var newIcon = $('<i></i>').attr('data-feather', iconName);
-          profilName.append(newIcon);
+            var iconName = champIcon;
+            var newIcon = $('<i></i>').attr('data-feather', iconName);
+            profilName.append(newIcon);
         } else if (iconType === 'Bootstrap') {
-          var iconName = champIcon.text().trim();
-          var newIcon = $('<i></i>').attr('class', 'bi-' + iconName);
-          profilName.append(newIcon);
+            var iconName = champIcon;
+            var newIcon = $('<i></i>').attr('class', 'bi-' + iconName);
+            profilName.append(newIcon);
         }
     }
 
