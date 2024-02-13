@@ -61,7 +61,8 @@ div.profil > div.profil-header > div.profil-name > div.profil-name-title {
   width: 100%;
 }
 div.profil > div.profil-header > div.profil-name > div.profil-name-title > ion-icon,
-div.profil > div.profil-header > div.profil-name > div.profil-name-title > i {
+div.profil > div.profil-header > div.profil-name > div.profil-name-title > i,
+div.profil > div.profil-header > div.profil-name > div.profil-name-title > iconify-icon {
   font-size: 24px;
   color: var(--co2);
 }
