@@ -490,10 +490,16 @@ div.profil > div.profil-irl > div.irl-bottom {
   grid-template-columns: 144px auto;
   gap: 32px;
 }
+div.profil > div.profil-irl > div.irl-bottom.nodc {
+  grid-template-columns: 1fr;
+}
 div.profil > div.profil-irl div.irl-contact {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+div.profil > div.profil-irl > div.irl-bottom.nodc > div.irl-contact {
+  flex-direction: row;
 }
 div.profil > div.profil-irl div.irl-contact > div {
   display: flex;
@@ -564,6 +570,7 @@ div.profil > div.profil-irl > div.irl-bottom > div.multicomptes {
   display: flex;
   gap: 24px;
 }
+div.profil > div.profil-irl > div.irl-bottom.nodc > div.multicomptes.empty { display: none; }
 div.profil > div.profil-irl > div.irl-bottom > div.multicomptes > strong {
   font-family: var(--font-titre);
   color: var(--text-contrast);
