@@ -320,6 +320,7 @@ var Wombat = function () {
                   });
               } else {
                   jQuery('#wombat').find('div.multicomptes').addClass('empty');
+                  jQuery('#wombat').find('div.irl-bottom').addClass('nodc');
               }
           }
     };
