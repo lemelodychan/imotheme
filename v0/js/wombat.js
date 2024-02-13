@@ -187,6 +187,10 @@ var Wombat = function () {
             var iconName = champIcon;
             var newIcon = $('<i></i>').attr('class', 'bi-' + iconName);
             profilName.append(newIcon);
+        } else if (iconType === 'Iconify') {
+            var iconName = champIcon;
+            var newIcon = $('<iconify-icon></iconify-icon>').attr('icon', iconName);
+            profilName.append(newIcon);
         }
     }
 
