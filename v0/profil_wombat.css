@@ -56,7 +56,8 @@ div.profil > div.profil-header > div.profil-name {
 div.profil > div.profil-header > div.profil-name > div.profil-name-title {
   display: flex;
   flex-direction: row-reverse;
-  gap: 4px;
+  align-items: center;
+  gap: 12px;
   width: 100%;
 }
 div.profil > div.profil-header > div.profil-name > div.profil-name-title > ion-icon,
