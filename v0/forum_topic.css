@@ -212,7 +212,9 @@ div.topic-actions > div.sub-header-buttons > a {
   border-radius: 12px;
   overflow: hidden;
 }
-.post > div.postprofile div.postprofile-avatar > .profile-hover > ion-icon {
+.post > div.postprofile div.postprofile-avatar > .profile-hover > ion-icon,
+.post > div.postprofile div.postprofile-avatar > .profile-hover > i,
+.post > div.postprofile div.postprofile-avatar > .profile-hover > iconify-icon {
   position: absolute;
   top: 12px;
   right: 12px;
