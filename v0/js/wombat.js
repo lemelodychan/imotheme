@@ -291,32 +291,37 @@ var Wombat = function () {
       if (champMulticomptes.length > 0) {
           var multicomptesContent = champMulticomptes.text().trim();
           var numbers = multicomptesContent.split(',');
-          function fetchData(userNumber) {
-              return new Promise(function(resolve) {
-                var userUrl = '/u' + userNumber;
-                var profileLink = $('<a>').attr('href', userUrl);
-                $.get(userUrl, function(data) {
-                  var imgSrc = $(data).find('#wombat #field_id3 > dd img').attr('src');
-                  var altText = $(data).find('#wombat #username').text().trim();
-                  var profileImage = $('<img>').attr('src', imgSrc).attr('alt', altText);
-                  profileLink.append(profileImage);
-                  if (altText !== '') {
-                    resolve(profileLink);
-                  } else {
-                    resolve(null);
-                  }
-                });
-              });
+
+          if (numbers.length > 0 && !isNaN(numbers[0])) {
+              function fetchData(userNumber) {
+                  return new Promise(function(resolve) {
+                    var userUrl = '/u' + userNumber;
+                    var profileLink = $('<a>').attr('href', userUrl);
+                    $.get(userUrl, function(data) {
+                      var imgSrc = $(data).find('#wombat #field_id3 > dd img').attr('src');
+                      var altText = $(data).find('#wombat #username').text().trim();
+                      var profileImage = $('<img>').attr('src', imgSrc).attr('alt', altText);
+                      profileLink.append(profileImage);
+                      if (altText !== '') {
+                        resolve(profileLink);
+                      } else {
+                        resolve(null);
+                      }
+                    });
+                  });
+              }
+              Promise.all(numbers.map(fetchData))
+                  .then(function(links) {
+                    links.filter(function(link) {
+                      return link !== null;
+                    }).forEach(function(link) {
+                      profileLinksContainer.append(link);
+                    });
+                  });
+              } else {
+                  jQuery('#wombat').find('div.multicomptes').addClass('empty');
+              }
           }
-          Promise.all(numbers.map(fetchData))
-              .then(function(links) {
-                links.filter(function(link) {
-                  return link !== null;
-                }).forEach(function(link) {
-                  profileLinksContainer.append(link);
-                });
-          });
-      }    
     };
 
     Wombat.prototype.cloneContent = function (sourceSelector, targetSelector) {
