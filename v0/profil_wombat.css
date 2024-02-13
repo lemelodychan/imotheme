@@ -59,7 +59,8 @@ div.profil > div.profil-header > div.profil-name > div.profil-name-title {
   gap: 4px;
   width: 100%;
 }
-div.profil > div.profil-header > div.profil-name > div.profil-name-title > ion-icon {
+div.profil > div.profil-header > div.profil-name > div.profil-name-title > ion-icon,
+div.profil > div.profil-header > div.profil-name > div.profil-name-title > i {
   font-size: 24px;
   color: var(--co2);
 }
