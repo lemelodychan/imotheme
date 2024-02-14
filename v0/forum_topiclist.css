@@ -184,6 +184,7 @@ div.topic-actions a.button1 > ion-icon,
 div.topic-actions a.button1 > span { 
   position: relative;
   z-index: 2;
+  font-weight: normal !important;
 }
 div.topic-actions.bottom {
   align-items: center;
