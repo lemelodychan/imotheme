@@ -195,7 +195,7 @@ div.topic-actions.bottom > a:not(.button1) {
   border: 1px solid var(--text);
   line-height: 24px;
   padding: 4px 16px;
-  border-radius: 8px;
+  border-radius: 4px;
   color: var(--text);
   font-size: 12px;
   text-transform: uppercase;
