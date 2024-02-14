@@ -173,7 +173,8 @@ body.light div.moderation fieldset.quickmod select {
   top: 0;
   width: 0px;
 }
-.post.readmode {
+.post.readmode,
+.post.readmode-forced {
   grid-template-columns: 96px auto;
 }
 
@@ -191,7 +192,8 @@ body.light div.moderation fieldset.quickmod select {
   position: relative;
   z-index: 1;
 }
-.post.readmode > div.postprofile {
+.post.readmode > div.postprofile,
+.post.readmode-forced > div.postprofile {
   grid-row: 1/2;
   border-radius: 16px 0 0 0;
   height: 96px;
@@ -200,7 +202,8 @@ body.light div.moderation fieldset.quickmod select {
 .post > div.postprofile dt {
   position: relative;
 }
-.post.readmode > div.postprofile dt {
+.post.readmode > div.postprofile dt,
+.post.readmode-forced > div.postprofile dt {
   height: 80px;
 }
 .post > div.postprofile dt:before {
@@ -224,7 +227,8 @@ body.light div.moderation fieldset.quickmod select {
   mask-composite: exclude;
   background: linear-gradient(130deg, var(--co2), var(--bg1) 15%, var(--bg1) 85%, var(--co2));
 }
-.post.readmode > div.postprofile dt:before {
+.post.readmode > div.postprofile dt:before,
+.post.readmode-forced > div.postprofile dt:before {
   background: linear-gradient(130deg, var(--co2), var(--bg1) 35%, var(--bg1) 85%, var(--co2));
 }
 
@@ -236,7 +240,9 @@ body.light div.moderation fieldset.quickmod select {
   height: auto;
 }
 .post.readmode > div.postprofile > dl,
-.post.readmode > div.postprofile > dt {
+.post.readmode > div.postprofile > dt,
+.post.readmode-forced > div.postprofile > dl,
+.post.readmode-forced > div.postprofile > dt {
   height: 60px;
 }
 .post > div.postprofile > dl div.icone {
@@ -248,13 +254,16 @@ body.light div.moderation fieldset.quickmod select {
   opacity: 0;
   top: 0px;
 }
-.post.readmode > div.postprofile > dl div.icone {
+.post.readmode > div.postprofile > dl div.icone,
+.post.readmode-forced > div.postprofile > dl div.icone {
   z-index: 2;
   opacity: 1;
   top: 0px;
 }
 .post.readmode > div.postprofile > dl div.icone div.profil-champ:not(.champ_ic__00f4ne),
-.post.readmode > div.postprofile > dl div.icone span.label {
+.post.readmode > div.postprofile > dl div.icone span.label,
+.post.readmode-forced > div.postprofile > dl div.icone div.profil-champ:not(.champ_ic__00f4ne),
+.post.readmode-foreced > div.postprofile > dl div.icone span.label {
   display: none;
 }
 .post > div.postprofile > dl div.icone img {
@@ -268,7 +277,8 @@ body.light div.moderation fieldset.quickmod select {
   transition: var(--transi);
   opacity: 1;
 }
-.post.readmode > div.postprofile > dl dd {
+.post.readmode > div.postprofile > dl dd,
+.post.readmode-forced > div.postprofile > dl dd {
   opacity: 0;
 }
 .post > div.postprofile > dl > dd.postprofile-info {
@@ -283,7 +293,8 @@ body.light div.moderation fieldset.quickmod select {
   border-radius: 12px;
   overflow: hidden;
 }
-.post.readmode > div.postprofile div.postprofile-avatar {
+.post.readmode > div.postprofile div.postprofile-avatar,
+.post.readmode-forced > div.postprofile div.postprofile-avatar {
   top: 3px;
 }
 .post > div.postprofile div.postprofile-avatar > .profile-hover {
@@ -316,7 +327,8 @@ body.light div.moderation fieldset.quickmod select {
   bottom: -1px;
   opacity: 1;
 }
-.post.readmode > div.postprofile div.postprofile-avatar > .profile-hover {
+.post.readmode > div.postprofile div.postprofile-avatar > .profile-hover,
+.post.readmode-forced > div.postprofile div.postprofile-avatar > .profile-hover {
   display: none;
 }
 .post > div.postprofile div.postprofile-avatar > .profile-hover > .irl {
@@ -441,7 +453,9 @@ body.light div.moderation fieldset.quickmod select {
   filter: grayscale(100%);
 }
 .post.readmode > div.postprofile div.postprofile-avatar > a > img,
-.post.readmode > div.postprofile div.postprofile-avatar > img {
+.post.readmode > div.postprofile div.postprofile-avatar > img,
+.post.readmode-forced > div.postprofile div.postprofile-avatar > a > img,
+.post.readmode-forced > div.postprofile div.postprofile-avatar > img {
   width: 60px;
   height: 60px;
   opacity: 0 !important;
@@ -508,7 +522,8 @@ body.light div.moderation fieldset.quickmod select {
   position: relative;
   z-index: 1;
 }
-.post.readmode > div.post-head {
+.post.readmode > div.post-head,
+.post.readmode-forced > div.post-head {
   z-index: 0;
 }
 .post > div.post-head a, .post > div.post-head a:link, .post > div.post-head a:active, .post > div.post-head a:visited {
@@ -538,7 +553,8 @@ body.light div.moderation fieldset.quickmod select {
   font-family: var(--font-texte);
   border: 1px solid var(--bg2) !important;
 }
-.post.readmode > div.post-head > div.head-left div.postprofile-name .statut {
+.post.readmode > div.post-head > div.head-left div.postprofile-name .statut,
+.post.readmode-forced > div.post-head > div.head-left div.postprofile-name .statut {
   display: flex;
 }
 
@@ -670,12 +686,15 @@ body.light div.moderation fieldset.quickmod select {
   left: calc(-1*16px);
   border-radius: 0 0 0 calc(16px*2);
 }
-.post.readmode > div.postbody {
+.post.readmode > div.postbody,
+.post.readmode-forced > div.postbody {
   grid-column: 1/3;
   border-radius: 0 0 16px 16px;
 }
 .post.readmode > div.postbody:before,
-.post.readmode > div.postbody:after {
+.post.readmode > div.postbody:after,
+.post.readmode-forced > div.postbody:before,
+.post.readmode-forced > div.postbody:after {
   opacity: 0;
 }
 
@@ -788,7 +807,8 @@ body.light div.moderation fieldset.quickmod select {
 .post > div.postprofile > dl > div.couleur-dia {
   display: none !important;
 }
-.post.readmode > div.postprofile > dl > div.couleur-dia {
+.post.readmode > div.postprofile > dl > div.couleur-dia,
+.post.readmode-forced > div.postprofile > dl > div.couleur-dia {
   display: flex !important;
 }
 .post > div.postprofile div.couleur-dia:before {
@@ -799,7 +819,8 @@ body.light div.moderation fieldset.quickmod select {
   background-color: var(--co3);
   content: " ";
 }
-.post.readmode > div.postprofile div.couleur-dia {
+.post.readmode > div.postprofile div.couleur-dia,
+.post.readmode-forced > div.postprofile div.couleur-dia {
   position: absolute;
   left: 56px;
   z-index: 2;
@@ -807,7 +828,8 @@ body.light div.moderation fieldset.quickmod select {
   padding: 2px;
   background: var(--bg1);
 }
-.post.readmode > div.postprofile div.couleur-dia > span {
+.post.readmode > div.postprofile div.couleur-dia > span,
+.post.readmode-forced > div.postprofile div.couleur-dia > span {
   visibility: hidden;
   position: absolute;
   top: -22px;
@@ -819,7 +841,8 @@ body.light div.moderation fieldset.quickmod select {
   border-radius: 4px;
   color: var(--text);
 }
-.post.readmode > div.postprofile div.couleur-dia:hover > span {
+.post.readmode > div.postprofile div.couleur-dia:hover > span,
+.post.readmode-forced > div.postprofile div.couleur-dia:hover > span {
   visibility: visible;
 }
 
@@ -910,7 +933,9 @@ body.light div.moderation fieldset.quickmod select {
 }
 
 .post.readmode div.postprofile > dl > div.profile-stats,
-.post.readmode div.postprofile > dl > div.aesthetic {
+.post.readmode div.postprofile > dl > div.aesthetic,
+.post.readmode-forced div.postprofile > dl > div.profile-stats,
+.post.readmode-forced div.postprofile > dl > div.aesthetic {
   display: none !important;
 }
 
@@ -961,7 +986,8 @@ body.light div.moderation fieldset.quickmod select {
   border-radius: 0 0 0 calc(16px*2);
   transform: rotate(180deg);
 }
-.post.readmode div.multicomptes:after { display: none; }
+.post.readmode div.multicomptes:after,
+.post.readmode-forced div.multicomptes:after { display: none; }
 
 .post div.multicomptes > a {
   padding: 8px;
