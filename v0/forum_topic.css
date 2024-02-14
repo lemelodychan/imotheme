@@ -1075,6 +1075,7 @@ div.quickreply > form#quick_reply {
   border-radius: 16px !important;
   position: relative;
   backdrop-filter: blur(4px);
+  margin: 0 !important;
 }
 #quick_reply #textarea_content { 
   box-shadow: none !important;
