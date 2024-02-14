@@ -1117,15 +1117,13 @@ div.word-count {
   display: flex;
   gap: 8px;
   align-items: center;
-}
-div.quickreply div.word-count {
   background: var(--bg1);
   padding: 0px 12px 4px 12px;
   margin-top: -4px;
   border-radius: 0 0 8px 8px;
   margin-left: -1px;
 }
-div.quickreply div.word-count:before {
+div.word-count:before {
   opacity: 1;
   content: "";
   display: block;
