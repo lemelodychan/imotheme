@@ -1107,6 +1107,7 @@ div.quickreply > form#quick_reply > div:last-of-type {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 0 !important;
 }
 
 div.word-count {
