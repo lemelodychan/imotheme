@@ -1117,6 +1117,7 @@ div.word-count {
   display: flex;
   gap: 8px;
   align-items: center;
+  color: var(--text);
   background: var(--bg1);
   padding: 0px 12px 4px 12px;
   margin-top: -4px;
