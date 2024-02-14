@@ -650,3 +650,369 @@ div.profil-container > div.tab-content#content_tab1 > dl#field_id17,
 div.profil-container > div.tab-content#content_tab1 > dl#field_id18 {
   display: none;
 }
+
+/* ---- PROFIL - PAGE NORMALE ---- */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+}
+h1.page-title {
+  color: var(--text-contrast);
+  font-family: var(--font-titre);
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+div.profil#regular {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg1_transp_5);
+  color: var(--text);
+  padding: 24px !important;
+  border: 1px solid var(--bg2) !important;
+  border-radius: 16px !important;
+  position: relative;
+  backdrop-filter: blur(4px);
+  gap: 24px;
+  position: relative;
+  overflow: visible;
+}
+div.profil#regular:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 16px;
+  padding: 2px 0 0 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background: linear-gradient(130deg, var(--co2), transparent 15%);
+}
+
+div.profil#regular > div.profil-header {
+  grid-template-columns: 1fr;
+}
+div.profil#regular > div.profil-header > div.profil-name {
+  gap: 8px;
+}
+div.profil#regular > div.profil-header > div.profil-name > div.profil-name-title {
+  flex-direction: row;
+}
+div.profil#regular > div.profil-header > div.profil-name > div.profil-name-title > span#username {
+  font-size: 32px;
+}
+div.profil#regular > div.profil-header > div.profil-name > div.profil-name-title > ion-icon {
+  font-size: 32px;
+}
+
+div.profil#regular > div.profil-content {
+  grid-template-columns: 224px auto 144px;
+}
+div.profil#regular > div.profil-content > div.profil-col1 > #avQEEL > img {
+  max-width: 224px !important;
+}
+div.profil#regular > div.profil-content > div.profil-col1 > div.profil-contact {
+  max-width: 224px;
+  max-width: 224px;
+}
+div.profil#regular > div.profil-content > div.profil-col1 > div.profil-contact > div.field_uneditable:first-of-type {
+  display: block !important;
+}
+
+div.profil#regular > div.profil-content > div.profil-col2 > div.profil-box {
+  height: 358px;
+}
+div.profil#regular > div.profil-content > div.profil-col2 > div.profil-box > div.profil-container {
+  height: calc(358px - 40px);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens.admin {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+div.profil#regular div.profil-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+div.profil#regular div.profil-stats > div,
+div.profil#regular div.profil-stats > span.couleur-dia {
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  height: 78px;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg1);
+  padding: 12px 16px;
+  border-radius: 16px;
+  position: relative;
+}
+div.profil#regular div.profil-stats > span.couleur-dia:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background: linear-gradient(130deg, var(--co3), var(--bg1) 30%, var(--bg1) 70%, var(--co3));
+}
+div.profil#regular div.profil-stats > span.couleur-dia > ion-icon {
+  font-size: 16px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--co3);
+}
+div.profil#regular div.profil-stats > div > strong,
+div.profil#regular div.profil-stats > span.couleur-dia > strong {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+div.profil#regular div.profil-stats > span.couleur-dia > span {
+  font-size: 14px;
+  color: var(--text-contrast);
+}
+div.profil#regular div.profil-stats > div > dd {
+  font-size: 20px;
+  color: var(--co2);
+  font-family: var(--font-titre);
+  line-height: 20px;
+}
+div.profil#regular div.profil-stats > div > dd:empty:before {
+  content: "12 345";
+}
+
+div.profil#regular > div.profil-irl > div.irl-header {
+  text-wrap: nowrap;
+  font-size: 24px;
+  line-height: 32px;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom {
+  grid-template-columns: 1fr;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes.empty { display: none; }
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > strong {
+  font-size: 21px;
+}
+div.profil#regular > div.profil-irl > div.irl-header > span#pronoms {
+  width: -webkit-fill-available;
+}
+div.profil#regular > div.profil-irl > div.irl-info {
+  grid-template-columns: 1fr 1fr auto;
+}
+div.profil#regular > div.profil-irl div.irl-contact {
+  flex-direction: row;
+  padding: 4px;
+  gap: 4px;
+}
+div.profil#regular > div.profil-irl div.irl-contact > div {
+  font-family: var(--font-texte);
+  display: flex;
+  gap: 8px;
+  padding: 2px 12px !important;
+  background: var(--bg1);
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  border: 1px solid var(--bg2);
+  width: fit-content;
+  position: relative;
+}
+
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a {
+  width: 100%;
+  height: 112px;
+  background: var(--bg1);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  position: relative;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 2px 0px 0px 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background: linear-gradient(130deg, var(--co2), var(--bg1) 15%, var(--bg1) 85%, var(--co2));
+}
+
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > img {
+  width: 80px;
+  height: 80px;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > div.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > ion-icon,
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > i,
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > iconify-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--co2);
+  font-size: 24px;
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > div.infos > span.nom {
+  font-size: 16px;
+  font-family: var(--font-titre);
+  color: var(--text-contrast);
+}
+div.profil#regular > div.profil-irl > div.irl-bottom > div.multicomptes > div.multicomptes-list > span > a > div.infos > span.occupation {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text);
+  min-height: 36px;
+}
+div.profil#regular > div.profil-header > div.profil-name > div.tags {
+  justify-content: space-between;
+}
+div.profil#regular > div.profil-header > div.profil-name > div.tags > span.lastvisit {
+  display: flex;
+  gap: 4px;
+  
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  
+  width: fit-content !important;
+  padding: 2px 12px !important;
+  background: var(--bg1);
+  border-radius: 16px;
+  line-height: 24px;
+  align-items: center;
+}
+div.profil > div.profil-irl {
+  position: relative;
+}
+div.profil#regular > div.profil-irl {
+  padding: 24px !important;
+}
+div.profil > div.profil-irl:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background: linear-gradient(130deg, var(--co2), var(--bg1) 15%, var(--bg1) 85%, var(--co2));
+}
+
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > span#admin_link {
+  display: block;
+  position: relative;
+  z-index: 0;
+  transition: var(--transi);
+  text-align: center;
+  background: var(--bg1);
+  border-radius: 8px;
+  line-height: 24px;
+  overflow: hidden;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > span#admin_link > a {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 4px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: var(--text-contrast);
+  line-height: 24px;
+  display: block;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > span#admin_link:hover > a {
+  color: var(--light_1);
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > span#admin_link:after {
+  display: inline-block;
+  content: " ";
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--co3), var(--co2));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: var(--transi);
+  transform-origin: center center;
+  z-index: 1;
+  border-radius: 50%;
+}
+div.profil > div.profil-content > div.profil-col2 > div.profil-liens > span#admin_link:hover:after {
+  transform: scaleX(10000%) scaleY(10000%);
+  opacity: 1;
+}
+div.profil#regular > div.profil-content > div.profil-col2 > div.profil-liens > span#admin_link:hover:after,
+div.profil#regular > div.profil-content > div.profil-col2 > div.profil-liens > a:hover:after {
+  transform: scaleX(15000%) scaleY(15000%);
+  opacity: 1;
+}
