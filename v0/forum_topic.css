@@ -538,11 +538,16 @@ body.light div.moderation fieldset.quickmod select {
 }
 .post > div.post-head > div.head-left div.postprofile-name {
   display: flex;
-  font-size: 16px;
+  font-size: 24px;
+  color: var(--text-contrast);
   font-family: var(--font-titre);
   font-weight: normal !important;
   text-align: left !important;
   align-items: center;
+}
+.post > div.post-head > div.head-left div.postprofile-name > a.mention {
+  font-size: 16px;
+  color: var(--text);
 }
 .post > div.post-head > div.head-left div.postprofile-name strong {
   font-weight: normal !important;
