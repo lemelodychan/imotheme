@@ -442,8 +442,9 @@ body.light div.moderation fieldset.quickmod select {
   transition: var(--transi);
   max-width: 216px !important;
   object-fit: cover;
+  object-position: center;
   width: 100%;
-  height: auto;
+  height: 345px;
   border-radius: 12px;
   position: relative;
   opacity: 1;
@@ -1148,4 +1149,28 @@ div.word-count > span {
 div.word-count > span > strong {
   color: var(--text-contrast);
   font-weight: normal;
+}
+
+
+/* --- POSTS INVITÉS --- */
+.post.guest .postprofile-name {
+  font-size: 24px !important;
+}
+.post.guest .multicomptes,
+.post.guest .aesthetic,
+.post.guest .profile-stats,
+.post.guest .postprofile-contact,
+.post.guest.readmode > div.postprofile > dl > div.couleur-dia,
+.post.guest .profile-hover,
+.post.guest .statut {
+  display: none !important;
+}
+.post.guest.readmode > div.postprofile div.postprofile-avatar {
+  top: 0px !important;
+}
+.post.guest > div.postprofile div.postprofile-avatar:hover > img {
+  filter: grayscale(0) !important;
+}
+.post.guest.readmode > div.postprofile div.postprofile-avatar > img {
+  opacity: 1 !important;
 }
