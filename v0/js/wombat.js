@@ -212,7 +212,7 @@ var Wombat = function () {
         var mainuserIDContent = mainuserId.text().trim();
         var userUrl = '/u' + mainuserIDContent;
       
-        if (mainuserIDContent === '0') {
+        if (mainuserIDContent === '0' || isNaN(mainuserIDContent)) {
           contactStatut('#field_id12 div.field_uneditable', '.irl-contact > .mp');
           contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
   
