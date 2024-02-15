@@ -120,7 +120,7 @@ $(document).ready(function () {
                         var sourceField = $(data).find('#field_id14 > dd > div.field_uneditable');
                         var mainuserIDContent = sourceField.html().trim();
                         
-                        if (mainuserIDContent === '0') {
+                        if (mainuserIDContent === '0' || mainuserIDContent === ' &nbsp;-') {
                               var presField = $(data).find('#field_id1 > dd > div.field_uneditable').clone();
                               var trimmedHtml = presField.html().trim();
                               if (trimmedHtml === 'Présent.e') {
