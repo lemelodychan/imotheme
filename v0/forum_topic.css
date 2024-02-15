@@ -558,6 +558,7 @@ body.light div.moderation fieldset.quickmod select {
   margin-left: 16px;
   height: 24px !important;
   font-family: var(--font-texte);
+  color: var(--text);
   border: 1px solid var(--bg2) !important;
 }
 .post.readmode > div.post-head > div.head-left div.postprofile-name .statut,
