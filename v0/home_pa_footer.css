@@ -28,6 +28,7 @@
   padding: 0;
   background: transparent !important;
 }
+.mod-stats-user strong { font-weight: normal !important; }
 
 /* -- PA STRUCTURE -- */
 .pa_widgets {
