@@ -66,6 +66,7 @@ div.sub-header > div.sub-header-info > h1 a {
   text-shadow: 0 0 #00000000 !important;
 }
 #page-desc div.description {
+  color: var(--text);
   font-size: 14px;
   padding: 16px;
   background: var(--bg1);
