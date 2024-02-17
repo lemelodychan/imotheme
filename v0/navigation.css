@@ -104,10 +104,77 @@ div.nav_ancres > span {
   left: auto !important;
   right: 0px !important;
   width: 300px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 16px 16px !important;
   border: none;
-  background-color: transparent;
+  background-color: var(--bg2) !important;
   box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+#fa_toolbar #fa_right.notification #notif_list li {
+  display: list-item;
+  color: var(--text);
+  text-wrap: wrap;
+  position: relative;
+  padding: 8px 16px;
+  font-size: 14px;
+  background: var(--bg1);
+}
+#fa_toolbar #fa_right.notification #notif_list li div.content {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+#fa_toolbar #fa_right.notification #notif_list li div.content a {
+  color: var(--co1) !important;
+}
+#fa_toolbar #fa_right.notification #notif_list li div.content a.delete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+#fa_toolbar #fa_right.notification #notif_list li div.content a.delete:before {
+  content: "×";
+  font-weight: bold;
+  color: var(--co2);
+  line-height: 14px;
+  font-size: 14px !important;
+}
+#fa_toolbar #fa_right #notif_list li.see_all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px !important;
+}
+#fa_toolbar #fa_right #notif_list li.see_all a {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-contrast);
+  text-align: center;
+  width: 100%;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 8px 16px !important;
+  transition: var(--transi);
+  background-color: var(--bg1);
+  background-image: linear-gradient(90deg, rgba(var(--co2_rgb), 0.2) 0%, rgba(var(--co1_rgb), 0.4) 50%, rgba(var(--co2_rgb), 0.4) 100%);
+  background-size: 200% 200%;
+  background-position: center left;
+  border-radius: 8px !important;
+}
+#fa_toolbar #fa_right #notif_list li.see_all a:hover {
+  background-position: center right;
+  background-color: var(--bg2);
+}
+#fa_toolbar #fa_right #notif_list li hr {
+  display: none;
 }
 
 /* -- TOOLBAR CUSTOM -- */
@@ -333,7 +400,7 @@ div.switcher_drop > div.user-switcher {
   transform: scaleY(100%);
   opacity: 1;
   background: var(--bg1);
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 0px 0px 16px 16px;
   overflow: hidden;
 }
 div.switcher_drop > div.user-switcher.switch-hide {
