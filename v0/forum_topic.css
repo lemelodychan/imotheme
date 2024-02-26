@@ -713,7 +713,11 @@ body.light div.moderation fieldset.quickmod select {
   background-color: var(--bg1);
   padding: 24px;
   border-radius: 12px;
+  overflow: hidden;
   min-height: 100%;
+}
+.post.post-admin > div.postbody .content {
+  padding: 0px !important;
 }
 /* ---- REACTIONS ---- */
 .post > div.fa_like_div {
