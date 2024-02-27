@@ -64,10 +64,11 @@ bb3::after,bb4::after {
 bg1:not(.cate_forum_desc bg1),
 bg2,bg3,bg4,bg5,bg6 {
   padding: 2px 4px;
-  line-height: 20px;
+  line-height: 16px;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 9.5px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
   font-weight: 600;
   border-radius: 4px;
 }
