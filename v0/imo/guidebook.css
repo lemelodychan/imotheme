@@ -60,13 +60,16 @@
     letter-spacing: 0.5px;
     transition: var(--transi);
 }
-.guidebook.guidev2 div.guide_menu a.active{ color: white; background: linear-gradient(to right, var(--co1), var(--co2)); font-weight: 600; }
 .guidebook.guidev2 div.guide_menu a:hover{ 
     color: var(--co1);
     background: var(--bg2_transp_5);
 }
-.guidebook.guidev2 div.guide_menu a.active:hover { color: white; }
-
+.guidebook.guidev2 div.guide_menu a.active,
+.guidebook.guidev2 div.guide_menu a.active:hover { 
+    color: white; 
+    background: linear-gradient(to right, var(--co1), var(--co2));
+    font-weight: 600;
+}
 
 /* --- CONTENU --- */
 .guidebook.guidev2 .guide_Contenu{
@@ -224,7 +227,7 @@
     background: var(--bg1_transp_5);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 }
 
 .guidebook.guidev2 .guide_Block .guide_Contenu__Titre{
@@ -241,7 +244,7 @@
     height: 1px;
     width: 48px;
     content: " ";
-    margin: 16px 0px 8px 0px;
+    margin: 16px 0px;
     background-image: linear-gradient(45deg, var(--co1), var(--co3), var(--co2));
 }
 .guidebook.guidev2 .guide_Block .guide_Contenu__SousTitre {
@@ -277,7 +280,7 @@
 }
 
 .guidebook.guidev2 .guide_Block .guide_Contenu__Texte{
-    padding: 16px;
+    padding: 24px;
     background: var(--bg1);
     border-radius: 8px;
     color: var(--text);
@@ -339,13 +342,8 @@
     max-width: 100%;
     background-color: var(--bg2);
     border-radius: 8px;
-    border-left: 1px var(--co1) solid!important;
-    border-right: 1px var(--co1) solid!important;
+    border: 0px;
     margin: 0;
-}
-.guidebook.guidev2 blockquote.blckqt.small{
-    font-size: 12px;
-    line-height: 21px;
 }
 .guidebook.guidev2 .guide_Block .guide_Contenu__Texte blockquote.blckqt {
     background-color: var(--bg2);
@@ -358,6 +356,8 @@
     min-height: 0;
     padding: 12px 16px;
 }
+.guidebook.guidev2 blockquote.blckqt > bg2:first-of-type,
+.guidebook.guidev2 blockquote.blckqt > bg6:first-of-type,
 .guidebook.guidev2 blockquote.blckqt.small.note > bg2:first-of-type{
     margin-right: 8px;
     display: inline-block;
