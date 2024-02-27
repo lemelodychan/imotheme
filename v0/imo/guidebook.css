@@ -61,8 +61,11 @@
     transition: var(--transi);
 }
 .guidebook.guidev2 div.guide_menu a.active{ color: white; background: linear-gradient(to right, var(--co1), var(--co2)); font-weight: 600; }
-.guidebook.guidev2 div.guide_menu a:hover{ color: var(--co1); }
-.guidebook.guidev2 div.guide_menu a.active:hover{ color: var(--text-contrast); }
+.guidebook.guidev2 div.guide_menu a:hover{ 
+    color: var(--co1);
+    background: var(--bg2_transp_5);
+}
+.guidebook.guidev2 div.guide_menu a.active:hover { color: white; }
 
 
 /* --- CONTENU --- */
