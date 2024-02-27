@@ -1,0 +1,183 @@
+/* --- INFOBULLE --- */
+.infobulle {
+  position: relative;
+  z-index: 0;
+}
+.infobulle:hover {
+  z-index: 50;
+  cursor: pointer;
+}
+.infobulle > span {
+  position: absolute;
+  font-family: var(--font);
+  background-color: var(--mid);
+  padding: 4px 8px 8px;
+  transform: scale(0);
+  visibility: hidden;
+  top: 20px;
+  left: 0;
+  z-index: 999;
+}
+.infobulle:hover > span {
+  visibility: visible;
+  transform: scale(1);
+  width: 240px;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+  font-size: 11px !important;
+  color: var(--tx);
+}
+.infobulle > span a { font-size:11px }
+.infobulle > span br { display: block; }
+
+/* ---- AES POST 1 - TEXTES SPÉCIAUX ---- */
+bb { 
+  background: linear-gradient(to right,var(--co2),var(--co4));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 #00000000;
+  font-weight: 600;
+}
+bb1,bb2,bb3,bb4 { font-weight: 600; }
+ba1,bb1,bb3 { color: var(--text-contrast); }
+ba2,bb2,bb4,c2 { color: var(--co2); }
+c1 { color: var(--co4); }
+c1,c2 { font-weight:400; }
+ba1,ba2{ 
+  font-family: var(--special-font);
+  font-size: 14px;
+}
+bb3{ text-transform:lowercase; }
+bb3::before,bb4::before { 
+  content:'※';
+  margin-right: 3px; 
+  font-size: 10px; 
+  line-height: 1.5em;
+}
+bb3::after,bb4::after { 
+  content:'・';
+  margin-right: -4px;
+}
+
+bg1:not(.cate_forum_desc bg1),
+bg2,bg3,bg4,bg5,bg6 {
+  padding: 2px 4px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-size: 9.5px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+bg1 { color:var(--light_1); background-color:var(--co2_light); border:none}
+bg2 { color:var(--light_1); background-color:var(--co2); border:none}
+bg3 { color:var(--light_1); background-color:var(--co4); border:none}
+bg4 { color:var(--light_1); background-color:var(--dark_1)}
+bg5 { color:var(--dark_1); background-color:var(--light_1)}
+bg6 { color:var(--light_1); background: linear-gradient(to right,var(--co2),var(--co4));}
+
+g1,g2,g3{background-color:var(--bg1);font-size:12px;padding:2px 4px;line-height:20px;font-weight:600;border-radius:4px}
+g1{color:var(--co2)}
+g2{color:var(--co4)}
+g3{color:var(--text-contrast)}
+
+cr::before{content:"\0000A9";margin-right:2px}
+cr{display:inline-block}
+
+d3 a,d4 a{!important}
+
+ii{font-style:italic;color:inherit;}
+i1,i2,i3,i3,i4,s1,s2,s3,s4{font-family:var(--font-secondaire),serif;font-size:initial;}
+i1,i2,i3,i4{font-style:italic;}
+i2,s2{color:var(--co2)}
+i3,s3{color:var(--co4)}
+i4,s4{background:linear-gradient(to right,var(--co2),var(--co4));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+d3,d4{padding:1px 4px;line-height:20px;color:#fff}
+d4{box-shadow:inset 0 0 16px var(--co2)} d3{box-shadow:inset 0 0 16px var(--co3)}
+
+e1{box-shadow:inset 0 -14px 0 var(--co2_fluo)}
+e2{box-shadow:inset 0 -14px 0 var(--co1_fluo)}
+e3{box-shadow:inset 0 -14px 0 var(--co3_fluo)}
+
+r1,r2,r3{font-size:9.5px;text-transform:uppercase;font-weight:700;letter-spacing: 0.5px;}
+r1{color:var(--co4)}
+r2{color:var(--co2)}
+r3{color:var(--text)}
+
+zz,ze{font-family: var(--font-secondaire),serif; color: var(--text); text-shadow: 1px 1px 0 var(--dark_1);text-transform: uppercase;}
+zz{border-bottom: 1px solid var(--co2);}
+ze{box-shadow: inset 2px 0 0 var(--co2);padding-left:8px;}
+
+sp{transition:all .5s ease;filter: blur(3px);}
+sp:hover{filter: blur(0px);}
+
+u{text-decoration:none;border-bottom:1px dashed var(--text)}
+u1{border-bottom:1px solid var(--co1)}
+u2{border-bottom:1px solid var(--co2)}
+u3{border-bottom:1px solid var(--co4)}
+u4{border-bottom:1px solid;border-image:linear-gradient(to right,var(--co2),var(--co2),var(--text-contrast),var(--text-contrast)) 15}
+
+i,em{color:#c4c4c4; line-height: unset;}
+body.light i,body.light em{color:#000000; line-height: unset;}
+body.dark i,body.dark em{color:#d7d7d7; line-height: unset;}
+.infos-posteur i,.pr__data i{color:var(--light_1)}
+
+/* ------ AES POST 2 ------ */
+.cad_col {
+  column-count: 2;
+  column-gap: 16px;
+}
+.degrade {
+  background: linear-gradient(140deg,var(--co2),var(--co3_light));
+  color: white;
+}
+.note {
+  min-height:96px;
+  max-height:192px;
+  overflow:auto;
+  padding:0px 8px;
+  font-size:12px;
+  line-height:150%;
+  margin: 8px 0px;
+}
+.note img:first-of-type{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--bg3);
+  background-color: var(--text);
+  padding: 4px;
+  float: left;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+div.para .note{overflow:initial; border: 1px solid var(--co1); padding: 0px 8px 0px 0px; border-radius: 8px;height: auto;width: auto;max-width: initial;max-height: fit-content;}
+div.para .note > span{display:block;padding: 8px;min-height:96px;max-height:192px;overflow:auto;font-size:12px;line-height:150%;}
+div.para .note > span::-webkit-scrollbar-thumb{background-color: var(--co2);}
+
+fond {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+fond br { display: none !important; }
+cadre {
+  display:block;
+  background-color:var(--bg1_transp_5);
+  padding:8px;
+  border-radius:4px;
+}
+cadre br { display: block !important; }
+
+/* ---- PROFIL ---- */
+span.profil_field h2, div.pp_champs_content div h2, span.profil_field h3, div.pp_champs_content div h3, span.profil_field h4, div.pp_champs_content div h4{display:inline;font-size:inherit;text-decoration:none!important;border:none!important;padding: 0; margin: 0;font-family:inherit;font-style: normal;}
+span.profil_field h2, div.pp_champs_content div h2{font-weight:600!important;color:var(--co2); line-height: initial;}
+span.profil_field h3, div.pp_champs_content div h3{padding:1px 4px;line-height:20px;text-transform:uppercase;font-size:9px;letter-spacing:1px; font-weight:600!important;border-radius:4px;color:var(--light_1);background-color:var(--co2);border:none}
+span.profil_field h4, div.pp_champs_content div h4{font-family:var(--font-secondaire),serif;font-size:initial;font-style:italic;}
+
