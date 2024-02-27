@@ -61,6 +61,12 @@ bb3::after,bb4::after {
   margin-right: -4px;
 }
 
+bb1 > ion-icon,
+bb2 > ion-icon {
+  position: relative;
+  top: 2px;
+}
+
 bg1:not(.cate_forum_desc bg1),
 bg2,bg3,bg4,bg5,bg6 {
   padding: 2px 4px;
