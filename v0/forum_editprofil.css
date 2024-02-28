@@ -1,0 +1,34 @@
+/* --- PREFERENCES --- */
+div.edit-profil .panel#preferences > .inner > fieldset > dl {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  height: fit-content;
+  align-items: center;
+}
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dt {
+  height: fit-content !important;
+}
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd#Langue_du_forum,
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd#Fuseau_horaire,
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd#Format_de_la_date {
+  display: flex;
+}
+
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label > input[type="radio"] {
+  width: 16px !important;
+}
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > span.italic {
+  width: 100%;
+  grid-column: 1/3;
+}
