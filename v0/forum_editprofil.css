@@ -314,3 +314,18 @@ div.panel#avatar fieldset > dl {
 div.panel#avatar fieldset > dl > dd {
   width: 80% !important;
 }
+
+/* --- SIGNATURE --- */
+div.panel#signature #smiley-box,
+div.panel#signature #parent_editor_simple > div.clear,
+div.panel#signature #message-box > br {
+  display: none !important;
+}
+div.panel#signature #message-box {
+  margin: 0px !important;
+}
+#cp-main .panel.sig {
+  background-color: transparent !important;
+  margin: 0;
+  padding: 16px;
+}
