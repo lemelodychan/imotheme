@@ -1,0 +1,385 @@
+span#conversation {
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 0;
+  line-height: 0;
+  align-items: center;
+  gap: 8px;
+}
+span#conversation > .names {
+  font-size: initial;
+  line-height: 2;
+  font-family: var(--font-titre);
+}
+.postbody span#conversation > .names strong {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+span#conversation > .avatars {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+}
+span#conversation > .avatars > img {
+  height: 72px;
+  width: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg1);
+  position: relative;
+  z-index: 2;
+}
+span#conversation > .avatars > img:not(:first-child) {
+  position: relative;
+  left: -16px;
+  z-index: 1;
+  margin-right: -18px;
+}
+span#conversation + br {
+    display: none;
+}
+div.conv-name {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  line-height: 20px;
+  width: fit-content;
+  margin: 8px auto;
+  padding: 0px 8px;
+  background: var(--co2);
+  border-radius: 8px;
+  color: var(--light_1);
+}
+div.conv-name > img {
+  height: 13px;
+  width: 13px;
+}
+
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name {
+  justify-content: flex-start;
+  font-size: 0px;
+  line-height: 0px;
+}
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name .topic-author {
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name .conv-name {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+  margin-right: 2px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: inherit;
+  background: transparent;
+  text-transform: inherit;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name .conv-name > img {
+  margin: 0 2px;
+}
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name .conv-name:after {
+  display: block;
+  content: "・";
+  font-size: 12px;
+}
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name > div:not(.conv-name),
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name > dl,
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name > span:not(.topic-author),
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name > p,
+.forumbg ul.topiclist > li.row div.topic-bottom div.topic-auteur.chat-name > br {
+  display: none;
+}
+
+/* ---- MESSENGER STYLES ---- */
+#blog_comments {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: var(--bg1_transp_7);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.online:before { display: none; }
+.comment {
+  width: 100%;
+  max-width: 560px !important;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+.comment.myself {
+  justify-content: flex-end;
+}
+.comment div.menu-options {
+  transition: var(--transi);
+  position: absolute;
+  top: 32px;
+  right: 8px;
+  opacity: 0;
+  z-index: 2;
+}
+.comment.myself div.menu-options { 
+  top: 8px;
+}
+.comment:hover div.menu-options {
+  opacity: 1;
+}
+.comment div.menu-options ul.profile-icons {
+  float: unset !important;
+  padding: 0px !important;
+  margin: 0px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.comment div.menu-options ul.profile-icons > li {
+  float: unset;
+  margin: 0;
+}
+.comment div.menu-options ul.profile-icons > li > a {
+  height: auto;
+  line-height: 16px;
+  font-size: 12px;
+  transition: var(--transi);
+  color: var(--text);
+  background: var(--bg1);
+  padding: 4px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 0px;
+  box-shadow: none !important;
+}
+.comment div.menu-options ul.profile-icons > li > a iconify-icon {
+  line-height: 16px;
+  height: 16px;
+}
+.comment div.menu-options ul.profile-icons > li > a:hover {
+  color: var(--text-contrast);
+}
+
+.comment .fa_like_div {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+}
+.comment .fa_like_div > button,
+.comment .fa_like_div > a {
+  transition: var(--transi);
+  background: var(--bg1);
+  border: 1px solid var(--bg2);
+  border-radius: 16px;
+  padding: 2px 4px;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  gap: 4px;
+  position: relative;
+  height: 24px;
+  color: var(--text);
+  z-index: 4;
+}
+.comment .fa_like_div > a:hover {
+  color: var(--text-contrast);
+}
+.comment .fa_like_div > button.fa_liked,
+.comment .fa_like_div > button.fa_disliked {
+  background: var(--co2);
+  border: 1px solid var(--co2);
+}
+.comment .fa_like_div > button > span.rep-nb {
+  display: none;
+  position: absolute;
+  background: var(--co1);
+  padding: 1px 2px;
+  border-radius: 50%;
+  text-align: center;
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+  line-height: 10px;
+  z-index: 2;
+  top: -4px;
+  right: -4px;
+}
+.comment .fa_like_div > button.fa_liked > span.rep-nb,
+.comment .fa_like_div > button.fa_disliked > span.rep-nb {
+  display: inline-block;
+  color: var(--light_1);
+  font-weight: bold;
+}
+
+.comment .comment-body {
+  width: 80%;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  position: relative;
+}
+
+.comment .comment-body .content {
+  color: var(--text);
+  line-height: 24px;
+  background: var(--bg1);
+  padding: 16px;
+  border-radius: 16px;
+  position: relative;
+  margin-top: 26px;
+}
+.comment.myself .comment-body .content {
+  margin-top: 0px;
+}
+body.dark .comment.myself .comment-body .content {
+  background-image: linear-gradient(-45deg, rgba(var(--co2_rgb),0.25), transparent);
+}
+body.light .comment.myself .comment-body .content {
+  background-image: linear-gradient(-45deg, rgba(var(--co2_rgb),0.4), transparent);
+}
+.comment.myself .comment-body .content:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 2px 0px 0px 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background: linear-gradient(130deg, var(--co2), transparent 10%, transparent 100%);
+}
+
+.comment .comment-body span.comment-author {
+  margin-left: 16px;
+  display: block;
+  font-size: 14px;
+  position: absolute;
+}
+.comment.myself .comment-body span.comment-author {
+  display: none;
+}
+.comment .comment-body span.comment-time {
+  font-size: 12px;
+  margin-left: 16px;
+  line-height: 20px;
+  margin-top: 4px;
+  display: block;
+}
+
+.comment .comment-avatar {
+  display: flex;
+  float: unset;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  width: auto;
+  padding: 20px 0px;
+}
+.comment.myself .comment-avatar { display: none; }
+
+.comment .comment-avatar:after,
+.comment .comment-body:before {
+  display: none !important;
+}
+.comment .comment-avatar img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  object-position: center;
+}
+.comment .comment-avatar .comment-author {
+  display: none;
+  visibility: hidden;
+  margin-left: 0;
+}
+
+.comment.quotereply:not(.myself),
+.comment.quotereply:first-child:not(.myself) {
+  margin-top: 36px;
+  overflow: visible;
+}
+.comment.quotereply.myself {
+  margin-top: 48px;
+  overflow: visible;
+}
+
+.comment.quotereply .comment-body .content {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 16px !important;
+}
+.comment.quotereply:not(.myself) .comment-body > span.comment-author {
+  display: none;
+}
+.comment blockquote.citation {
+  padding: 8px 16px;
+  border: 0px;
+  height: 36px;
+  position: relative;
+  top: -52px;
+  left: -1px;
+  margin-bottom: -36px;
+  border-radius: 16px 16px 0 0;
+  background: var(--bg1);
+  opacity: 0.6;
+  overflow: visible;
+  width: calc(100% + 8px);
+}
+.comment.quotereply:not(.myself) blockquote.citation {
+  left: -25px;
+}
+.comment.quotereply:not(.myself) .comment-body .content {
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 0px !important;
+}
+.comment blockquote.citation:before { display: none; }
+.comment blockquote.citation > div {
+  max-width: 100%;
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+.comment blockquote.citation cite {
+  position: absolute;
+  top: -24px;
+  margin-bottom: -24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+.comment blockquote.citation + br { display: none; }
+.comment blockquote.citation cite span.comment-author {
+  position: relative;
+  font-size: 12px;
+  margin: 0;
+  color: var(--text);
+}
