@@ -215,12 +215,8 @@ div.edit-profil .panel > .inner > fieldset > dl#Skype {
 }
 
 /* --- PREFERENCES --- */
-div.edit-profil .panel#preferences > .inner > fieldset > dl {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  height: fit-content;
-  align-items: center;
+div.edit-profil .panel#preferences > .inner > fieldset {
+  gap: 12px;
 }
 div.edit-profil .panel#preferences > .inner > fieldset > dl > dt {
   height: fit-content !important;
@@ -237,10 +233,16 @@ div.edit-profil .panel#preferences > .inner > fieldset > dl > dd#Format_de_la_da
 }
 
 div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label {
-  display: flex;
-  gap: 4px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 16px auto;
+  grid-gap: 8px;
 }
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label:not(:nth-of-type(1)),
+div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label:not(:nth-of-type(2)) {
+  width: 100%;
+  grid-column: 1/3;
+}
+
 div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label > input[type="radio"] {
   width: 16px !important;
 }
