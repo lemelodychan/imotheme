@@ -236,6 +236,7 @@ div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label {
   display: grid;
   grid-template-columns: 16px auto;
   grid-gap: 8px;
+  align-items: center;
 }
 div.edit-profil .panel#preferences > .inner > fieldset > dl > dd > label:nth-of-type(2n + 3) {
   width: 100%;
