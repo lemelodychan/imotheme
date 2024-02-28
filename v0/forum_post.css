@@ -1,0 +1,367 @@
+/* ---- POSTER UN MESSAGE ---- */
+form[name="post"] {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 40px 0;
+}
+#postingbox fieldset.postform {
+  padding: 24px;
+  background: var(--bg1_transp_5);
+  border-radius: 16px;
+  border: 1px solid var(--bg2);
+  margin: 0;
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+  grid-gap: 16px;
+}
+#postingbox fieldset.postform div.top {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#postingbox fieldset.postform div.top > div {
+  margin: 0;
+}
+#postingbox fieldset.postform div.top > dl {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  grid-gap: 16px;
+  padding: 0;
+  grid-template-columns: 200px auto;
+}
+#postingbox fieldset.postform div.top > dl:after {
+  display: none;
+}
+#postingbox fieldset.postform div.top > dl label {
+  margin: 0;
+  color: var(--text);
+}
+#postingbox fieldset.postform div.top > dl dd {
+  display: block;
+}
+#postingbox fieldset.postform div.top > dl dd input {
+  background: var(--bg1);
+  border: 0;
+  border-radius: 8px;
+  width: -webkit-fill-available;
+  padding: 8px 8px;
+  line-height: 24px;
+  color: var(--text);
+}
+
+#postingbox fieldset.postform #message-box {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 0;
+  height: 336px;
+}
+#postingbox fieldset.postform #message-box textarea {
+  height: 240px !important;
+  font-size: 14px;
+  line-height: 24px;
+}
+#postingbox fieldset.postform #message-box #textarea_content {
+  border-radius: 8px 8px 8px 0px;
+}
+#postingbox fieldset.postform div.word-count {
+  margin-left: 0px !important;
+}
+#postingbox fieldset.postform div.word-count:before {
+  top: -4px;
+}
+#postingbox fieldset.postform #smiley-box {
+  border-radius: 8px;
+  overflow: hidden;
+  float: none;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+}
+fieldset.submit-buttons {
+  margin: 0;
+  margin-bottom: 24px;
+}
+#smiley-box iframe, .smile-status-box iframe {
+  background: var(--bg1);
+  border-radius: 8px;
+  height: 336px !important;
+}
+#smiley-box iframe body::-webkit-scrollbar-button:start:increment,
+#sceditor_smilies {
+  background: transparent;
+}
+#smiley-box iframe html#sceditor_smilies::-webkit-scrollbar-button:start:increment,
+#sce_smilies_body::-webkit-scrollbar-button:start:increment {
+  display: none;
+}
+select, option {
+  color: var(--text);
+  font-family: var(--font-texte);
+}
+
+div.topic-review {
+  background: transparent !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1048px !important;
+  margin: auto !important;
+  margin-top: 40px !important;
+}
+div.topic-review .h3 {
+  color: var(--text-contrast);
+  font-family: var(--font-titre);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  margin: 0;
+  border: 0px !important;
+}
+div.review-posts {
+  background: var(--bg1);
+  border-radius: 16px;
+}
+div.review-posts > div {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 560px;
+  overflow: auto;
+  padding: 0px 8px;
+  border: 8px var(--bg1) solid;
+  border-top: 0;
+  border-bottom: 0px;
+}
+div.review-posts > div::-webkit-scrollbar-button:start:increment,
+div.review-posts > div::-webkit-scrollbar-button:end:decrement {
+  height: 16px;
+  display: block;
+  background: var(--bg1);
+}
+div.review-posts div.review-post:first-of-type {
+  margin-top: 16px;
+}
+div.review-posts div.review-post:last-of-type {
+  margin-bottom: 16px;
+}
+div.review-posts div.review-post .review-postbody {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px var(--bg2) solid;
+}
+div.review-posts div.review-post .review-postbody p.author {
+  margin: 0;
+  padding: 8px 16px;
+  background: var(--bg2);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+div.review-posts div.review-post .content {
+  padding: 16px;
+  background: var(--bg2_transp_5);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.forum-hideable {
+  border: 0;
+  background: var(--bg1);
+  padding: 16px 24px;
+  border-radius: 16px 16px 0px 0px;
+  color: var(--text-contrast);
+  font-family: var(--font-titre);
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+}
+.forum-hideable.forum-hidden {
+  border-radius: 16px;
+}
+.forum-hide { height: 32px; }
+.forum-hide-icon-a,
+.forum-hide-icon-b {
+  background-color: var(--text-contrast);
+}
+.forum-hideable + .panel {
+  position: relative;
+  top: -24px;
+  background-color: var(--bg1);
+  padding: 24px;
+  color: var(--text);
+  margin-bottom: -24px;
+  border-radius: 0 0 16px 16px;
+  padding-top: 0px;
+}
+
+#helpbox:empty{ display: none; }
+
+.panel fieldset,
+.panel fieldset.fields1 {
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.panel fieldset.submit-buttons {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px !important;
+}
+.panel fieldset.fields1 > br {
+  display: none;
+}
+.panel fieldset.fields1 > label {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+#list_dice {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#list_dice div.throw {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg2);
+  border-radius: 8px;
+}
+#list_dice div.throw > span,
+#list_dice div.throw div.rolls > label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  text-wrap: nowrap;
+}
+#list_dice div.throw div.rolls {
+  width: -webkit-fill-available;
+}
+#list_dice div.throw select {
+  background: var(--bg1);
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px var(--bg2) solid;
+  width: 144px;
+}
+#list_dice div.throw input {
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--bg1);
+  color: var(--text);
+}
+#list_dice div.throw span#dice_to_del {
+  position: absolute;
+  right: 16px;
+}
+#list_dice div.throw span#dice_to_del > a {
+  display: block;
+  background: var(--bg1);
+  padding: 4px 8px;
+  border-radius: 16px;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+#list_dice div.throw span#dice_to_del > a:hover > iconify-icon:first-child {
+  color: var(--text-contrast);
+}
+#list_dice div.throw span#dice_to_del > a > iconify-icon:first-child {
+  line-height: 28px;
+  height: 24px;
+  color: var(--text);
+}
+#list_dice div.throw span#dice_to_del > a > iconify-icon:last-child {
+  color: var(--co2);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -4px;
+  right: -6px;
+}
+
+div.post#preview {
+  display: block !important;
+}
+div.post#preview > div.inner {
+  width: 100% !important;
+  position: initial !important;
+  height: 100% !important;
+}
+div.post#preview > div.inner > div.postbody {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  gap: 0px;
+  background: var(--bg1_transp_5);
+  border: 1px solid var(--bg2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+div.post#preview > div.inner > div.postbody > div.h3 {
+  border: 0;
+  margin: 0;
+  padding: 8px 16px;
+  background: var(--bg1);
+  color: var(--text-contrast);
+  letter-spacing: 0;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+div.post#preview > div.inner > div.postbody > div.content {
+  background: var(--bg1_transp_5);
+  color: var(--text);
+  padding: 16px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+div.topic-type {
+  display: flex;
+  gap: 8px 0px;
+  font-size: 0px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  height: fit-content;
+}
+div.topic-type > span {
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-contrast);
+}
+div.topic-type > label {
+  font-size: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
