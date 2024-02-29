@@ -313,6 +313,8 @@ dd {
 .forumbg ul.topiclist > li.row div.tags > strong.note {
   background: rgba(var(--co4_rgb), 0.5);
   color: var(--light_1);
+  max-height: unset !important;
+  min-height: unset !important;
 }
 .forumbg ul.topiclist > li.row div.tags:empty {
   display: none;
