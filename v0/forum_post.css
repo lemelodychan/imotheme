@@ -111,6 +111,7 @@ div.topic-review {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
   max-width: 1048px !important;
   margin: auto !important;
   margin-top: 40px !important;
