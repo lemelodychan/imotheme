@@ -27,8 +27,6 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
-body.dark .fiche-2023{ --tx_content: #c0c3c4; }
-body.light .fiche-2023{ --tx_content: #424a4c; }
 .fiche-2023 br{ display: none; }
 .fiche-2023, .fiche-2023.maison { 
   --co1: var(--sui); 
@@ -83,8 +81,8 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   align-items: center;
 }
 .fiche-2023 .fiche-header > div img{
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 8px;
   aspect-ratio: 1;
   object-fit: cover;
@@ -112,7 +110,7 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   background-clip: text;
   text-fill-color: transparent;
   font-size: 28px;
-  line-height: 32px;
+  line-height: 40px;
   align-self: flex-end;
 }
 .fiche-2023 .fiche-header.right > div .fiche-nom h2{ align-self: flex-start; }
@@ -279,9 +277,8 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
 }
 .fiche-2023 .fiche-chrono > div::-webkit-scrollbar-thumb{
   height: 8px!important;
-  background-color: ;
-  border-radius: 8px!important;
-  border: 0px!important;
+  background: var(--bg3) !important;
+  border-radius: 8px !important;
 }
 .fiche-2023 .fiche-chrono > div > div{
   display: flex;
@@ -326,20 +323,24 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   line-height: 21px;
   width: 259px;
   height: max-content;
-  max-height: 144px;
+  max-height: 172px;
   overflow: hidden;
 }
 .fiche-2023 .fiche-chrono > div > div .chrono-item > div > span{
   display: block;
-  max-height: 144px;
+  max-height: 172px;
   overflow: auto;
   padding: 16px;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
   background: var(--bg2);
 }
-.fiche-2023 .fiche-chrono > div > div .chrono-item > div > span::-webkit-scrollbar-thumb{ background-color: var(--co1); }
-.fiche-2023 .fiche-chrono > div > div .chrono-item > div > span::-webkit-scrollbar-track{ background-color: ; }
+.fiche-2023 .fiche-chrono > div > div .chrono-item > div > span::-webkit-scrollbar-thumb{ 
+  border: 2px solid var(--bg2);
+}
+.fiche-2023 .fiche-chrono > div > div .chrono-item > div > span::-webkit-scrollbar-track{
+  border: 3px solid var(--bg2);
+}
 
 .fiche-2023 .fiche-chrono > div > div .chrono-item > div span label{
   display: inline-block;
