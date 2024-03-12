@@ -111,7 +111,7 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 32px;
   align-self: flex-end;
 }
@@ -126,7 +126,7 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   display: inline-block;
   width: fit-content;
   min-width: max-content;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 16px;
   font-weight: 600;
   color: var(--text-contrast);
@@ -198,23 +198,30 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   gap: 8px;
   padding-right: 16px;
 }
-.fiche-2023 .fiche-infos-content > div > div > span{
+.fiche-2023 .fiche-infos-content > div > div > span {
   display: block;
-  background: ;
+  background: var(--bg2);
   color: var(--text);
-  padding: 12px 16px;
+  padding: 16px;
   border-radius: 8px;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 21px;
 }
 .fiche-2023 .fiche-infos-content > div > div > span br{ display: initial!important; }
+.fiche-2023 .fiche-infos-content > div > div > span r1{
+  font-size: 12px;
+  line-height: 21px;
+}
 .fiche-2023 .fiche-infos-content > div > div > span label{
   display: inline-block;
   color: var(--text-contrast);
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 16px;
+  background: var(--bg1);
+  padding: 2px 6px;
+  border-radius: 4px;
   letter-spacing: 0.05em;
   margin-bottom: 4px;
 }
@@ -240,7 +247,7 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   height: max-content;
 }
 .fiche-2023 .fiche-infos-grid span > p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 16px;
   margin: 0px;
 }
@@ -311,7 +318,7 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   background: linear-gradient(to right, var(--co1), var(--co3), var(--co2), var(--co1));
   content: " ";
 }
-.fiche-2023 .fiche-chrono > div > div .chrono-item > div{
+.fiche-2023 .fiche-chrono > div > div .chrono-item > div {
   margin-right: 16px;
   background: ;
   border-radius: 8px;
@@ -327,8 +334,9 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   max-height: 144px;
   overflow: auto;
   padding: 16px;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 21px;
+  background: var(--bg2);
 }
 .fiche-2023 .fiche-chrono > div > div .chrono-item > div > span::-webkit-scrollbar-thumb{ background-color: var(--co1); }
 .fiche-2023 .fiche-chrono > div > div .chrono-item > div > span::-webkit-scrollbar-track{ background-color: ; }
@@ -338,7 +346,10 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   text-transform: uppercase;
   color: var(--text-contrast);
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
+  background: var(--bg1);
+  border-radius: 4px;
+  padding: 2px 6px;
   line-height: 16px;
   letter-spacing: 0.05em;
   margin-bottom: 4px;
@@ -361,8 +372,8 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   color: var(--text);
 }
 .fiche-2023 .fiche-background-content > div{
-  font-size: 13px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 24px;
   padding-right: 16px;
 }
 .fiche-2023 .fiche-background-content > div br{ display: initial!important; }
@@ -376,7 +387,7 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   padding: 10px 12px;
   background: var(--bg1);
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 21px;
   color: var(--text);
 }
@@ -385,8 +396,12 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   font-weight: 600;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 16px;
+  border-radius: 4px;
+  background: var(--bg1);
+  padding: 2px 6px;
+  border: 1px solid var(--bg2);
   letter-spacing: 0.05em;
   margin-bottom: 4px;
 }
