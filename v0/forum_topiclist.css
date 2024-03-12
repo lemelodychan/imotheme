@@ -37,7 +37,9 @@ div.sub-header > div.sub-header-info > h1 a {
   border-radius: 16px;
   box-shadow: none;
 }
-#page-desc div.nom-jp {
+#page-desc div.page-desc-content div.icon,
+#page-desc div.nom-jp,
+#page-desc div.page-desc-content div.guidebooks_list {
   display: none;
 }
 #page-desc div.soustitre {
