@@ -18,7 +18,7 @@
   height: calc(100% + 2px);
   border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(130deg, var(--co1), rgba(var(--bg1_rgb),0) 10%, rgba(var(--bg1_rgb),0) 90%, var(--co1));
+  background: linear-gradient(130deg, var(--co1), var(--bg2_transp_5) 10%, var(--bg2_transp_5) 90%, var(--co1));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
