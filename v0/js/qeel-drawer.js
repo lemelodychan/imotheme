@@ -2,6 +2,7 @@ $(document).ready(function () {
     var drawerContainer = $('#qeel_drawer_container');
     var drawer = $('#qeel_drawer');
     var button = $('#qeel_button');
+    var drawerContent = '';
 
     if (!drawer.length) {
         drawer = $('<div id="qeel_drawer"></div>');
@@ -17,6 +18,13 @@ $(document).ready(function () {
 
     function toggleDrawer() {
         var isDrawerVisible = drawer.css('right') === '0px';
+        if (!isDrawerVisible) {
+            // Drawer is closing, remove content from DOM
+            drawer.empty();
+        } else {
+            // Drawer is opening, add content back to DOM
+            drawer.html(drawerContent);
+        }
         drawer.css({
             display: 'grid',
             right: isDrawerVisible ? '-400px' : '0px'
