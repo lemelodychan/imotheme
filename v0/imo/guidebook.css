@@ -624,8 +624,8 @@
     letter-spacing: 0.5px;
     color: white!important;
     line-height: var(--spacing-md);
-    padding: var(--spacing-xs) 8px;
-    border-radius: var(--spacing-xs);
+    padding: 4px 8px;
+    border-radius: 4px;
     margin: 8px auto 0 auto;
     transition: var(--transi);
     border-width: initial;
@@ -681,7 +681,7 @@ p.credo_eng {
 }
 p.credo_jp {
     text-align: center;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 4px;
 }
 p.credo_rom {
     text-align: center;
@@ -741,7 +741,7 @@ p.credo_rom {
 }
 .guide_Ecoles_liste .guide_Ecole r3 {
     display: block;
-    margin: 0px 8px var(--spacing-xs) 8px;
+    margin: 0px 8px 4px 8px;
 }
 .guide_Ecoles_liste .guide_Ecole tit {
     font-family: var(--font-titre);
@@ -894,3 +894,420 @@ p.credo_rom {
 .msg-admin > .guide { padding: 1px !important }
 .msg-admin .guide_Header > div div.guide_Titre h2 { font-size: 24px !important;  line-height: 32px !important; }
 .msg-admin  .guide_Block .guide_Contenu__Titre { font-size: 20px !important; line-height: 24px !important; }
+
+
+/* ------ LISTINGS - CARDS -------- */
+div.listing{
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  background: var(--bg1_transp_5);
+}
+div.listing .para{margin:0!important}
+
+div.listing.col1{ grid-template-columns: 1fr; position: relative; }
+div.listing:last-of-type {border-radius: 8px;}
+div.listing.etudiants{
+  grid-template-columns: 1fr;
+  grid-gap: 8px;
+}
+div.listing.col1:before{
+  display: block;
+  background-color: var(--bg3);
+  width: 1px;
+  height: calc(100% - 32px);
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  margin: 0px 50%;
+}
+
+div.listing card{
+  display: grid;
+  padding: 8px;
+  background: var(--bg1);
+  border: 1px solid var(--bg2);
+  border-radius: 8px;
+  grid-row-gap: 8px;
+  align-content: start;
+  z-index: 1;
+}
+div.listing card:hover{z-index: 3!important;}
+div.listing card cardtop{
+  display: grid;
+  grid-template-columns: max-content auto 8px;
+  grid-column-gap: 8px;
+  align-items: flex-start;
+}
+div.listing card cardtop.metiers{
+  grid-template-columns: auto 8px;
+  grid-template-rows: auto;
+}
+card a.tag, .listing tag{
+  display: inline-block;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 2px 0px;
+  transition: var(--transi);
+  box-shadow: none; 
+  transform: scale(100%,100%);
+  text-align: center;
+  min-width: 44px;
+}
+card a.tag{ color: var(--light_1)!important; }
+card a.tag.wakoku{ background: var(--doj); width: fit-content; }
+card a.tag.eiyamachi{ background: var(--hii); width: fit-content; }
+card a.tag.chuokoei{ background: #8F9FF0; width: fit-content; }
+card a.tag.shinmeidai{ background: #D7B59C; width: fit-content; }
+card a.tag.uminomiya{ background: var(--sui); width: fit-content; }
+card a.tag.mikazukijima{ background: var(--fug); width: fit-content; }
+card a.tag.tokidai{ background: var(--min); width: fit-content; }
+card a.tag.makosa{ background: var(--co2); width: fit-content; }
+card a.tag:hover{ box-shadow: var(--boxshadow); transform: scale(104%,104%); }
+
+.listing card tag{ background: var(--co2); color: white; }
+.listing.col1 card:nth-child(even) tag{ background: var(--co2); color: white; }
+.listing.col1 card:nth-child(odd) tag{ background: var(--co1); color: white; }
+.listing card tag.fugi{ background: var(--fug); }
+.listing card tag.suisei{ background: var(--sui); }
+.listing card tag.hiisa{ background: var(--hii); }
+.listing card tag.raiyo{ background: var(--rai); }
+.listing card tag.dojin{ background: var(--doj); }
+
+cardtop > span{
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  line-height: 150%;
+  color: var(--text);
+}
+cardtop > span nom{
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text);
+}
+cardtop > span nom a{ color: var(--text)!important; font-size: 10px; --ionicon-stroke-width: 48px; }
+cardtop > span nom a.mentiontag{ font-size: 13px!important; }
+card .infobulle.infobulle_small{
+  width: 24px;
+  height: 24px;
+  right: 4px;
+}
+card .infobulle>span{ left: auto!important; right: 8px!important; }
+card .infobulle>span hr{ background-color: var(--bg1); margin: 8px 0px -8px 0px;}
+
+card .infobulle ion-icon{ color: var(--co2); font-size: 16px; }
+card liste{
+  display: block;
+  background-color: var(--bg2);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 4px 8px;
+  height: -webkit-fill-available;
+  max-height: 64px;
+  overflow: auto;
+  font-size: 11px;
+  line-height: 16px;
+}
+card.logement liste{ max-height: none; }
+card.mahoutokoro liste { max-height: none; }
+card liste::-webkit-scrollbar-thumb{ background: var(--co2)!important; }
+card liste br{ display: block!important; }
+card liste b {
+  color: var(--co2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 9px;
+  line-height: 16px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+card.mahoutokoro liste b{ min-width: 36px; display: inline-block; }
+card liste a, card liste a:link{ color: var(--co2)!important; }
+card liste a:hover{ color: var(--co3)!important; }
+card .postlink:hover{ background-color: transparent; }
+card liste a.mentiontag:link,
+card liste a.mentiontag:visited{
+  background: transparent!important;
+  padding: 0px!important;
+  margin: 0px;
+  border-radius: 0px;
+  color: var(--text)!important;
+  line-height: 16px;
+  text-transform: lowercase;
+  border-bottom: 0px;
+}
+card liste a.mentiontag:hover{ color: var(--co2); }
+
+div.etudiants liste{
+  display: grid;
+  padding: 8px;
+  grid-gap: 8px;
+  border: 1px solid var(--bg3);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+div.etudiants liste:last-of-type{ margin-bottom: 0px; }
+
+div.etudiants liste annee{
+  display: grid;
+  grid-template-columns: 74px auto;
+  grid-gap: 8px;
+  align-items: center;
+  justify-content: start;
+  justify-items: center;
+}
+div.etudiants.top liste annee{ 
+  grid-template-columns: 22px auto; 
+  align-items: start; 
+}
+
+liste annee.quidd{
+  grid-template-columns: 144px auto!important;
+  align-items: self-start;
+  align-content: flex-start!important;
+  align-items: flex-start!important;
+  justify-items: flex-start!important;
+}
+
+liste annee tag{
+  width: 100%;
+  max-width: 96px;
+  text-align: center;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0px 4px;
+  background-color: var(--bg2);
+  border-radius: 4px;
+}
+div.top liste annee tag{
+  font-size: 8px;
+  width: 22px;
+  min-width: 22px;
+  line-height: 20px;
+  max-width: 22px;
+  height: 22px;
+  border: 1px solid var(--co2);
+  background: transparent;
+  color: var(--co2);
+  border-radius: 50%;
+  margin: 0px;
+}
+liste annee.quidd tag{ max-width: 144px; text-align: left; }
+
+liste annee span{ line-height: 20px; font-size: 12px; color: var(--text); }
+
+/* ------ BESTIAIRE ----- */
+.listing.bestiaire {
+  background: transparent;
+  padding-top: 0px;
+}
+.listing.ecoles { grid-template-columns: 1fr; }
+
+div.listing.bestiaire card{
+  border: 0px;
+  background-color: var(--bg1_transp_5);
+  padding: 0px!important;
+  border-radius: 8px;
+  height: 185px;
+  overflow: hidden;
+  display: flex;
+  gap: 0px;
+  position: relative;
+}
+.bestiaire card > img{
+  height: 185px;
+  width: 95px;
+  object-fit: cover;
+  transition: var(--transi);
+  opacity: 1;
+}
+.bestiaire card card-content{
+  transition: var(--transi);
+  opacity: 1;
+  width: -webkit-fill-available;
+  padding: 8px;
+  justify-items: end;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+.bestiaire card.ecole card-content{ grid-template-rows: 56px auto; }
+.bestiaire card card-content > span{
+  display: block;
+  text-align: right;
+  height: 40px;
+}
+.bestiaire card card-content > span nom{
+  text-align: right;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  font-family: var(--font-titre);
+}
+
+.bestiaire card card-content > span nom:after{
+  display: block;
+  content: " ";
+  width: 96px;
+  height: 1px;
+  margin: 8px 0;
+  position: absolute;
+  background-color: var(--co2);
+  right: 0px;
+}
+.bestiaire card card-content info{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  background: var(--bg1);
+  border: none;
+}
+.bestiaire card card-content info > span{
+  background-color: var(--bg2);
+  display: grid;
+  grid-auto-rows: 8px;
+  padding: 8px;
+  grid-gap: 4px;
+  font-size: 10px;
+  line-height: 16px;
+  height: 100%;
+  align-items: center;
+}
+.bestiaire card card-content info > span label{
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 8px;
+  line-height: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: var(--bg1);
+  display: inline-block;
+  letter-spacing: .5px;
+  width: fit-content;
+  color: var(--text);
+}
+
+.bestiaire card.ecole card-content infos{
+  display: block;
+  height: 100%;
+  overflow: auto;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--bg1_transp_5);
+  font-size: 12px;
+  text-align: justify;
+}
+.bestiaire card.ecole card-content infos::-webkit-scrollbar-thumb{ background-color: var(--co2)!important; }
+
+div.listing.bestiaire card:hover > img,
+div.listing.bestiaire card:hover card-content{ opacity: 0.3; }
+div.listing.bestiaire card.ecole:hover > img,
+div.listing.bestiaire card.ecole:hover card-content{ opacity: 1; }
+div.listing.bestiaire card.ecole:hover > img{ filter: grayscale(1); }
+
+
+.bestiaire card desc{
+  position: absolute;
+  background-color: var(--bg1_transp_5);
+  padding: 8px;
+  height: 100%;
+  opacity: 0;
+  transform-origin: center center;
+  transform: scale3D(0%,0%,0%);
+  transition: var(--transi);
+  /* backdrop-filter: blur(4px); */
+}
+div.listing.bestiaire card:hover desc{
+  opacity: 1;
+  transform: scale3D(100%,100%,100%);
+}
+.bestiaire card desc span{
+  overflow: auto;
+  padding: 8px;
+  background-color: var(--bg1_transp_5);
+  border-radius: 8px;
+  display: block;
+  text-align: justify;
+  color: var(--text);
+  height: -webkit-fill-available;
+}
+.bestiaire card.ecole infos span br,
+.bestiaire card desc span br{display: block;}
+
+.bestiaire card desc span::-webkit-scrollbar-thumb{ background-color: var(--co1); }
+
+.cad_col{
+  font-size: 12px!important;
+  line-height: 20px!important;
+  column-count: 2;
+  column-gap: 8px;
+}
+
+/* --- LOTO --- */
+.para-loto {
+  background-color: var(--bg1_transp_5)!important;
+}
+.para.para-loto br {
+    display: none!important;
+}
+.loto {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  margin: 0 auto;
+  grid-gap: 8px;
+}
+.loto_lot {
+  transition: var(--transi);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  background-color: var(--bg1);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.loto_lot:hover {
+  box-shadow: var(--boxshadow);
+}
+.loto_lot ba1,
+.loto_lot ba2 {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 2px;
+  margin: 0px auto 8px auto;
+  font-size: 16px;
+  line-height: 36px;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  color: white!important;
+  font-family: var(--font-titre);
+}
+.loto_lot ba1{ background-color: var(--co2); }
+.loto_lot ba2{ background-color: var(--co1); }
+
+.loto_lot span {
+  line-height: 16px;
+  height: 80px;
+  overflow: auto;
+  font-size: 12px;
+}
+.loto_lot span br{ display: initial!important; }
