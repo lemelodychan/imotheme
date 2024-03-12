@@ -33,38 +33,38 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
 .fiche-2023, .fiche-2023.maison { 
   --co1: var(--sui); 
   background: 
-    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--co1_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%),
-    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--co1_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%); 
+    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--co1_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
+    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--co1_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
 }
 .fiche-2023.dojin { 
   --co1: var(--doj); 
   background: 
-    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--doj_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%),
-    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--doj_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%); 
+    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--doj_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
+    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--doj_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
 }
 .fiche-2023.fugi { 
   --co1: var(--fug); 
   background: 
-    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--fug_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%),
-    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--fug_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%); 
+    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--fug_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
+    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--fug_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
 }
 .fiche-2023.hiisa { 
   --co1: var(--hii); 
   background: 
-    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--hii_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%),
-    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--hii_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%); 
+    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--hii_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
+    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--hii_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
 }
 .fiche-2023.raiyo { 
   --co1: var(--rai); 
   background: 
-    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--rai_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%),
-    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--rai_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%); 
+    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--rai_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
+    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--rai_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
 }
 .fiche-2023.suisei { 
   --co1: var(--sui); 
   background: 
-    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--sui_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%),
-    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--sui_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%); 
+    radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--sui_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
+    radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--sui_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
 }
 
 .fiche-2023 .fiche-header {
