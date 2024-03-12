@@ -27,9 +27,9 @@
     flex-direction: column; 
     margin: auto;
 }
-.guidebook.guidev2 div.guide{ 
+.guidebook.guidev2 div.guide { 
     padding: 24px;
-    background-color: var(--bg2);
+    background-color: var(--bg1);
 }
 .guidebook.guidev2 img{ border-radius: 8px; overflow: hidden; }
 
@@ -80,7 +80,7 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
-    background: radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--co1_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%), radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--co1_rgb),0.3) 0%, rgba(var(--bg1_rgb),0) 100%);
+    background: radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--co1_rgb),0.3) 0%, rgba(var(--bg2_rgb),0.5) 100%), radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--co1_rgb),0.3) 0%, rgba(var(--bg2_rgb),0.5) 100%);
 }
 .guide_Contenu > div:first-of-type { border-radius: 16px 16px 0px 0px; }
 .guide_Contenu > div:last-of-type { border-radius: 0px 0px 16px 16px; }
@@ -96,7 +96,7 @@
     height: calc(100% + 2px);
     border-radius: 16px;
     padding: 1px;
-    background: linear-gradient(130deg, var(--co1), rgba(var(--bg1_rgb),0) 10%, rgba(var(--bg1_rgb),0) 90%, var(--co1));
+    background: linear-gradient(130deg, var(--co1), rgba(var(--bg2_rgb),0.5) 10%, rgba(var(--bg2_rgb),0.5) 90%, var(--co1));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
