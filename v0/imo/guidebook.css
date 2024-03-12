@@ -430,6 +430,7 @@
 }
 .guidebook.guidev2 .guide_Onglets a.guide_Onglet bg5 {
     font-size: 12px;
+    margin-bottom: 8px;
     transition: var(--transi);
 }
 .guidebook.guidev2 .guide_Onglets a.guide_Onglet.selected bg5 {
@@ -947,10 +948,10 @@ div.listing card cardtop.metiers{
 }
 card a.tag, .listing tag{
   display: inline-block;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: bold;
   line-height: 16px;
-  padding: 0px 4px;
+  padding: 2px 6px;
   border-radius: 2px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -990,8 +991,8 @@ cardtop > span{
 }
 cardtop > span nom{
   font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--text);
 }
 cardtop > span nom a{ color: var(--text)!important; font-size: 10px; --ionicon-stroke-width: 48px; }
@@ -1010,12 +1011,12 @@ card liste{
   background-color: var(--bg2);
   color: var(--text);
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 8px;
   height: -webkit-fill-available;
   max-height: 64px;
   overflow: auto;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 24px;
 }
 card.logement liste{ max-height: none; }
 card.mahoutokoro liste { max-height: none; }
