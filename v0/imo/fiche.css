@@ -362,7 +362,7 @@
   padding: 16px;
   background: var(--bg1);
   border-radius: 8px;
-  height: 540px;
+  /* height: 540px; */
   width: 100%;
   max-width: 100%;
   overflow: hidden;
