@@ -184,7 +184,7 @@
 }
 .fiche-2023 .fiche-infos-content > div{
   background: var(--bg1);
-  padding: 16px;
+  padding: 16px 8px 16px 16px;
   border-radius: 8px;
   height: 320px;
 }
@@ -194,7 +194,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-right: 16px;
+  padding-right: 8px;
 }
 .fiche-2023 .fiche-infos-content > div > div > span {
   display: block;
@@ -221,7 +221,7 @@
   padding: 2px 6px;
   border-radius: 4px;
   letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .fiche-2023 .fiche-infos-content > img{
   width: 200px;
@@ -235,7 +235,7 @@
   grid-template-rows: 1fr auto;
 }
 .fiche-2023 .fiche-infos-grid span{
-  padding: 6px 10px;
+  padding: 8px 12px;
   background: var(--bg1);
   border-radius: 8px;
   display: flex;
@@ -246,7 +246,7 @@
 }
 .fiche-2023 .fiche-infos-grid span > p {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 20px;
   margin: 0px;
 }
 .fiche-2023 .fiche-infos-grid span ion-icon{ color: var(--co1); }
@@ -317,7 +317,8 @@
 }
 .fiche-2023 .fiche-chrono > div > div .chrono-item > div {
   margin-right: 16px;
-  background: ;
+  background: var(--bg2);
+  padding: 4px;
   border-radius: 8px;
   font-size: 12px;
   line-height: 21px;
@@ -330,7 +331,7 @@
   display: block;
   max-height: 172px;
   overflow: auto;
-  padding: 16px;
+  padding: 12px;
   font-size: 14px;
   line-height: 24px;
   background: var(--bg2);
@@ -385,7 +386,7 @@
 }
 
 .fiche-2023 .fiche-irl > span{
-  padding: 10px 12px;
+  padding: 16px;
   background: var(--bg1);
   border-radius: 8px;
   font-size: 14px;
@@ -400,11 +401,11 @@
   font-size: 12px;
   line-height: 16px;
   border-radius: 4px;
-  background: var(--bg1);
+  background: var(--bg2);
   padding: 2px 6px;
   border: 1px solid var(--bg2);
   letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .fiche-2023 .fiche-irl > span:last-of-type{
   padding: 16px;
