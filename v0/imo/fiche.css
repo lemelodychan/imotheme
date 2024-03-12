@@ -262,13 +262,13 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   background: var(--bg1);
   border-radius: 8px;
   height: fit-content;
-  max-width: 623px;
+  max-width: 100%;
   width: 100%;
   overflow: hidden;
 }
 .fiche-2023 .fiche-chrono > div{
   height: fit-content;
-  max-width: 623px;
+  max-width: 100%;
   width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
@@ -360,9 +360,9 @@ body.light .fiche-2023{ --tx_content: #424a4c; }
   padding: 16px;
   background: var(--bg1);
   border-radius: 8px;
-  height: 514px;
-  max-width: 623px;
+  height: 540px;
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
 }
 .fiche-2023 .fiche-chrono > div,
