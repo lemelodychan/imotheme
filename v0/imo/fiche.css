@@ -29,7 +29,7 @@
 }
 .fiche-2023 br{ display: none; }
 .fiche-2023, .fiche-2023.maison { 
-  --co1: var(--sui); 
+  --co1: var(--co2); 
   background: 
     radial-gradient(73.55% 42.04% at 100% 0%, rgba(var(--co1_rgb),0.3) 0%, var(--bg2_transp_5) 100%),
     radial-gradient(73.55% 42.04% at 0% 100%, rgba(var(--co1_rgb),0.3) 0%, var(--bg2_transp_5) 100%); 
