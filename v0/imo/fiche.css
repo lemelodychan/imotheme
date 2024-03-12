@@ -408,8 +408,6 @@
   margin-bottom: 8px;
 }
 .fiche-2023 .fiche-irl > span:last-of-type{
-  padding: 16px;
-  background: var(--bg1_transp_5);
   grid-column-start: 1;
   grid-column-end: 4;
 }
