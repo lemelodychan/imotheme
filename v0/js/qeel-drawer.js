@@ -1,8 +1,9 @@
+var drawerContent = '';
+
 $(document).ready(function () {
     var drawerContainer = $('#qeel_drawer_container');
     var drawer = $('#qeel_drawer');
     var button = $('#qeel_button');
-    var drawerContent = '';
 
     if (!drawer.length) {
         drawer = $('<div id="qeel_drawer"></div>');
@@ -17,20 +18,13 @@ $(document).ready(function () {
     $('#qeel_button').on('click', toggleDrawer);
 
     function toggleDrawer() {
-        var isDrawerVisible = drawer.css('right') === '0px';
-        if (!isDrawerVisible) {
-            // Drawer is closing, remove content from DOM
-            drawer.empty();
-        } else {
-            // Drawer is opening, add content back to DOM
-            drawer.html(drawerContent);
+            var isDrawerVisible = drawer.css('right') === '0px';
+            drawer.css('right', isDrawerVisible ? '-400px' : '0px');
+            button.toggleClass('open', !isDrawerVisible);
+            if (!isDrawerVisible) {
+                populateDrawerContent();
+            }
         }
-        drawer.css({
-            display: 'grid',
-            right: isDrawerVisible ? '-400px' : '0px'
-        });
-        button.toggleClass('open', !isDrawerVisible);
-    }
 
     function addStatusAndAvatar(userLink, statusClass, avatarUrl, hoverText) {
         var usernameElement = userLink.find('span[style^="color"], span[class^="style"]');
@@ -86,7 +80,7 @@ $(document).ready(function () {
     }
 
     function populateDrawerContent() {
-        var drawerContent = `
+        drawerContent = `
             <div>
                 <h3>Actuellement connecté.e.s&nbsp;ー&nbsp;<span id="online_number"></span></h3>
                 <div id="qeel_online" class="loading"></div>
