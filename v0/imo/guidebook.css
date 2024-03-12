@@ -432,6 +432,7 @@
     font-size: 12px;
     margin-bottom: 8px;
     transition: var(--transi);
+    color: var(--text-contrast);
 }
 .guidebook.guidev2 .guide_Onglets a.guide_Onglet.selected bg5 {
     background-color: var(--co2)!important;
