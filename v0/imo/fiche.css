@@ -208,6 +208,7 @@
 .fiche-2023 .fiche-infos-content > div > div > span r1{
   font-size: 12px;
   line-height: 21px;
+  color: var(--text-contrast);
 }
 .fiche-2023 .fiche-infos-content > div > div > span label{
   display: inline-block;
