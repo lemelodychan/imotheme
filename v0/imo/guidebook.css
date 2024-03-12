@@ -924,7 +924,7 @@ div.listing.col1:before{
   content: " ";
   position: absolute;
   z-index: 1;
-  top: 8px;
+  top: 16px;
   margin: 0px 50%;
 }
 
