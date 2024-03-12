@@ -209,7 +209,7 @@
 .guidebook.guidev2 .guide_TdM > div{
     width: -webkit-fill-available;
     padding: 16px;
-    background: var(--bg1_transp_5);
+    background: var(--bg1);
     border-radius: 8px;
 }
 .guidebook.guidev2 .guide_TdM > div > bb2 {
@@ -436,6 +436,9 @@
 .guidebook.guidev2 .guide_Onglets a.guide_Onglet.selected bg5 {
     background-color: var(--co2)!important;
     color: white!important;
+}
+.guidebook.guidev2 .guide_Onglets a.guide_Onglet:not(.selected) bg5 {
+    background-color: var(--bg2)!important;
 }
 .guidebook.guidev2 .guide_Onglets a.guide_Onglet strong {
     letter-spacing: 1px;
@@ -898,12 +901,12 @@ p.credo_rom {
 
 
 /* ------ LISTINGS - CARDS -------- */
-div.listing{
-  padding: 8px;
+div.listing {
+  padding: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 8px;
-  background: var(--bg1_transp_5);
+  grid-gap: 16px;
+  background: var(--bg1);
 }
 div.listing .para{margin:0!important}
 
@@ -993,7 +996,7 @@ cardtop > span nom{
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: var(--text);
+  color: var(--text-contrast);
 }
 cardtop > span nom a{ color: var(--text)!important; font-size: 10px; --ionicon-stroke-width: 48px; }
 cardtop > span nom a.mentiontag{ font-size: 13px!important; }
@@ -1013,7 +1016,7 @@ card liste{
   border-radius: 4px;
   padding: 8px;
   height: -webkit-fill-available;
-  max-height: 64px;
+  max-height: 128px;
   overflow: auto;
   font-size: 14px;
   line-height: 24px;
