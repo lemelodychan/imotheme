@@ -305,7 +305,7 @@ var Wombat = function () {
                     $.get(userUrl, function(data) {
                       var imgSrc = $(data).find('#wombat #field_id3 > dd img').attr('src');
                       var altText = $(data).find('#wombat #username').text().trim();
-                      var profileImage = $('<img>').attr('src', imgSrc).attr('alt', altText);
+                      var profileImage = $('<img>').attr('data-src', imgSrc).addClass('lazyload').attr('alt', altText);
                       profileLink.append(profileImage);
                       if (altText !== '') {
                         resolve(profileLink);
@@ -395,6 +395,19 @@ var Wombat = function () {
         this.binds();
         this.onClickOutside();
     };
+
+    function convertTagsForLazyLoad() {
+        document.querySelectorAll('img, iframe').forEach(el => {
+            if (!el.classList.contains('lazyload')) {
+                if (el.tagName.toLowerCase() === 'img' || el.tagName.toLowerCase() === 'iframe') {
+                    el.dataset.src = el.src;
+                    el.removeAttribute('src');
+                }
+                el.classList.add('lazyload');
+            }
+        });
+    }
+    convertTagsForLazyLoad();
 
     return Wombat;
 }();
