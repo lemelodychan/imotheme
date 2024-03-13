@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         var strongElement = userLink.find('strong');
 
-        var avatarImg = $('<img>').attr('src', avatarUrl).addClass('avatar_qeel');
+        var avatarImg = $('<img>').attr('data-src', avatarUrl).addClass('avatar_qeel lazyload');
         var statusSpan = $('<span></span>').addClass('status ' + statusClass);
         userLink.append(avatarImg, statusSpan);
 
