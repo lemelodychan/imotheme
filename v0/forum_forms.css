@@ -1,0 +1,31 @@
+/* --- SIGN UP --- */
+
+/* --- POST CONFIRMATION MODAL --- */
+
+/* --- PROFIL EDIT CONFIRMATION MODAL --- */
+div.msgdie-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px auto;
+}
+div.msgdie-panel > div.metadata > p {
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+}
+div.msgdie-panel > h1.page-title {
+  padding: 0;
+  border: 0;
+  font-size: 32px;
+  line-height: 40px;
+}
+div.msgdie-panel > div.inner {
+  background: var(--bg1_transp_7);
+  border: 1px solid var(--bg2);
+  padding: 16px;
+  border-radius: 16px;
+}
+div.msgdie-panel > div.inner > p {
+  margin: 0;
+}
