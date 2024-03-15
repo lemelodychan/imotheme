@@ -33,7 +33,12 @@ $(document).ready(function() {
         const prenom = $('#prenom').val();
         const surnom = $('#surnom').val();
         const ndf = $('#ndf').val();
-        const dob = $('#dob').val();
+
+        const dobValue = $('#dob').val();
+        const selectedDate = new Date(dobValue);
+        const dob = selectedDate.getFullYear() + '-' +
+                  ('0' + (selectedDate.getMonth() + 1)).slice(-2) + '-' +
+                  ('0' + selectedDate.getDate()).slice(-2);
 
         try {
             const { data, error } = await supabaseClient
