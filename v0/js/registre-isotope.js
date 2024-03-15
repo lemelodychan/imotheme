@@ -90,7 +90,7 @@ $(document).ready(function(){
             const date = new Date();
             let year = date.getFullYear();
             let DOB = `${item.dob}`;
-            DOBy = DOB.substring(6);
+            let DOBy = DOB.substring(0, 4);
             let age = year - DOBy;
             if (age <= 20) { listItem.classList.add('u20'); }
             else if (age > 20 && age < 30) { listItem.classList.add('u30'); }
