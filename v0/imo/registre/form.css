@@ -68,18 +68,19 @@ div.form_container > div.form_code > span a:hover { color: var(--co1); }
 div.form_container form#registreForm input[type="text"], 
 div.form_container form#registreForm input[type="number"],
 div.form_container form#registreForm input[type="url"],
+div.form_container form#registreForm input[type="date"],
 div.form_container form#registreForm .inputbox, 
 div.form_container form#registreForm select {
-background-color: var(--bg1);
-color: var(--text);
-border-bottom: 0px;
-cursor: text;
-font-size: 14px;
-line-height: 24px;
-height: 40px;
-border-radius: 4px;
-padding: 8px;
-width: 100%;
+  background-color: var(--bg1);
+  color: var(--text);
+  border-bottom: 0px;
+  cursor: text;
+  font-size: 14px;
+  line-height: 24px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
 }
 div.form_container form#registreForm label,
 div.form_container form#registreForm legend {
