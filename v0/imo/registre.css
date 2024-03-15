@@ -5,7 +5,7 @@ div.directory {
     grid-gap: 1px;
     border-radius: 16px;
     overflow: hidden;
-    max-width: 100% !important;
+    max-width: calc(100% - 96px) !important;
 }
 
 div.directory div.filters {
