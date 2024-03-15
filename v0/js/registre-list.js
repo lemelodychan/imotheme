@@ -17,7 +17,7 @@ $(document).ready(function() {
 
             // Display fetched data in a list
             data.forEach(item => {
-                const listItem = `<li>ID: ${item.id}, Nom: ${item.nom}, Prenom: ${item.prenom}, Surnom: ${item.surnom}, NDF: ${item.ndf}</li>`;
+                const listItem = `<li>ID: ${item.id}, Nom: ${item.nom}, Prenom: ${item.prenom}, Surnom: ${item.surnom}, NDF: ${item.ndf}, DOB: ${item.dob}</li>`;
                 $('#itemList').append(listItem);
             });
         } catch (error) {
@@ -33,11 +33,12 @@ $(document).ready(function() {
         const prenom = $('#prenom').val();
         const surnom = $('#surnom').val();
         const ndf = $('#ndf').val();
+        const dob = $('#dob').val();
 
         try {
             const { data, error } = await supabaseClient
                 .from('Registre')
-                .insert([{ id, nom, prenom, surnom, ndf }]);
+                .insert([{ id, nom, prenom, surnom, ndf, dob }]);
 
             if (error) throw error;
             $('#entryForm')[0].reset();
