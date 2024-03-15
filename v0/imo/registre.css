@@ -5,6 +5,7 @@ div.directory {
     grid-gap: 1px;
     border-radius: 16px;
     overflow: hidden;
+    max-width: 100% !important;
 }
 
 div.directory div.filters {
@@ -60,7 +61,7 @@ div.directory div.filters div.button-group > div > .button {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--text-contrast);
+    color: var(--text);
     background-color: var(--bg2);
     border: 1px solid var(--bg2);
     border-radius: 16px;
@@ -71,7 +72,7 @@ div.directory div.filters div.button-group > div > .button {
     justify-content: center;
 }
 div.directory div.filters div.button-group > div > .button.is-checked {
-    border: 1px solid var(--bg2);
+    border: 1px solid var(--bg1);
     position: relative;
     color: var(--text-contrast) !important;
 }
