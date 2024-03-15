@@ -147,8 +147,8 @@ div.formsection.info { font-style: normal !important;}
   align-items: center !important;
 }
 
-.parti > div:nth-of-type(1) { grid-column: 1/4; margin-top: 8px; }
-.parti > div:nth-of-type(2) { grid-column: 4/7; margin-top: 8px; }
+.parti > div:nth-of-type(1) { grid-column: 1/4; }
+.parti > div:nth-of-type(2) { grid-column: 4/7; }
 .parti > div:nth-of-type(3) {
   width: 100%;
   display: flex;
@@ -167,7 +167,6 @@ div.formsection.info { font-style: normal !important;}
   width: 100%;
   display: flex;
   gap: 16px;
-  margin-bottom: 16px;
 }
 .parti > div:nth-of-type(3) > div > div#animal_forme,
 .parti > div:nth-of-type(3) > div > div#mangetsuki_role { 
@@ -213,9 +212,9 @@ div.formsection.occupation .occup2{
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
-  border: 1px solid var(--bg1);
+  border: 1px solid var(--bg2);
   border-radius: 16px;
-  background: rgba(var(--bg1_rgb),0.3);
+  background: var(--bg1_transp_7);
 }
 div.formsection.occupation .occup1 div,
 div.formsection.occupation .occup2 div {
@@ -249,9 +248,9 @@ div.formsection.etudiant .cosmo{
   display: grid;
   grid-gap: 16px;
   padding: 16px;
-  border: 1px solid var(--bg1);
+  border: 1px solid var(--bg2);
   border-radius: 16px;
-  background: rgba(var(--bg1_rgb),0.3);
+  background: var(--bg1_transp_7);
 }
 div.formsection.etudiant .etudes1,
 div.formsection.etudiant .etudes2 {
