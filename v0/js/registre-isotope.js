@@ -238,62 +238,63 @@ $(document).ready(function(){
             listItem.appendChild(containerSpan);
   
             dataList.appendChild(listItem); 
-          });
-        } catch (error) {
-          console.error('Error:', error);
-        }
+        });
+
+        // Initialize Isotope after appending grid items
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            stagger: 30,
+            layoutMode: 'masonry',
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: '.gutter-sizer',
+                horizontalOrder: true,
+            },
+            getSortData: {
+                name: '.nom span:first-child',
+                category: '[data-category]',
+                weight: function( itemElem ) {
+                    var weight = $( itemElem ).find('.weight').text();
+                    return parseFloat( weight.replace( /[\(\)]/g, '') );
+                }
+            },
+            sortBy: 'name'
+        });
+    
+        var filters = {};
+        $('.filters').on('click', '.button', function() {
+            var $this = $(this);
+            var $buttonGroup = $this.parents('.button-group');
+            var filterGroup = $buttonGroup.attr('data-filter-group');
+            filters[filterGroup] = $this.attr('data-filter');
+            var filterValue = concatValues(filters);
+    
+            console.log('Filter Value:', filterValue);
+    
+            $buttonGroup.find('.button').removeClass('is-checked');
+            $this.addClass('is-checked');
+    
+            $grid.isotope({ filter: filterValue });
+        });
+            
+        function concatValues(obj) {
+            var value = '';
+            for (var prop in obj) {
+                value += obj[prop];
+            }
+            return value;
+        }  
+                
+        $grid.imagesLoaded().progress( function() {
+            $grid.isotope('layout');
+        });
+    
+        const columnWidth = $('.grid-sizer').width();
+        console.log('Column Width:', columnWidth);
+    } catch (error) {
+        console.error('Error:', error);
     }
-  fetchDataAndDisplay();
-  
-  var $grid = $('.grid').isotope({
-      itemSelector: '.grid-item',
-      stagger: 30,
-      layoutMode: 'masonry',
-      masonry: {
-        columnWidth: '.grid-sizer',
-        gutter: '.gutter-sizer',
-        horizontalOrder: true,
-      },
-      getSortData: {
-        name: '.nom span:first-child',
-        category: '[data-category]',
-        weight: function( itemElem ) {
-          var weight = $( itemElem ).find('.weight').text();
-          return parseFloat( weight.replace( /[\(\)]/g, '') );
-        }
-      },
-      sortBy: 'name'
-  });
-  
-  var filters = {};
-  $('.filters').on('click', '.button', function() {
-      var $this = $(this);
-      var $buttonGroup = $this.parents('.button-group');
-      var filterGroup = $buttonGroup.attr('data-filter-group');
-      filters[filterGroup] = $this.attr('data-filter');
-      var filterValue = concatValues(filters);
+}
 
-      console.log('Filter Value:', filterValue);
-
-      $buttonGroup.find('.button').removeClass('is-checked');
-      $this.addClass('is-checked');
-
-      $grid.isotope({ filter: filterValue });
-  });
-      
-  function concatValues(obj) {
-      var value = '';
-      for (var prop in obj) {
-          value += obj[prop];
-      }
-      return value;
-  }  
-        
-  $grid.imagesLoaded().progress( function() {
-      $grid.isotope('layout');
-   });
-  
-  const columnWidth = $('.grid-sizer').width();
-  console.log('Column Width:', columnWidth);
-
+fetchDataAndDisplay();
 });
