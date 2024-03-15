@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         try {
             const { data, error } = await supabaseClient
-                .from('registre')
+                .from('Registre')
                 .insert([{ id, nom, prenom, surnom, ndf }]);
 
             if (error) throw error;
