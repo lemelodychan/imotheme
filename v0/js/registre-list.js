@@ -94,7 +94,7 @@ $(document).ready(function() {
                 }
 
                 // Reset form and update displayed data
-                $('#entryForm')[0].reset();
+                $('#registreForm')[0].reset();
                 fetchDataAndDisplay();
             } catch (error) {
                 console.error('Error inserting data:', error.message);
@@ -111,7 +111,7 @@ $(document).ready(function() {
         }
 
         // Event listener for form submission
-        $('#entryForm').submit(async function(e) {
+        $('#registreForm').submit(async function(e) {
             e.preventDefault();
             if (validateForm()) {
                 await handleFormSubmit(e);
