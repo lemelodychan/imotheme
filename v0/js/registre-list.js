@@ -5,100 +5,122 @@ $(document).ready(function() {
     const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
     async function fetchDataAndDisplay() {
-        try {
-            const { data, error } = await supabaseClient
-                .from('Registre')
-                .select('*');
+            try {
+                const { data, error } = await supabaseClient
+                    .from('Registre')
+                    .select('*');
 
-            if (error) throw error;
+                if (error) {
+                    throw error;
+                }
 
-            // Clear previous list items
-            $('#itemList').empty();
+                // Clear previous list items
+                $('#itemList').empty();
 
-            // Display fetched data in a list
-            data.forEach(item => {
-                const listItem = `<li>ID: ${item.id}, Nom: ${item.nom}, Prenom: ${item.prenom}, Surnom: ${item.surnom}, NDF: ${item.ndf}, DOB: ${item.dob}</li>`;
-                $('#itemList').append(listItem);
-            });
-        } catch (error) {
-            console.error('Error:', error);
+                // Display fetched data in a list
+                data.forEach(item => {
+                    const listItem = `<li>ID: ${item.id}, Nom: ${item.nom}, Prenom: ${item.prenom}, Surnom: ${item.surnom}, NDF: ${item.ndf}, DOB: ${item.dob}</li>`;
+                    $('#itemList').append(listItem);
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error.message);
+                // Display error message to the user
+                $('#error').text('An error occurred while fetching data. Please try again later.');
+            }
         }
-    }
 
-    async function handleFormSubmit(e) {
-        e.preventDefault();
+        // Handle form submission
+        async function handleFormSubmit(e) {
+            e.preventDefault();
 
-        const id = parseInt($('#id').val(), 10);
-        const nom = $('#nom').val();
-        const prenom = $('#prenom').val();
-        const surnom = $('#surnom').val();
-        const ndf = $('#ndf').val();
+            // Retrieve form field values
+            const formData = {
+                id: parseInt($('#id').val(), 10),
+                nom: $('#nom').val(),
+                prenom: $('#prenom').val(),
+                surnom: $('#surnom').val(),
+                ndf: $('#ndf').val(),
+                dob: $('#dob').val(),
+                type: $('#type').val(),
+                plURL: $('#plURL').val(),
+                intouche: $('#intouche').prop('checked'),
+                ryu: $('#ryu').prop('checked'),
+                dustquash: $('#dustquash').val(),
+                parti1: $('#parti1').val(),
+                parti2: $('#parti2').val(),
+                ronin_details: $('#ronin_details').val(),
+                animal: $('#animal').val(),
+                mangetsuki_details: $('#mangetsuki_details').val(),
+                maison: $('#maison').val(),
+                promo: $('#promo').val(),
+                ecole: $('#ecole').val(),
+                otherEcole: $('#otherEcole').val(),
+                occupation1: $('#occupation1').val(),
+                occupation2: $('#occupation2').val(),
+                occupation_lieu1: $('#occupation_lieu1').val(),
+                occupation_lieu2: $('#occupation_lieu2').val(),
+                occupation_details1: $('#occupation_details1').val(),
+                occupation_details2: $('#occupation_details2').val(),
+                cursus1: $('#cursus1').val(),
+                cursus1_annee: $('#cursus1_annee').val(),
+                cursus2: $('#cursus2').val(),
+                cursus2_annee: $('#cursus2_annee').val(),
+                option1: $('#option1').val(),
+                option2: $('#option2').val(),
+                cosmoball: $('#cosmoball').val(),
+                cosmo_equipe: $('#cosmo_equipe').val(),
+                cosmo_poste: $('#cosmo_poste').val(),
+                cosmo_cap: $('#cosmo_cap').prop('checked'),
+                logement: $('#logement').val(),
+                logement_details: $('#logement_details').val(),
+                logement_type: $('#logement_type').val(),
+                coloc: $('#coloc').val(),
+                pseudo: $('#pseudo').val(),
+                faceclaim: $('#faceclaim').val(),
+                image: $('#image').val(),
+                credits: $('#credits').val(),
+                fiche: $('#fiche').val(),
+                jdb: $('#jdb').val()
+            };
 
-        const dobValue = $('#dob').val();
-        const selectedDate = new Date(dobValue);
-        const dob = selectedDate.getFullYear() + '-' +
-                  ('0' + (selectedDate.getMonth() + 1)).slice(-2) + '-' +
-                  ('0' + selectedDate.getDate()).slice(-2);
+            try {
+                // Insert form data into Supabase
+                const { data, error } = await supabaseClient
+                    .from('Registre')
+                    .insert([formData]);
 
-        const type = $('#type').val();
-        const plURL = $('#plURL').val();
-        const intouche = $('#intouche').prop('checked');
-        const ryu = $('#ryu').prop('checked');
-        const dustquash = $('#dustquash').val();
-        const parti1 = $('#parti1').val();
-        const parti2 = $('#parti2').val();
-        const ronin_details = $('#ronin_details').val();
-        const animal = $('#animal').val();
-        const mangetsuki_details = $('#mangetsuki_details').val();
-        const maison = $('#maison').val();
-        const promo = $('#promo').val();
-        const ecole = $('#ecole').val();
-        const otherEcole = $('#otherEcole').val();
-        const occupation1 = $('#occupation1').val();
-        const occupation2 = $('#occupation2').val();
-        const occupation_lieu1 = $('#occupation_lieu1').val();
-        const occupation_lieu2 = $('#occupation_lieu2').val();
-        const occupation_details1 = $('#occupation_details1').val();
-        const occupation_details2 = $('#occupation_details2').val();
-        const cursus1 = $('#cursus1').val();
-        const cursus1_annee = $('#cursus1_annee').val();
-        const cursus2 = $('#cursus2').val();
-        const cursus2_annee = $('#cursus2_annee').val();
-        const option1 = $('#option1').val();
-        const option2 = $('#option2').val();
-        const cosmoball = $('#cosmoball').val();
-        const cosmo_equipe = $('#cosmo_equipe').val();
-        const cosmo_poste = $('#cosmo_poste').val();
-        const cosmo_cap = $('#cosmo_cap').prop('checked');
-        const logement = $('#logement').val();
-        const logement_details = $('#logement_details').val();
-        const logement_type = $('#logement_type').val();
-        const coloc = $('#coloc').val();
-        const pseudo = $('#pseudo').val();
-        const faceclaim = $('#faceclaim').val();
-        const image = $('#image').val();
-        const credits = $('#credits').val();
-        const fiche = $('#fiche').val();
-        const jdb = $('#jdb').val();
+                if (error) {
+                    throw error;
+                }
 
-        try {
-            const { data, error } = await supabaseClient
-                .from('Registre')
-                .insert([{ id, nom, prenom, surnom, ndf, dob, type, plURL, intouche, ryu, dustquash, 
-                          parti1, parti2, ronin_details, animal, mangetsuki_details, maison, promo,
-                         ecole, otherEcole, occupation1, occupation2, occupation_lieu1, occupation_lieu2,
-                         occupation_details1, occupation_details2, cursus1, cursus1_annee, cursus2_annee,
-                         option1, option2, cosmoball, cosmo_equipe, cosmo_poste, cosmo_cap, logement,
-                         logement_details, logement_type, coloc, pseudo, faceclaim, image, credits, fiche, jdb}]);
-
-            if (error) throw error;
-            $('#entryForm')[0].reset();
-            fetchDataAndDisplay();
-        } catch (error) {
-            console.error('Error:', error);
+                // Reset form and update displayed data
+                $('#entryForm')[0].reset();
+                fetchDataAndDisplay();
+            } catch (error) {
+                console.error('Error inserting data:', error.message);
+                // Display error message to the user
+                $('#error').text('An error occurred while submitting the form. Please try again later.');
+            }
         }
-    }
 
-    fetchDataAndDisplay();
-    $('#entryForm').submit(handleFormSubmit);
-});
+        // Validate form fields before submission
+        function validateForm() {
+            // Implement validation logic here (e.g., check required fields)
+            // Return true if validation passes, false otherwise
+            return true;
+        }
+
+        // Event listener for form submission
+        $('#entryForm').submit(async function(e) {
+            e.preventDefault();
+            if (validateForm()) {
+                await handleFormSubmit(e);
+            } else {
+                // Display validation error message to the user
+                $('#error').text('Please fill out all required fields.');
+            }
+        });
+
+        // Fetch and display initial data
+        fetchDataAndDisplay();
+    });
