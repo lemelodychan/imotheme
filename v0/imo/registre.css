@@ -46,7 +46,7 @@ div.directory div.filters div.button-group {
 
 div.directory div.filters div.button-group > div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 8px;
 }
 div.directory div.filters div.button-group[data-filter-group="job"] > div,
@@ -56,8 +56,9 @@ div.directory div.filters div.button-group[data-filter-group="origines"] > div {
 }
 
 div.directory div.filters div.button-group > div > .button {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
     font-weight: 600;
     color: var(--text-contrast);
     background-color: var(--bg2);
@@ -70,7 +71,7 @@ div.directory div.filters div.button-group > div > .button {
     justify-content: center;
 }
 div.directory div.filters div.button-group > div > .button.is-checked {
-    border: 1px solid var(--text-contrast);
+    border: 1px solid var(--bg2);
     position: relative;
     color: var(--text-contrast) !important;
 }
