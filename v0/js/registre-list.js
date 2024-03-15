@@ -62,7 +62,7 @@ $(document).ready(function() {
         const occupation_details2 = $('#occupation_details2').val();
         const cursus1 = $('#cursus1').val();
         const cursus1_annee = $('#cursus1_annee').val();
-        const cursus1 = $('#cursus2').val();
+        const cursus2 = $('#cursus2').val();
         const cursus2_annee = $('#cursus2_annee').val();
         const option1 = $('#option1').val();
         const option2 = $('#option2').val();
