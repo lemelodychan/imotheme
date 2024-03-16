@@ -11,12 +11,12 @@ $(document).ready(function() {
         forumathonClient.from('Forumathon_032024').select('mots').then(response => {
             var sum = response.data.reduce((acc, curr) => acc + curr.mots, 0);
             var percentage = (sum / goal) * 100;
+            var wordsToGoal = (goal - sum);
             var nextLevel = level + 1;
-            $("#progress").text(percentage + "% du palier" + nextLevel);
-            $("#wordCount").text(sum + "mots");
-            $("#goalCount").text(goal);
+            $("#progress").text("Plus que <strong>" + wordsToGoal + "mots</strong> avant le <strong>palier" + nextLevel + "</strong> !");
+            $("#wordCount").text(sum + " / " + goal);
             $("#progress-bar").css("width", percentage + "%");
-            $("#level").text("Level: " + level);
+            $("#level").text("Palier" + level);
         })
         .catch(error => {
             console.error('Error fetching data from Supabase:', error.message);
