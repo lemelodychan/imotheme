@@ -91,6 +91,11 @@ div.form_container > div#formBox > form#registreForm {
   overflow: auto;
   padding-top: 24px;
 }
+div.form_container > div#formBox > form#registreForm::-webkit-scrollbar-button:end:decrement {
+  height: 72px;
+  display: block;
+  background: var(--bg1);
+}
 
 div.form_container form#registreForm input[type="text"], 
 div.form_container form#registreForm input[type="number"],
