@@ -5,11 +5,11 @@ $(document).ready(function() {
     const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
     $('#registre-new').click(function() {
-        $('.form-container').toggle();
+        $('div.form_container').toggle();
     });
     $('#closeForm').click(function() {
         $('#registreForm')[0].reset();
-        $('.form-container').hide();
+        $('div.form_container').hide();
     });
 
     // Function to get form data
