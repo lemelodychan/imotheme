@@ -13,9 +13,9 @@ $(document).ready(function() {
             var percentage = (sum / goal) * 100;
             var wordsToGoal = (goal - sum);
             var nextLevel = level + 1;
-            $("#progress").text(wordsToGoal + "mots");
-            $("#nextLevel").text(nextLevel);
-            $("#wordCount").text(sum + " / " + goal);
+            $("#progress").text(wordsToGoal + " mots");
+            $("#nextLevel").text("Palier " + nextLevel);
+            $("#wordCount").text(sum + "/" + goal);
             $("#progress-bar").css("width", percentage + "%");
             $("#level").text("Palier" + level);
 
