@@ -15,7 +15,7 @@ $(document).ready(function() {
             $("#progress").text(percentage + "% du palier" + nextLevel);
             $("#wordCount").text(sum + "mots");
             $("#goalCount").text(goal);
-            $("#progress-bar").css("width", percentage + "%").text(sum);
+            $("#progress-bar").css("width", percentage + "%");
             $("#level").text("Level: " + level);
         })
         .catch(error => {
