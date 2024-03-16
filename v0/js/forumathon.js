@@ -31,13 +31,16 @@ $(document).ready(function() {
 
     $("#addBtn").click(function(){
         $("#addModal").css("display", "block");
+        $("#addBtn").css("display", "none");
     });
     $(".close").click(function(){
         $("#addModal").css("display", "none");
+        $("#addBtn").css("display", "inline-block");
     });
     $(window).click(function(event) {
         if (event.target == $("#addModal")[0]) {
             $("#addModal").css("display", "none");
+            $("#addBtn").css("display", "inline-block");
         }
     });
     $("#confirmBtn").click(function(){
@@ -46,6 +49,7 @@ $(document).ready(function() {
           forumathonClient.from('Forumathon_032024').insert([{ mots: newGoal }]).then(response => {
               updateProgress();
               $("#addModal").css("display", "none");
+              $("#addBtn").css("display", "inline-block");
           })
           .catch(error => {
               console.error('Error adding new entry to Supabase:', error.message);
