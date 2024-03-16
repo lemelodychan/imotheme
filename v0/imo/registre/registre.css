@@ -9,7 +9,8 @@ div.directory {
 }
 
 div.directory-buttons {
-    max-width: calc(100% - 96px);
+    max-width: calc(100% - 96px) !important;
+    margin-top: 48px;
     display: flex;
     gap: 24px;
     align-content: flex-end;
@@ -22,6 +23,7 @@ div.directory-buttons > h1 {
     font-size: 36px;
     line-height: 44px;
 }
+div.directory-buttons button.button1,
 div.directory button.button1,
 div.directory button.button2 {
     height: 40px;
