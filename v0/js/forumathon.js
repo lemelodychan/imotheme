@@ -4,7 +4,7 @@ $(document).ready(function() {
     const { createClient } = supabase;
     const forumathonClient = createClient(forumathonUrl, forumathonKey);
 
-    var goal = 1000;
+    var goal = 5000;
     var level = 0;
 
     async function updateProgress() {
@@ -13,10 +13,16 @@ $(document).ready(function() {
             var percentage = (sum / goal) * 100;
             var wordsToGoal = (goal - sum);
             var nextLevel = level + 1;
-            $("#progress").text("Plus que <strong>" + wordsToGoal + "mots</strong> avant le <strong>palier" + nextLevel + "</strong> !");
+            $("#progress").text(wordsToGoal + "mots");
+            $("#nextLevel").text(nextLevel);
             $("#wordCount").text(sum + " / " + goal);
             $("#progress-bar").css("width", percentage + "%");
             $("#level").text("Palier" + level);
+
+            while (sum >= goal) {
+                level++;
+                goal += 5000;
+            }
         })
         .catch(error => {
             console.error('Error fetching data from Supabase:', error.message);
