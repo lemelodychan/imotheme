@@ -50,13 +50,13 @@ $(document).ready(function(){
             else { listItem.classList.add('autreplace'); } 
   
             let cosmo = item.cosmoball;
-            if (cosmo === "Yes") { listItem.classList.add('cosmo'); }
+            if (cosmo === "TRUE") { listItem.classList.add('cosmo'); }
             let dust = item.dustquash;
-            if (dust === "Yes") { listItem.classList.add('dustq'); }
+            if (dust === "TRUE") { listItem.classList.add('dustq'); }
             let ryu = item.ryu;
-            if (ryu === "Yes") { listItem.classList.add('ryu'); }
+            if (ryu === "TRUE") { listItem.classList.add('ryu'); }
             let intouche = item.intouche;
-            if (intouche === "Yes") { listItem.classList.add('intouche'); }
+            if (intouche === "TRUE") { listItem.classList.add('intouche'); }
     
             let parti1 = item.parti1;
             if (parti1 === "Rōnin") { listItem.classList.add('ronin'); }
