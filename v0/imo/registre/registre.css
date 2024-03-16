@@ -160,13 +160,13 @@ div.grid-item.Suisei { --co2: var(--sui); }
 
 #grid > div.grid-item > .container {
     background: var(--bg1);
-    padding: 8px;
+    padding: 16px;
     position: relative;
     border-radius: 16px;
     display: inline-flex;
     flex-direction: column;
     gap: 8px;
-    font-size: 13px;
+    font-size: 14px;
     z-index: 4;
     color: var(--text);
     width: 100% !important;
@@ -183,7 +183,7 @@ div.grid-item.Suisei { --co2: var(--sui); }
     height: 100%;
     border-radius: 16px;
     z-index: 1;
-    padding: 1px;
+    padding: 2px;
     background: linear-gradient(130deg, var(--co2), var(--bg1) 30%, var(--bg1) 70%, var(--co2));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -204,7 +204,7 @@ div.grid-item > .container > .avatar {
     box-shadow: none;
     width: 100%;
     height: auto;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
 }
 div.grid-item > .container > .avatar > img.image {
     width: 100%;
@@ -224,13 +224,13 @@ div.grid-item > .container > .avatar > .credits {
     transition: var(--transi);
     z-index: 1;
     bottom: -20px;
-    right: 4px;
+    right: 16px;
     display: inline-block;
     background: var(--bg1);
     padding: 2px 6px;
     border-radius: 4px 4px 0 0;
     color: var(--text-contrast);
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.5px;
     line-height: 16px;
     text-transform: uppercase;
@@ -241,14 +241,14 @@ div.grid-item > .container > span.nom {
     padding: 0 4px;
 }
 div.grid-item > .container > span.nom > span:first-child {
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--font-titre);
     font-feature-settings: 'ss02' on;
     color: var(--text-contrast);
     line-height: 24px;
 }
 div.grid-item > .container > span.nom > span:last-child {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 500;
@@ -257,8 +257,8 @@ div.grid-item > .container > span.nom > span:last-child {
 div.grid-item > .container > span.tags {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 4px;
-    column-gap: 4px;
+    row-gap: 8px;
+    column-gap: 8px;
     padding: 0 4px;
     margin: 4px 0 8px;
 }
@@ -271,7 +271,7 @@ div.grid-item > .container > span.tags > span {
 div.grid-item > .container > span.tags > span.location,
 div.grid-item > .container > span.tags > span.promo {
     width: fit-content;
-    font-size: 10px;
+    font-size: 12px;
     gap: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -282,7 +282,7 @@ div.grid-item > .container > span.tags > span.promo {
 }
 div.grid-item > .container > span.tags > span.job,
 div.grid-item > .container > span.tags > span.parti {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
     color: var(--text);
     align-items: flex-start;
@@ -330,7 +330,7 @@ div.grid-item > .container > span.liens > a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 4px;
+    padding: 8px;
     background-color: var(--bg2);
     font-size: 14px;
     line-height: 20px;
@@ -339,9 +339,9 @@ div.grid-item > .container > span.liens > a {
 }
 div.grid-item > .container > span.liens > a:hover { background-color: var(--co2); }
 div.grid-item > .container > span.liens > a > span {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     line-height: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
