@@ -4,12 +4,15 @@ $(document).ready(function() {
     const { createClient } = supabase;
     const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
+    function toggleFormContainer() {
+        $('.form-container').toggleClass('show');
+    }
     $('#registre-new').click(function() {
-        $('div.form_container').toggle();
+        toggleFormContainer();
     });
     $('#closeForm').click(function() {
         $('#registreForm')[0].reset();
-        $('div.form_container').hide();
+        toggleFormContainer();
     });
 
     // Function to get form data
