@@ -1,11 +1,33 @@
 div.form_container {
-  margin: 48px;
-  border-radius: 16px;
+  display: none;
+  transition: all 0.3s ease;
   overflow: hidden;
-  width: calc(100% - 96px);
-  max-width: calc(100% - 96px) !important;
-  background: var(--bg1_transp_5);
+
+  width: 100%;
+  max-width: 100% !important;
+  border-radius: 0;
+  position: fixed;
+  z-index: 9999999;
+  top: 42px;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+  padding: 48px;
+
+  height: calc(100vh - 42px);
 }
+
+button#closeForm {
+  margin: auto;
+  align-self: center;
+  line-height: 24px;
+  padding: 4px 16px;
+  background: var(--bg1);
+  border-radius: 36px;
+  height: 40px;
+  color: var(--text-contrast);
+}
+
 div.form_container h2 {
   font-size: 24px;
   font-family: var(--font-titre);
@@ -38,32 +60,13 @@ div.form_container div.formsection h3 {
   grid-column: 1/7;
 }
 
-div.form_container > form#registreForm {
+div.form_container > div#formBox > form#registreForm {
   max-width: none !important;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
-div.form_container > div.form_code {
-  padding: 24px;
-  display: flex;
-  background: var(--bg1);
-  flex-direction: column;
-  gap: 16px;
-}
-div.form_container > div.form_code > span {
-  font-size: 10px;
-  line-height: 16px;
-  color: var(--text);
-  opacity: 0.7;
-}
-div.form_container > div.form_code > span a {
-  color: var(--co2);
-  transition: var(--transi);
-}
-div.form_container > div.form_code > span a:hover { color: var(--co1); }
 
 div.form_container form#registreForm input[type="text"], 
 div.form_container form#registreForm input[type="number"],
