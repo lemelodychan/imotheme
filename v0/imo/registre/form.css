@@ -1,5 +1,6 @@
 div.form_container {
   display: none;
+  display: flex;
   transition: all 0.3s ease;
   overflow: hidden;
 
@@ -21,11 +22,15 @@ button#closeForm {
   margin: auto;
   align-self: center;
   line-height: 24px;
-  padding: 4px 16px;
+  padding: 4px;
   background: var(--bg1);
   border-radius: 36px;
-  height: 40px;
+  height: 40px !important;
+  width: 40px;
+  min-height: 40px !important;
   color: var(--text-contrast);
+  display: block;
+  font-size: 24px;
 }
 
 div.form_container h2 {
@@ -59,6 +64,16 @@ div.form_container h3:after {
 div.form_container div.formsection h3 {
   grid-column: 1/7;
 }
+
+div#formBox,
+div#registreConf {
+  background: var(--bg2);
+  border-radius: 16px;
+  height: calc(100vh - 42px - 24px - 40px);
+  max-height: calc(100vh - 42px - 24px - 40px);
+  overflow: auto;
+}
+
 
 div.form_container > div#formBox > form#registreForm {
   max-width: none !important;
