@@ -1,6 +1,6 @@
 div.form_container {
   display: none;
-  display: flex;
+
   flex-direction: column;
   gap: 24px;
   transition: all 0.3s ease;
@@ -18,6 +18,9 @@ div.form_container {
   padding: 48px;
 
   height: calc(100vh - 42px);
+}
+div.form_container.show {
+  display: flex !important;
 }
 
 button#closeForm {
