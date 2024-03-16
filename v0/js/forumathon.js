@@ -5,7 +5,7 @@ $(document).ready(function() {
     const forumathonClient = createClient(forumathonUrl, forumathonKey);
 
     var goal = 5000;
-    var level = 0;
+    var level = 1;
 
     async function updateProgress() {
         forumathonClient.from('Forumathon_032024').select('mots').then(response => {
@@ -14,7 +14,7 @@ $(document).ready(function() {
             var wordsToGoal = (goal - sum);
             var nextLevel = level + 1;
             $("#progress").text(wordsToGoal + " mots");
-            $("#nextLevel").text("Palier " + nextLevel);
+            $("#nextLevel").text("palier " + nextLevel);
             $("#wordCount").text(sum + "/" + goal);
             $("#progress-bar").css("width", percentage + "%");
             $("#level").text("Palier" + level);
