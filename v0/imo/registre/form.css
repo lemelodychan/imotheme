@@ -5,6 +5,7 @@ div.form_container {
   gap: 24px;
   transition: all 0.3s ease;
   overflow: hidden;
+  align-items: center;
 
   width: 100%;
   max-width: 100% !important;
@@ -15,7 +16,7 @@ div.form_container {
   left: 0;
   background: rgba(0,0,0,0.2);
   backdrop-filter: blur(6px);
-  padding: 48px;
+  padding: 96px;
 
   height: calc(100vh - 42px);
 }
@@ -77,6 +78,7 @@ div#registreConf {
   border-radius: 16px;
   height: calc(100vh - 42px - 24px - 40px);
   max-height: calc(100vh - 42px - 24px - 40px);
+  max-width: 1048px !important;
   overflow: hidden;
   position: relative;
   display: flex;
