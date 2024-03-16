@@ -69,7 +69,7 @@ $(document).ready(function() {
 
     // Function to display confirmation step
     function displayConfirmationStep(formData) {
-        $('#registreForm').hide();
+        $('#formBox').hide();
         $('#registreConf').show();
 
         // Event listener for confirm button
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
         // Event listener for edit button
         $('#editButton').click(function() {
-            $('#registreForm').show();
+            $('#formBox').show();
             $('#registreConf').hide();
             setFormData(formData);
         });
