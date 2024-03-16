@@ -1,11 +1,33 @@
 div.directory {
-    margin: 48px;
+    margin: 24px 48px 48px 48px;
     display: grid;
     grid-template-columns: 332px auto;
     grid-gap: 1px;
     border-radius: 16px;
     overflow: hidden;
     max-width: calc(100% - 96px) !important;
+}
+
+div.directory-buttons {
+    max-width: calc(100% - 96px);
+    display: flex;
+    gap: 24px;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+div.directory-buttons > h1 {
+    color: var(--text-contrast);
+    font-family: var(--font-titre);
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+}
+div.directory button.button1,
+div.directory button.button2 {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 div.directory div.filters {
