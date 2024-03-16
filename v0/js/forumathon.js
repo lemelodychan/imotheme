@@ -8,7 +8,7 @@ $(document).ready(function() {
     var level = 0;
 
     async function updateProgress() {
-        supabase.from('Forumathon_032024').select('mots').then(response => {
+        forumathonClient.from('Forumathon_032024').select('mots').then(response => {
             var sum = response.data.reduce((acc, curr) => acc + curr.mots, 0);
             var percentage = (sum / goal) * 100;
             $("#progress-bar").css("width", percentage + "%").text(sum);
@@ -33,7 +33,7 @@ $(document).ready(function() {
     $("#confirmBtn").click(function(){
         var newGoal = parseInt($("#goalInput").val());
         if (!isNaN(newGoal)) {
-          supabase.from('Forumathon_032024').insert([{ mots: newGoal }]).then(response => {
+          forumathonClient.from('Forumathon_032024').insert([{ mots: newGoal }]).then(response => {
               updateProgress();
               $("#addModal").css("display", "none");
           })
