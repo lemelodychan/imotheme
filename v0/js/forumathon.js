@@ -7,6 +7,13 @@ $(document).ready(function() {
     var goal = 5000;
     var level = 1;
 
+    jQuery(function($) {
+          if (_userdata["user_id"] < (0)){
+              $('#addBtn').remove();
+              $("#addModal").remove();
+          }
+      });
+
     async function updateProgress() {
         forumathonClient.from('Forumathon_032024').select('mots').then(response => {
             var sum = response.data.reduce((acc, curr) => acc + curr.mots, 0);
