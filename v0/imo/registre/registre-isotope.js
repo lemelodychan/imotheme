@@ -10,6 +10,12 @@ $(document).ready(function(){
         try {
           const { data, error } = await supabaseClient.from('Registre').select('*');
           data.forEach(item => {
+            for (const key in item) {
+                if (item[key] === null) {
+                    item[key] = ''; // Replace null with empty string
+                }
+            }
+              
             const listItem = document.createElement('div');
             listItem.classList.add('grid-item');
   
