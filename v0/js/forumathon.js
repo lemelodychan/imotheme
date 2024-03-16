@@ -11,6 +11,10 @@ $(document).ready(function() {
         forumathonClient.from('Forumathon_032024').select('mots').then(response => {
             var sum = response.data.reduce((acc, curr) => acc + curr.mots, 0);
             var percentage = (sum / goal) * 100;
+            var nextLevel = level + 1;
+            $("#progress").text(percentage + "% du palier" + nextLevel);
+            $("#wordCount").text(sum + "mots");
+            $("#goalCount").text(goal);
             $("#progress-bar").css("width", percentage + "%").text(sum);
             $("#level").text("Level: " + level);
         })
