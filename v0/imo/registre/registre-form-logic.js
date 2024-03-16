@@ -137,7 +137,7 @@ function toggleEtudiantDetails() {
 function toggleCosmoSelect() {
     const selectedCosmo = cosmoSelect.value;
     const cosmoInputs = document.querySelectorAll('#cosmo_options input, #cosmo_options select');
-    const showCosmoSelect = selectedCosmo === 'Yes';
+    const showCosmoSelect = selectedCosmo === 'TRUE';
     if (showCosmoSelect) {
         cosmoptionsDiv.style.display = 'grid';
     } else {
