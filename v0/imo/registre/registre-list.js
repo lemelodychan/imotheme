@@ -4,6 +4,14 @@ $(document).ready(function() {
     const { createClient } = supabase;
     const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
+    $('#registre-new').click(function() {
+        $('.form-container').toggle();
+    });
+    $('#closeForm').click(function() {
+        $('#registreForm')[0].reset();
+        $('.form-container').hide();
+    });
+
     // Function to get form data
     function getFormData() {
         return {
@@ -141,9 +149,8 @@ $(document).ready(function() {
         $('#jdb').val(formData.jdb);
     }
 
-    // Function to close modal
     function closeModal() {
-        $('#registreModal').modal('hide');
+        $('div.form_container').hide();
     }
 
     // Handle form submission
