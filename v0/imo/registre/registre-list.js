@@ -5,7 +5,7 @@ $(document).ready(function() {
     const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
     function toggleFormContainer() {
-        $('.form-container').toggleClass('show');
+        $('.form_container').toggleClass('show');
     }
     $('#registre-new').click(function() {
         toggleFormContainer();
