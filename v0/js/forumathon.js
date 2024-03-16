@@ -8,9 +8,8 @@ $(document).ready(function() {
     var level = 1;
 
     jQuery(function($) {
-          if (_userdata["user_id"] < (0)){
-              $('#addBtn').remove();
-              $("#addModal").remove();
+          if (_userdata["user_id"] > (0)){
+              $('#addBtn').css("display", "inline-block");
           }
       });
 
