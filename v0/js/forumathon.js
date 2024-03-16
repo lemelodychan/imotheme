@@ -17,7 +17,7 @@ $(document).ready(function() {
             $("#nextLevel").text("palier " + nextLevel);
             $("#wordCount").text(sum + "/" + goal);
             $("#progress-bar").css("width", percentage + "%");
-            $("#level").text("Palier" + level);
+            $("#level").text("Palier " + level);
 
             while (sum >= goal) {
                 level++;
