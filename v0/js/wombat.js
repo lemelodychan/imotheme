@@ -207,14 +207,34 @@ var Wombat = function () {
         }
     }
 
+    Wombat.prototype.contactStatut = function(sourceSelector, targetSelector) {
+        var sourceField = jQuery('#wombat').find(sourceSelector);
+        var targetContainer = jQuery('#wombat').find(targetSelector);
+        var clonedContent = sourceField.clone();
+        var trimmedHtml = clonedContent.html().trim();
+        if (trimmedHtml === 'Ouverts' || trimmedHtml === 'Ouvert') {
+          targetContainer.addClass('open');
+          var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
+          targetContainer.append(openIcon);
+        } else if (trimmedHtml === 'Fermés' || trimmedHtml === 'Fermé') {
+          targetContainer.addClass('closed');
+          var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
+          targetContainer.append(closedIcon);
+        } else {
+          targetContainer.addClass('open');
+          var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
+          targetContainer.append(openIcon);
+        }
+    };
+
     Wombat.prototype.contactInfo = function() {
         var mainuserId = jQuery('#wombat').find("#field_id14 div.field_uneditable");
         var mainuserIDContent = mainuserId.text().trim();
         var userUrl = '/u' + mainuserIDContent;
       
         if (mainuserIDContent === '0' || isNaN(mainuserIDContent)) {
-          contactStatut('#field_id12 div.field_uneditable', '.irl-contact > .mp');
-          contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
+          this.contactStatut('#field_id12 div.field_uneditable', '.irl-contact > .mp');
+          this.contactStatut('#field_id13 div.field_uneditable', '.irl-contact > .discord');
   
           var sourceField = jQuery('#wombat').find('#field_id1 div.field_uneditable').clone();
           var statutContainer = jQuery('#wombat').find('.irl-contact > .statut');
@@ -271,26 +291,6 @@ var Wombat = function () {
                   statutContainer.addClass('abs');
                 }
           });
-        }
-    };
-
-    Wombat.prototype.contactStatut = function(sourceSelector, targetSelector) {
-        var sourceField = jQuery('#wombat').find(sourceSelector);
-        var targetContainer = jQuery('#wombat').find(targetSelector);
-        var clonedContent = sourceField.clone();
-        var trimmedHtml = clonedContent.html().trim();
-        if (trimmedHtml === 'Ouverts' || trimmedHtml === 'Ouvert') {
-          targetContainer.addClass('open');
-          var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
-          targetContainer.append(openIcon);
-        } else if (trimmedHtml === 'Fermés' || trimmedHtml === 'Fermé') {
-          targetContainer.addClass('closed');
-          var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
-          targetContainer.append(closedIcon);
-        } else {
-          targetContainer.addClass('open');
-          var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
-          targetContainer.append(openIcon);
         }
     };
 
