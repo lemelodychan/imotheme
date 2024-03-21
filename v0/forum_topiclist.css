@@ -142,6 +142,7 @@ div.pagination > span > a.pag-img {
   height: 24px;
   align-items: center;
   justify-content: center;
+  color: var(--text-contrast);
 }
 div.pagination > span > a.pag-img > img { margin: 0; }
 
