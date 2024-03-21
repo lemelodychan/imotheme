@@ -30,3 +30,13 @@ span#faqCookies {
   line-height: 32px;
   margin: 0;
 }
+dl.faq dd p {
+  padding: 16px;
+  margin: 0;
+  margin-top: 8px;
+  border-radius: 16px;
+  color: var(--text);
+  background: var(--bg2);
+  font-size: 14px;
+  line-height: 21px;
+}
