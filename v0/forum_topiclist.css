@@ -350,6 +350,9 @@ dd {
   line-height: 24px;
   transition: var(--transi);
 }
+.forumbg ul.topiclist > li.row div.topic-title-container h2 a.topictitle span.coloradmin {
+  color: var(--co1) !important;
+}
 .forumbg ul.topiclist > li.row div.topic-title-container h2 a.topictitle span.nouveaumsg {
   display: none;
   background: rgba(var(--co2_rgb), 0.4);
