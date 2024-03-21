@@ -287,6 +287,10 @@ var Wombat = function () {
           targetContainer.addClass('closed');
           var closedIcon = $('<ion-icon name="close-circle-outline"></ion-icon>');
           targetContainer.append(closedIcon);
+        } else {
+          targetContainer.addClass('open');
+          var openIcon = $('<ion-icon name="checkmark-circle-outline"></ion-icon>');
+          targetContainer.append(openIcon);
         }
     };
 
