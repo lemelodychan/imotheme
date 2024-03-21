@@ -285,7 +285,8 @@
   height: fit-content !important;
 }
 .fiche-2023 .fiche-chrono > div > div .chrono-item{
-  width: 275px;
+  --chrono-width: 300px;
+  width: var(--chrono-width);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -320,7 +321,7 @@
   border-radius: 8px;
   font-size: 12px;
   line-height: 21px;
-  width: 259px;
+  width: calc(var(--chrono-width) - 16px);
   height: max-content;
   max-height: 172px;
   overflow: hidden;
