@@ -201,8 +201,6 @@
   color: var(--text);
   padding: 16px;
   border-radius: 8px;
-  font-size: 14px;
-  line-height: 21px;
 }
 .fiche-2023 .fiche-infos-content > div > div > span br{ display: initial!important; }
 .fiche-2023 .fiche-infos-content > div > div > span r1{
@@ -374,8 +372,6 @@
   color: var(--text);
 }
 .fiche-2023 .fiche-background-content > div{
-  font-size: 14px;
-  line-height: 24px;
   padding-right: 16px;
 }
 .fiche-2023 .fiche-background-content > div br{ display: initial!important; }
@@ -389,8 +385,6 @@
   padding: 16px;
   background: var(--bg1);
   border-radius: 8px;
-  font-size: 14px;
-  line-height: 21px;
   color: var(--text);
 }
 .fiche-2023 .fiche-irl > span label{
