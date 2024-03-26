@@ -430,6 +430,8 @@ div.form_container.editRegistre {
   padding: 0;
   margin: 40px auto;
   display: flex;
+  height: auto !important;
+  max-height: none !important;
 }
 div.form_container.editRegistre div#formBox,
 div.form_container.editRegistre > div#formBox > form#registreForm{
