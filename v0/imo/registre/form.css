@@ -421,3 +421,18 @@ div.formFooter {
 div.formFooter button {
   margin: 0 !important;
 }
+
+
+div.form_container.editRegistre {
+  position: initial;
+  background: transparent;
+  backdrop-filter: none;
+  padding: 0;
+  margin: 40px auto;
+  display: flex;
+}
+div.form_container.editRegistre div#formBox,
+div.form_container.editRegistre > div#formBox > form#registreForm{
+  max-height: auto !important;
+  height: auto !important;
+}
