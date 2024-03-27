@@ -489,10 +489,10 @@ div.form_container.editRegistre > div#formBox > form#registreForm{
   div#message-new > ion-icon,
   div#message-edit > ion-icon {
     font-size: 24px;
-    padding: 2px 8px;
+    padding: 4px 8px;
     border-radius: 50%;
     height: 32px;
-    width: 32px;
+    display: flex;
     line-height: 32px;
   }
   div#message-new > ion-icon {
