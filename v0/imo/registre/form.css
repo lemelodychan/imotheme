@@ -424,15 +424,49 @@ div.formFooter button {
 
 
 div.form_container.editRegistre {
+  border-radius: 0 16px 16px 16px !important;
   position: initial;
   background: transparent;
   backdrop-filter: none;
   padding: 0;
-  margin: 40px auto;
+  margin: 0 !important;
   display: flex;
   height: auto !important;
   max-height: none !important;
 }
+div.form_container.editRegistre div#formBox {
+  border-radius: 0 16px 16px 16px !important;
+}
+
+div.form_container.editRegistre div#formBox h2 {
+  padding: 0px 16px 8px 16px;
+  margin: 0;
+  background: var(--bg1);
+  padding: 8px 16px;
+  font-size: 24px;
+  font-family: var(--font-titre);
+  font-weight: 500;
+  line-height: 48px;
+  color: var(--text-contrast);
+  position: relative;
+}
+div.form_container.editRegistre div#formBox h2:after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  bottom: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  transform: rotate(90deg);
+  visibility: visible !important;
+}
+
 div.form_container.editRegistre div#formBox,
 div.form_container.editRegistre > div#formBox > form#registreForm{
   margin: auto;
