@@ -255,8 +255,8 @@ div.bottin_content.isotope > .filters > .button-group > button:after {
     left: -1px;
     right: 0;
     bottom: 0;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
     border-radius: 16px !important;
     padding: 1px;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
