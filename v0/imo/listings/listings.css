@@ -971,8 +971,13 @@ span.etudiant-name span.cap {
     border-radius: 4px;
     background: var(--bg1);
     align-content: center;
-    align-items: baseline;
+    align-items: center;
     gap: 4px;
+}
+.logements-item span.pin > ion-icon,
+.logements-item span.type > ion-icon {
+    position: relative;
+    top: -1px;
 }
 .logements-item span.tags {
     display: flex;
