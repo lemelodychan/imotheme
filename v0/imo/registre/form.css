@@ -424,6 +424,7 @@ div.formFooter button {
 
 
 div.form_container.editRegistre {
+  z-index: 10;
   border-radius: 0 16px 16px 16px !important;
   position: initial;
   background: transparent;
