@@ -353,7 +353,9 @@ div.formsection.autres > div:nth-of-type(2) { grid-column: 2/3; }
 div.form_container form#registreForm button, 
 div.form_container form#registreForm button:visited, 
 div.form_container form#registreForm button:active {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: white!important;
   transition: var(--transi);
   border-width: initial;
