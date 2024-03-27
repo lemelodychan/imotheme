@@ -489,10 +489,10 @@ div.form_container.editRegistre > div#formBox > form#registreForm{
   div#message-new > ion-icon,
   div#message-edit > ion-icon {
     font-size: 24px;
-    padding: 0px 8px;
+    padding: 2px 8px;
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 32px;
+    width: 32px;
     line-height: 32px;
   }
   div#message-new > ion-icon {
@@ -502,9 +502,6 @@ div.form_container.editRegistre > div#formBox > form#registreForm{
   div#message-edit > ion-icon {
     color: var(--co1);
     background-color: rgba(var(--co1_rgb),0.1);
-    padding: 0px 7px;
-    font-size: 16px;
-    width: 32px;
   }
   div#message-new > div,
   div#message-edit > div {
