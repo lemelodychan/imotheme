@@ -660,9 +660,6 @@ div.listing.parti cardtop > span > br { display: none !important; }
     padding-right: 16px;
     padding-top: 8px;
 }
-.etudiants-grid-container::-webkit-scrollbar-thumb {
-    background: var(--gradient) !important;
-}
 
 .etudiants-grid,
 .cursus-grid {
