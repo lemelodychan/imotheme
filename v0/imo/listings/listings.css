@@ -871,20 +871,23 @@ span.etudiant-name span.cap {
     overflow: auto;
     padding-right: 16px;
 }
-.logements-grid-container > div::-webkit-scrollbar {
+.logements-grid-container > div::-webkit-scrollbar,
+.etudiants-grid-container::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
     height: 7px;
     background-color: var(--bg2);
 }
-.logements-grid-container > div::-webkit-scrollbar-thumb {
+.logements-grid-container > div::-webkit-scrollbar-thumb,
+.etudiants-grid-container::-webkit-scrollbar-thumb {
     width: 1px;
     height: 1px;
     border-radius: 4px;
     border: 2px solid var(--bg1);
     background-image: var(--gradient_vert);
 }
-.logements-grid-container > div::-webkit-scrollbar-track {
+.logements-grid-container > div::-webkit-scrollbar-track,
+.etudiants-grid-container::-webkit-scrollbar-track {
     border: 3px solid var(--bg1);
 }
 
