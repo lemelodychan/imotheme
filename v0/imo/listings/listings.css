@@ -702,6 +702,7 @@ div.listing.parti cardtop > span > br { display: none !important; }
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 10px;
+    line-height: 20px;
     color: var(--text_contrast);
     font-weight: 600;
 }
@@ -719,6 +720,7 @@ div.listing.parti cardtop > span > br { display: none !important; }
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 10px;
+    line-height: 20px;
     color: var(--text_contrast);
     font-weight: 600;
 }
