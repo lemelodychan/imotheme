@@ -614,7 +614,7 @@ div.ryuketsuki-grid:empty::after {
 .reiketsuki-item,
 .ryuketsuki-item {
     padding: 4px 8px;
-    background: var(--transp_1);
+    background: var(--bg1_transp_5);
     border-radius: 8px;
     border: 1px solid var(--bg2);
     line-height: 21px;
@@ -706,7 +706,7 @@ div.listing.parti cardtop > span > br { display: none !important; }
     letter-spacing: 0.5px;
     font-size: 10px;
     color: var(--text_contrast);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .etudiants-item span.option,
@@ -723,7 +723,7 @@ div.listing.parti cardtop > span > br { display: none !important; }
     letter-spacing: 0.5px;
     font-size: 10px;
     color: var(--text_contrast);
-    font-weight: 500;
+    font-weight: 600;
 }
 .etudiants-item span.names {
     display: flex;
@@ -736,7 +736,7 @@ div.listing.parti cardtop > span > br { display: none !important; }
 }
 span.etudiant-name {
     padding: 4px 4px 4px 8px;
-    background: var(--transp_1);
+    background: var(--bg1);
     border-radius: 8px;
     border: 1px solid var(--bg2);
     line-height: 21px;
@@ -754,6 +754,7 @@ span.etudiant-name span.tag {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    line-height: 20px;
     font-weight: 600;
     background: var(--bg2);
     display: inline-block;
