@@ -31,7 +31,7 @@ div.sub-header > div.sub-header-info > h1 a {
 
 /* ------ DESCRIPTION BLOCK ----- */
 #page-desc {
-  background: var(--bg1_transp_5);
+  background: var(--bg1_transp_5) !important;
   backdrop-filter: blur(4px);
   border: 1px solid var(--bg2);
   border-radius: 16px;
