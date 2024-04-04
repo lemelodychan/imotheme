@@ -1,1 +1,8 @@
-
+@font-face {
+  font-family: "Geist Sans";
+  src: url('Geist-Sans/GeistVF.eot');
+  src: url('Geist-Sans/GeistVF.eot') format('embedded-opentype'),
+       url('Geist-Sans/GeistVF.woff2') format('woff2'),
+       url('Geist-Sans/GeistVF.woff') format('woff'),
+       url('Geist-Sans/GeistVF.ttf') format('truetype');
+}
