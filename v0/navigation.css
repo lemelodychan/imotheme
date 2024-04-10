@@ -48,8 +48,15 @@ div.nav_ancres > span {
 #fa_left, #fa_search, #fa_share,
 #fa_menu, #fa_hide, a.rightHeaderLink:not(#fa_notifications) { display: none !important; }
 
+@media (max-width: 800px)
+#fa_right {
+  right: inherit !important;
+  top: inherit !important;
+}
+
 #fa_right > #fa_notifications {
     display: grid !important;
+    position: relative;
     line-height: 28px;
     height: 28px;
     width: 28px;
@@ -83,11 +90,12 @@ div.nav_ancres > span {
 #fa_right > #fa_notifications:before {
   transition: var(--transi);
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
+  align-self: center;
+  justify-self: center;
+  padding: 6px;
   position: absolute;
-  left: 12.5px;
-  top: 12.5px;
   color: var(--text-contrast);
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M427.68 351.43C402 320 383.87 304 383.87 217.35C383.87 138 343.35 109.73 310 96c-4.43-1.82-8.6-6-9.95-10.55C294.2 65.54 277.8 48 256 48s-38.21 17.55-44 37.47c-1.35 4.6-5.52 8.71-9.95 10.53c-33.39 13.75-73.87 41.92-73.87 121.35C128.13 304 110 320 84.32 351.43C73.68 364.45 83 384 101.61 384h308.88c18.51 0 27.77-19.61 17.19-32.57M320 384v16a64 64 0 0 1-128 0v-16'/%3E%3C/svg%3E");
 }
@@ -307,7 +315,7 @@ button.sun_moon {
   border-radius: 16px;
   border: 1px var(--bg3) solid;
   height: 28px;
-  width: 116px;
+  width: 128px;
   transition: var(--transi);
 }
 button.sun_moon > span {
@@ -321,7 +329,12 @@ button.sun_moon > span {
   height: 100%;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+}
+button.sun_moon > span.sun { 
+  padding: 4px 8px 4px 4px;
+}
+button.sun_moon > span.moon {
+  padding: 4px 4px 4px 8px;
 }
 button.sun_moon > span > span {
   text-transform: uppercase;
@@ -340,6 +353,7 @@ body.light button.sun_moon > span.sun {
   opacity: 0;
   display: none !important;
 }
+
 button.sun_moon > span > ion-icon {
   padding: 4px;
   display: flex;
