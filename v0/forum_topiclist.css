@@ -489,6 +489,12 @@ body.light .forumbg ul.topiclist > li.row dd.lastpost > span.lastpost-avatar img
   align-items: center;
   gap: 4px;
 }
+.forumbg ul.topiclist > li.row dd.lastpost > span.lastpost-infos > span.auteur > strong > a,
+.forumbg ul.topiclist > li.row dd.lastpost > span.lastpost-infos > span.auteur > strong > a > span > strong {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600 !important;
+}
 .forumbg ul.topiclist > li.row dd.lastpost > span.lastpost-infos > span.auteur > a ion-icon {
   font-size: 12px;
   color: var(--text);
