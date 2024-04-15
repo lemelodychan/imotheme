@@ -25,7 +25,7 @@ div.topic-actions > div.sub-header-buttons > a {
 }
 
 button#toggleReadMode {
-  --width-text: 100px;
+  --width-text: 112px;
   transition: var(--transi);
   background: var(--bg1);
   border-radius: 24px;
