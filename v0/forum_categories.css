@@ -383,6 +383,7 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-da
 }
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-author {
   font-weight: 500;
+  font-size: 14px;
   color: var(--text-contrast);
   margin-top: 1px;
   display: flex;
@@ -391,6 +392,7 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-au
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-author:before {
   display: inline-block;
   content: "Par";
+  font-size: 14px;
   font-weight: normal;
   color: var(--text);
 }
