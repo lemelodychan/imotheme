@@ -1019,8 +1019,6 @@ card liste{
   height: -webkit-fill-available;
   max-height: 128px;
   overflow: auto;
-  font-size: 14px;
-  line-height: 24px;
 }
 card.logement liste{ max-height: none; }
 card.mahoutokoro liste { max-height: none; }
