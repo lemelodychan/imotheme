@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Diranista";
+  src: url('Diranista/Diranista.eot');
+  src: url('Diranista/Diranista.eot') format('embedded-opentype'),
+       url('Diranista/Diranista.woff2') format('woff2'),
+       url('Diranista/Diranista.woff') format('woff'),
+       url('Diranista/Diranista.ttf') format('truetype');
+}
