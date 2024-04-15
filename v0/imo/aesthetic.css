@@ -147,8 +147,6 @@ body.dark i,body.dark em{color:#d7d7d7; line-height: unset;}
   max-height:192px;
   overflow:auto;
   padding:0px 8px;
-  font-size:12px;
-  line-height:150%;
   margin: 8px 0px;
 }
 .note img:first-of-type{
