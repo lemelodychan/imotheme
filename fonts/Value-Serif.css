@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Value";
+  src: url('Value-Serif/value-serif.eot');
+  src: url('Value-Serif/value-serif.eot') format('embedded-opentype'),
+       url('Value-Serif/value-serif.woff2') format('woff2'),
+       url('Value-Serif/value-serif.woff') format('woff'),
+       url('Value-Serif/value-serif.ttf') format('truetype');
+}
