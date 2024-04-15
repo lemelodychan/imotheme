@@ -560,6 +560,7 @@ body.light .pa_widgets #Introduction div.meteo {
 
 /* --- WIDGET FOOTER - PARTENAIRES --- */
 #footer_widgets {
+  z-index: 2;
   margin-top: 48px;
   border: 0px;
   border-top: 1px var(--bg2) solid !important;
@@ -600,6 +601,7 @@ body.light #f_widgets_col_0 > div img {
 /* --- FOOTER --- */
 #page-footer {
   background: var(--bg1);
+  z-index: 2;
 }
 #page-footer > div {
   display: grid;
@@ -655,6 +657,7 @@ body.light #f_widgets_col_0 > div img {
 #page-footer > div > div.credits > span.disclaimer {
   text-align: left;
   font-size: 14px;
+  line-height: 24px;
 }
 #page-footer > div > div.credits > span.disclaimer a {
   border-bottom: 1px solid var(--co2);
