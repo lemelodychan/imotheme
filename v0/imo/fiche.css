@@ -254,7 +254,7 @@
 }
 
 .fiche-2023 .fiche-chrono{
-  padding: 16px 16px 8px 16px;
+  padding: 16px 0px 8px 0px;
   background: var(--bg1);
   border-radius: 8px;
   height: fit-content;
@@ -262,7 +262,7 @@
   width: 100%;
   overflow: hidden;
 }
-.fiche-2023 .fiche-chrono > div{
+.fiche-2023 .fiche-chrono > div {
   height: fit-content;
   max-width: 100%;
   width: 100%;
@@ -270,13 +270,19 @@
   overflow-x: auto;
   padding-bottom: 8px;
 }
-.fiche-2023 .fiche-chrono > div::-webkit-scrollbar{
+.fiche-2023 .fiche-chrono > div::-webkit-scrollbar {
   height: 8px!important;
 }
-.fiche-2023 .fiche-chrono > div::-webkit-scrollbar-thumb{
+.fiche-2023 .fiche-chrono > div::-webkit-scrollbar-thumb {
   height: 8px!important;
   background: var(--bg3) !important;
   border-radius: 8px !important;
+}
+.fiche-2023 .fiche-chrono > div::-webkit-scrollbar-button:start:increment,
+.fiche-2023 .fiche-chrono > div::-webkit-scrollbar-button:end:decrement {
+  width: 16px;
+  display: block;
+  background: var(--bg1);
 }
 .fiche-2023 .fiche-chrono > div > div{
   display: flex;
@@ -290,6 +296,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.fiche-2023 .fiche-chrono > div > div .chrono-item:first-of-type {
+  margin-left: 16px;
 }
 .fiche-2023 .fiche-chrono > div > div .chrono-item > span{
   display: flex;
