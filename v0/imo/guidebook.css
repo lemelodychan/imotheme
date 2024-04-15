@@ -260,7 +260,7 @@
     display: inline-block;
     margin: 0;
     width: 100%;
-    background: var(--bg2);
+    background: var(--bg2_transp_7);
     border-radius: 4px;
     padding: 2px 8px;
     margin-bottom: 8px;
@@ -361,7 +361,6 @@
 .guidebook.guidev2 blockquote.blckqt.small.note > bg2:first-of-type{
     margin-right: 8px;
     display: inline-block;
-    line-height: 12px;
 }
 
 /* --- BLOC AVEC ONGLETS --- */
