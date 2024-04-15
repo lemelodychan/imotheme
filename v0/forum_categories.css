@@ -368,11 +368,12 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a:first-child {
   line-height: 20px;
   background: var(--bg1);
   color: var(--text-contrast);
+  font-weight: 400 !important;
 }
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > a:first-child:empty { display: none; }
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span {
-  padding: 4px 12px 8px 12px;
-  line-height: 20px;
+  padding: 8px 12px;
+  line-height: 16px;
   background: var(--bg1);
 }
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-date {
@@ -381,7 +382,7 @@ ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-da
   letter-spacing: 0.5px;
 }
 ul.forums li.row div.metadata dd.lastpost span.lastpost-infos > span.lastpost-author {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-contrast);
   margin-top: 1px;
   display: flex;
@@ -461,6 +462,7 @@ ul.forums li.row div.metadata span.sousforums_container > a.bookmark:hover {
   order: 3;
   display: inline-block;
   font-size: 12px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: right;
   color: var(--text);
