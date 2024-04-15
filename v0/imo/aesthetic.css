@@ -144,8 +144,6 @@ body.dark i,body.dark em{color:#d7d7d7; line-height: unset;}
 }
 .note {
   min-height:96px;
-  max-height:192px;
-  overflow:auto;
   padding:0px 8px;
   margin: 8px 0px;
 }
