@@ -7,7 +7,7 @@ span#conversation {
   gap: 8px;
 }
 span#conversation > .names {
-  font-size: initial;
+  font-size: 20px !important;
   line-height: 2;
   font-family: var(--font-titre);
 }
