@@ -72,6 +72,45 @@ div.form_container div.formsection h3 {
   grid-column: 1/7;
 }
 
+div.edit-profil div.form_container h3 {
+  background: var(--bg1);
+  padding: 8px 24px;
+  width: calc(100% + 48px);
+  position: relative;
+  left: -24px;
+}
+div.edit-profil div.form_container h3:before {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  top: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  visibility: visible !important;
+}
+div.edit-profil div.form_container h3:after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  bottom: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  transform: rotate(90deg);
+  visibility: visible !important;
+}
+
 div#formBox,
 div#registreConf {
   background: var(--bg2);
@@ -133,6 +172,11 @@ div.formsection {
   display: grid;
   grid-gap: 24px;
   grid-template-columns: repeat(6, 1fr);
+}
+div.edit-profil div.formsection {
+  padding: 0;
+  background: transparent;
+  border-radius: 0px;
 }
 
 div.formsection > div {
