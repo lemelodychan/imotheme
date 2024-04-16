@@ -224,8 +224,8 @@
   opacity: 0.5;
   transition: var(--transi);
 }
-body.dark .pa_widgets #News .content > div > a > img { filter: grayscale(1) brightness(0.8); }
-body.light .pa_widgets #News .content > div > a > img { filter: grayscale(1) brightness(1.2); }
+body.dark .pa_widgets #News .content > div > a > img { filter: grayscale(0) brightness(0.8); }
+body.light .pa_widgets #News .content > div > a > img { filter: grayscale(0) brightness(1.2); }
 .pa_widgets #News .content > div > a:hover > img { 
   opacity: 0.3;
   filter: grayscale(1) brightness(1); 
