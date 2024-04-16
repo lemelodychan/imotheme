@@ -573,7 +573,7 @@ body.light .pa_widgets #Introduction div.meteo {
   color: var(--co2);
   z-index: 3;
 }
-.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > div.topic-auteur {
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > div.topic-auteur {
   position: relative;
   height: 20px;
   display: flex;
@@ -582,12 +582,12 @@ body.light .pa_widgets #Introduction div.meteo {
   transition: var(--transi);
   top: 0;
 }
-.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > div.topic-auteur > a {
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > div.topic-auteur > a {
   color: var(--text);
 }
 .pa_widgets #Personnages_attendus > .content > div > div.widget-pa:hover > a > span.topictitle > span,
 .pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a:hover > span.topictitle > span,
-.pa_widgets #Personnages_attendus > .content > div > div.widget-pa:hover > a > div.topic-auteur {
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa:hover > div.topic-auteur {
   top: -28px;
 }
 
