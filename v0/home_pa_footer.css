@@ -178,7 +178,7 @@
   overflow: auto !important;
 }
 .pa_widgets #News > .content::-webkit-scrollbar {
-  background: transparent !important;
+  background-color: var(--bg2) !important;
   border-radius: 4px !important;
 }
 .pa_widgets #News > .content::-webkit-scrollbar-track {
@@ -198,7 +198,7 @@
   width: max-content;
 }
 .pa_widgets #News .content > div > a {
-  width: 150px !important;
+  width: 164px !important;
   height: 216px !important;
   border-radius: 8px;
   position: relative;
@@ -208,7 +208,7 @@
   gap: 4px;
   justify-content: flex-end;
   padding: 24px 16px;
-  background-color: var(--bg1);
+  background-color: var(--co3);
 }
 .pa_widgets #News .content > div > a:last-child { margin-right: 16px; }
 .pa_widgets #News .content > div > a > img {
@@ -238,7 +238,6 @@ body.light .pa_widgets #News .content > div > a > img { filter: grayscale(1) bri
   font-size: 24px;
   line-height: 28px;
   color: var(--text-contrast);
-  text-shadow: var(--bg1) 1px 1px 0px;
 }
 .pa_widgets #News .content > div > a > span.news_text {
   position: relative;
@@ -247,7 +246,7 @@ body.light .pa_widgets #News .content > div > a > img { filter: grayscale(1) bri
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--text-contrast);
+  color: var(--text);
 }
 .pa_widgets #News .content > div > a:after {
   display: block;
