@@ -1,9 +1,9 @@
 /* ---- GENERAL ----*/
-.tag.doj { background-color: var(--doj); color: white; }
-.tag.fug { background-color: var(--fug); color: white; }
-.tag.hii { background-color: var(--hii); color: white; }
-.tag.rai { background-color: var(--rai); color: white; }
-.tag.sui { background-color: var(--sui); color: white; }
+.tag.doj { background-color: var(--doj) !important; color: white; }
+.tag.fug { background-color: var(--fug) !important; color: white; }
+.tag.hii { background-color: var(--hii) !important; color: white; }
+.tag.rai { background-color: var(--rai) !important; color: white; }
+.tag.sui { background-color: var(--sui) !important; color: white; }
 
 /* ---- STYLES BOUTIQUE UPDATE 2023 ----*/
 div.btq-tabs {
