@@ -4,6 +4,9 @@ div.edit-profil {
   gap: 0px;
   margin: 64px 0;
 }
+div.edit-profil .panel > .inner {
+  margin: 0 auto !important;
+}
 div.edit-profil > #tabs {
   background: var(--bg1);
   padding: 16px;
