@@ -109,6 +109,7 @@ div.edit-profil div.form_container h3:after {
   border-radius: 0 0 0 calc(16px*2);
   transform: rotate(90deg);
   visibility: visible !important;
+  background: transparent !important;
 }
 
 div#formBox,
@@ -134,6 +135,9 @@ div.form_container > div#formBox > form#registreForm {
   height: 100%;
   overflow: auto;
   padding-top: 24px;
+}
+div.edit-profil div.form_container > div#formBox > form#registreForm {
+  gap: 32px;
 }
 div.form_container > div#formBox > form#registreForm::-webkit-scrollbar-button:end:decrement {
   height: 72px;
