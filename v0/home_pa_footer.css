@@ -550,11 +550,45 @@ body.light .pa_widgets #Introduction div.meteo {
 .pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 0px 8px;
   width: 100%;
-  height: 100%;
+  height: 28px;
+  overflow: hidden;
+  position: relative;
 }
-
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > span.topictitle {
+  display: grid;
+  grid-template-columns: auto 16px;
+  gap: 4px;
+  align-items: center;
+  line-height: 28px;
+}
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > span.topictitle > span {
+  color: var(--text-contrast);
+  position: relative;
+  transition: var(--transi);
+  top: 0;
+}
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > span.topictitle > span.hover-icon {
+  position: relative;
+  z-index: 3;
+}
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > div.topic-auteur {
+  position: relative;
+  height: 20px;
+  display: flex;
+  padding: 0 8px;
+  line-height: 28px;
+  transition: var(--transi);
+  top: 0;
+}
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a > div.topic-auteur > a {
+  color: var(--text);
+}
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a:hover > span.topictitle > span,
+.pa_widgets #Personnages_attendus > .content > div > div.widget-pa > a:hover > div.topic-auteur {
+  top: -28px;
+}
 
 /* --- WIDGET FOOTER - PARTENAIRES --- */
 #footer_widgets {
