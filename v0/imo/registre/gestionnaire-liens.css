@@ -57,11 +57,17 @@ form#liensForm > h3:after {
 
 form#editLiens div.formsection h4 {
   grid-column: 1/7;
+  background: var(--bg1);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+form#editLiens div.formsection h4 span {
   width: max-content;
   text-align: right;
   margin: 0px;
   padding: 0px;
   border: 0px;
+  font-weight: normal !important;
   font-family: var(--font-titre);
   font-feature-settings: 'ss02' on;
   color: var(--text-contrast)!important;
