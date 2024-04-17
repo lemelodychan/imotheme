@@ -19,6 +19,7 @@ form#liensForm > h3 {
   width: 100%;
   position: relative;
   left: 0px;
+  line-height: 40px;
 }
 form#editLiens > h3:before,
 form#liensForm > h3:before {
@@ -167,4 +168,5 @@ form#liensForm #gesli-addnew button#confirmButton{
   display: flex;
   align-items: center;
   gap: 8px;
+  height: 40px;
 }
