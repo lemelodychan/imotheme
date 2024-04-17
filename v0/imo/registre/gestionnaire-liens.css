@@ -137,9 +137,13 @@ form#liensForm #gesli-addnew > div.type-order > div {
   gap: 8px;
 }
 form#liensForm #gesli-addnew > div.type-order {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    grid-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-gap: 16px;
+  margin-bottom: -16px;
+}
+form#liensForm #gesli-addnew > div:last-of-type {
+  margin-top: -8px;
 }
 form#liensForm #gesli-addnew label {
   font-size: 14px;
