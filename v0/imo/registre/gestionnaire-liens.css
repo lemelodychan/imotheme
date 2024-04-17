@@ -110,6 +110,19 @@ div#gesli-misc {
   font-size: 14px;
 }
 
+form#editLiens > h3 {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+form#editLiens > h3 > a {
+  font-family: var(--font-texte) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+
 form#liensForm div.addnew {
   margin: 24px;
 }
