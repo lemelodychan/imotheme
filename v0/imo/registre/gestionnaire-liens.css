@@ -109,3 +109,32 @@ div#gesli-misc {
   gap: 8px;
   font-size: 14px;
 }
+
+form#liensForm div.addnew {
+  margin: 24px;
+}
+form#liensForm #gesli-addnew {
+  grid-column: 1/7;
+}
+form#liensForm #gesli-addnew > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+form#liensForm #gesli-addnew label {
+  font-size: 14px;
+  color: var(--text-contrast);
+  font-weight: 500;
+}
+form#liensForm #gesli-addnew input[name="lien-nom"] {
+  font-size: 16px !important;
+}
+form#liensForm #gesli-addnew textarea {
+  width: 100%;
+  height: 112px;
+}
+
+form#editLiens button#editButton,
+form#liensForm #gesli-addnew button#confirmButton{
+  align-self: center;
+}
