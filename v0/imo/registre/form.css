@@ -533,9 +533,10 @@ div.form_container.editRegistre > div#formBox > form#registreForm{
     padding: 16px;
     background: var(--bg1);
     border-radius: 16px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 32px auto;
     font-size: 14px;
-    gap: 24px;
+    grid-gap: 24px;
     align-items: center;
     color: var(--text);
   }
@@ -544,7 +545,7 @@ div.form_container.editRegistre > div#formBox > form#registreForm{
     font-size: 24px;
     padding: 4px 8px;
     border-radius: 50%;
-    width: 32px;
+    width: 24px;
     height: 32px;
     display: flex;
     line-height: 32px;
@@ -565,8 +566,10 @@ div.form_container.editRegistre > div#formBox > form#registreForm{
   }
   div#message-new > div > strong {
     color: orange;
+    line-height: 24px;
   }
   div#message-new > div > p,
   div#message-edit > div > p {
     font-size: 14px;
+    line-height: 21px;
   }
