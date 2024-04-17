@@ -148,10 +148,15 @@ form#editLiens > h3 > a {
 
 form#liensForm div.addnew {
   margin: 24px;
+  justify-items: center;
 }
 form#liensForm #gesli-addnew {
   grid-column: 1/7;
   gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  background: var(--bg1_transp_5);
 }
 form#liensForm #gesli-addnew > div,
 form#liensForm #gesli-addnew > div.type-order > div {
@@ -183,9 +188,12 @@ form#liensForm #gesli-addnew textarea {
 form#liensForm #gesli-addnew span.hint {
   margin: 0px !important;
 }
+form#liensForm button#confirmButton{
+  grid-column: 1/7;
+}
 
 form#editLiens button#editButton,
-form#liensForm #gesli-addnew button#confirmButton{
+form#liensForm button#confirmButton{
   align-self: center;
   display: flex;
   align-items: center;
