@@ -55,7 +55,7 @@ div#gesli-misc {
   color: var(--text-contrast);
   font-weight: 500;
 }
-#editLiens div.lien-item input:not([name="lien-img"]) {
+#editLiens div.lien-item input[name="lien-nom"] {
   font-size: 16px !important;
 }
 #editLiens div.lien-item div.field textarea {
