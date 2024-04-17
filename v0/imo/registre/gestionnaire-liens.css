@@ -12,6 +12,37 @@ form#editLiens div.formsection {
   background: var(--bg1_transp_5);
   border-radius: 16px;
 }
+form#editLiens div.form_container h3:before {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  top: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  visibility: visible !important;
+}
+form#editLiens div.form_container h3:after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  bottom: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  transform: rotate(90deg);
+  visibility: visible !important;
+}
 
 form#editLiens div.formsection h4 {
   grid-column: 1/7;
