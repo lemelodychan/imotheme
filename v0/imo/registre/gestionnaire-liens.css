@@ -14,12 +14,14 @@ form#editLiens div.formsection {
   border-radius: 16px;
 }
 
-form#editLiens div.form_container h3 {
+form#editLiens > h3,
+form#liensForm > h3 {
   width: 100%;
   position: relative;
   left: 0px;
 }
-form#editLiens div.form_container h3:before {
+form#editLiens > h3:before,
+form#liensForm > h3:before {
   opacity: 1;
   content: "";
   display: block;
@@ -34,7 +36,8 @@ form#editLiens div.form_container h3:before {
   border-radius: 0 0 0 calc(16px*2);
   visibility: visible !important;
 }
-form#editLiens div.form_container h3:after {
+form#editLiens > h3:after,
+form#liensForm > h3:after {
   opacity: 1;
   content: "";
   display: block;
