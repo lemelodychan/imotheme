@@ -30,7 +30,7 @@ div#gesli-misc {
 #editLiens div.lien-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 #editLiens div.lien-item img {
   max-width: 100%;
@@ -40,10 +40,17 @@ div#gesli-misc {
 #editLiens div.lien-item div.type-order {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: auto 96px;
+}
+#editLiens div.lien-item div.type-order > div.field:last-of-type {
+  width: 96px;
 }
 #editLiens div.lien-item div.field {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+#editLiens div.lien-item div.field textarea {
+  width: 100%;
+  height: 112px;
 }
