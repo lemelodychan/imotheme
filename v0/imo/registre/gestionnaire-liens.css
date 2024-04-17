@@ -137,4 +137,7 @@ form#liensForm #gesli-addnew textarea {
 form#editLiens button#editButton,
 form#liensForm #gesli-addnew button#confirmButton{
   align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
