@@ -115,11 +115,18 @@ form#liensForm div.addnew {
 }
 form#liensForm #gesli-addnew {
   grid-column: 1/7;
+  gap: 16px;
 }
-form#liensForm #gesli-addnew > div {
+form#liensForm #gesli-addnew > div,
+form#liensForm #gesli-addnew > div.type-order > div {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+form#liensForm #gesli-addnew > div.type-order {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-gap: 16px;
 }
 form#liensForm #gesli-addnew label {
   font-size: 14px;
