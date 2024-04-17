@@ -1,0 +1,20 @@
+div#gesli-pos,
+div#gesli-neu,
+div#gesli-neg,
+div#gesli-misc {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/7;
+}
+
+#editLiens div.lien-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#editLiens div.lien-item img {
+  max-width: 100%;
+  margin: auto;
+  border-radius: 8px;
+}
