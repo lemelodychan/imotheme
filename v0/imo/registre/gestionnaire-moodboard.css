@@ -11,13 +11,15 @@ form#editMood div.formsection {
   border-radius: 16px;
 }
 
-form#editMood > h3 {
+form#editMood > h3,
+div.gesmo h3 {
   width: 100%;
   position: relative;
   left: 0px;
   line-height: 40px;
 }
-form#editMood > h3:before {
+form#editMood > h3:before,
+div.gesmo h3:before {
   opacity: 1;
   content: "";
   display: block;
@@ -32,7 +34,8 @@ form#editMood > h3:before {
   border-radius: 0 0 0 calc(16px*2);
   visibility: visible !important;
 }
-form#editMood > h3:after {
+form#editMood > h3:after,
+div.gesmo h3:before {
   opacity: 1;
   content: "";
   display: block;
@@ -127,20 +130,20 @@ div#gesmoo-board > div > img {
   margin-top: 8px !important;
 }
 
-#editMood #code-snippet {
+div.gesmo #code-snippet {
   margin: 0 24px 24px 24px;
   padding: 16px;
   background: var(--bg1_transp_5);
   border-radius: 16px;
 }
-#editMood #code-snippet > pre {
+div.gesmo #code-snippet > pre {
   width: 100%;
   background: var(--bg1);
   padding: 16px;
   border-radius: 8px;
   position: relative;
 }
-#editMood #code-snippet > pre > code {
+div.gesmo #code-snippet > pre > code {
   width: 100%;
   position: relative;
   white-space: break-spaces;
