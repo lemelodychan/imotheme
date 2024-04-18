@@ -13,9 +13,9 @@ form#editMood div.formsection {
 
 form#editMood > h3,
 div.gesmo h3 {
-  width: 100%;
-  position: relative;
-  left: 0px;
+  width: 100% !important;
+  position: relative !important;
+  left: 0px !important;
   line-height: 40px;
 }
 form#editMood > h3:before,
@@ -135,6 +135,10 @@ div.gesmo #code-snippet {
   padding: 16px;
   background: var(--bg1_transp_5);
   border-radius: 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 div.gesmo #code-snippet > pre {
   width: 100%;
@@ -152,4 +156,13 @@ div.gesmo #code-snippet > pre > code {
   display: block;
   max-height: 240px;
   overflow-y: auto;
+}
+div.gesmo #code-snippet button#copyButton {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--co2);
+  display: flex;
+  gap: 4px;
 }
