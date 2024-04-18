@@ -115,7 +115,8 @@ div.imo-geschro div.chrono-item > span.desc::-webkit-scrollbar-button:end:increm
 
 
 /* ------ MOODBOARD AUTOMATIQUE ------ */
-div#imo-gesmoo {
+div#imo-gesmoo,
+div.imo-gesmoo {
   max-width: 540px;
   margin: auto;
   display: grid;
@@ -125,7 +126,8 @@ div#imo-gesmoo {
   border-radius: 16px;
   overflow: hidden;
 }
-div#imo-gesmoo > img {
+div#imo-gesmoo > img,
+div.imo-gesmoo > img {
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
