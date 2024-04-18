@@ -24,6 +24,7 @@ div.imo-gesli div.lien-item > img {
 }
 div.imo-gesli div.lien-item > span.lien-nom {
   font-size: 20px;
+  color: var(--text-contrast);
   font-weight: 500;
   align-content: center;
 }
