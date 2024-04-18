@@ -1,0 +1,104 @@
+/* ---- BLOCK FORUMATHON ---- */
+div#forumathon {
+  position: relative;
+  width: 400px;
+  margin: 24px auto;
+  background: var(--bg1_transp_5);
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+div.progress {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-contrast);
+  line-height: 32px;
+  font-size: 16px;
+}
+div.progress > div {
+  font-weight: 600;
+}
+div.progress-container {
+  background: var(--bg1);
+  margin: 4px 0px;
+  border-radius: 16px;
+  height: 8px;
+  width: 100%;
+}
+div.progress-container > div.progress-bar {
+  position: relative;
+  background-image: repeating-linear-gradient(to right, var(--co2), var(--light_2), var(--co2));
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: jauge 4s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  border-radius: 16px;
+  height: 8px;
+}
+@keyframes jauge {
+  0%   { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+}
+div.progress-container > div.progress-bar > iconify-icon {
+  position: absolute;
+  background: var(--light_1);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  right: 0px;
+  top: -6px;
+  align-items: center;
+  justify-content: center;
+  color: var(--co1);
+}
+div#forumathon div.count {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-contrast);
+  line-height: 24px;
+  font-weight: 500;
+}
+div#forumathon button#addBtn {
+  display: none;
+  padding: 2px 16px !important;
+  line-height: 24px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+}
+div#addModal {
+  width: 100%;
+}
+div.modal-content {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+div.modal-content input,
+div.modal-content button { border-radius: 8px !important; }
+div.modal-content input {
+  width: 100%;
+  color: var(--text);
+  background: var(--bg1)!important;
+  padding: 4px 8px !important;
+}
+div.modal-content button { 
+  margin: 0 !important;
+  line-height: 24px !important;
+  font-size: 14px !important;
+  padding: 0px 8px !important;
+  height: 32px !important;
+  width: 104px !important;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
