@@ -59,6 +59,8 @@ div.imo-gesli div.lien-item > span.desc-long::-webkit-scrollbar-button:end:incre
 
 /* ------ MOODBOARD AUTOMATIQUE ------ */
 div#imo-gesmoo {
+  max-width: 540px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
