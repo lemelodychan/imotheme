@@ -77,7 +77,7 @@ div.imo-geschro div.chrono-item:after {
   width: 1px;
   height: calc(100% - 16px);
   content: " ";
-  background: linear-gradient(to bottom, var(--co1), var(--co2), var(--co3), var(--co2), var(--co1));
+  background-color: var(--co2);
   position: absolute;
   left: 56px;
   bottom: -16px;
