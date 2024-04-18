@@ -4,9 +4,9 @@ div.imo-gesli > div#gesli-pos,
 div.imo-gesli > div#gesli-neu,
 div.imo-gesli > div#gesli-neg,
 div.imo-gesli > div#gesli-misc {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
 }
 div.imo-gesli div.lien-item {
   display: grid;
