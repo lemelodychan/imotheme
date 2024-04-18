@@ -1,0 +1,16 @@
+/* ------ CODES AUTOMAIQUES - BASES ------ */
+
+/* ------ MOODBOARD AUTOMATIQUE ------ */
+div#imo-gesmoo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+div#imo-gesmoo > img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
