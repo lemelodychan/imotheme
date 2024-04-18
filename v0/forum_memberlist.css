@@ -1,0 +1,212 @@
+/* --- MEMBERLIST --- */
+div.forumbg-table {
+  margin: 48px auto !important;
+}
+
+div.inner.memberlist-container {
+  padding: 24px;
+  position: relative;
+}
+
+div.inner.memberlist-container:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 16px;
+  z-index: 0;
+  padding: 2px;
+  background: linear-gradient(145deg, var(--co2), var(--bg1_transp_5) 30%, var(--bg1_transp_5) 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+div.inner.memberlist-container > h1.page-title {
+  text-align: center;
+  font-weight: 400!important;
+  margin-bottom: 8px !important;
+}
+
+div.inner.memberlist-container > h2.h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--text);
+  border: none;
+}
+
+div.inner.memberlist-container > h2.h3::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 240px;
+  background: linear-gradient(45deg, transparent, var(--co2), transparent);
+  margin: 16px auto 0 auto;
+}
+
+div.inner.memberlist-container form {
+  text-align: center;
+  position: relative;
+  z-index: 2!important;
+  margin: 24px auto;
+}
+
+div.inner.memberlist-container form > span {
+  padding: 0 8px;
+}
+
+div.inner.memberlist-container form > span > input, div.inner.memberlist-container form > span > select {
+  margin-left: 8px;  
+  width: 150px;
+  font-size: 1.3rem;
+  border-radius: 8px!important;
+}
+
+div.inner.memberlist-container form > .button2 {
+  border-radius: 8px !important;
+  border: 1px solid var(--co2) !important;
+  background: rgb(var(--co2_rgb), 0.4) !important;
+  color: var(--contrast);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 4px 8px !important;
+}
+
+div.inner.memberlist-container form > .button2:hover {
+  background: rgb(var(--co2_rgb),1)!important;
+}
+
+div#memberlist {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 316px));
+  grid-template-columns: repeat(4, 1fr);
+  padding: 16px;
+  background: var(--bg1_transp_5);
+  border-radius: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  div#memberlist {
+  	grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+div.member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  background: var(--bg1);
+  border-radius: 8px;
+  position: relative;
+}
+
+div.member-card:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 8px;
+  z-index: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--co2), var(--bg1_transp_5) 30%, var(--bg1_transp_5) 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+div.member-card > div.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+div.member-card > div.member-avatar {
+  aspect-ratio: 1;
+  width: 100%;
+  position: relative;
+  border-radius: 7px;
+  overflow: hidden;
+}
+div.member-card > div.member-avatar > a > img {
+  max-width: unset !important;
+  max-height: unset !important;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+div.member-card > div.member-avatar > span.member-pseudo {
+  position: absolute;
+  bottom: -24px;
+  right: 8px;
+  background-color: var(--bg1);
+  border-radius: 4px 4px 0px 0px;
+  padding: 2px 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-contrast);  
+  transition: var(--transi);
+  opacity: 0;
+}
+
+div.member-card:hover > div.member-avatar > span.member-pseudo {
+  bottom: 0px;
+  opacity: 1;
+}
+
+div.member-card span.member-name {
+  font-family: var(--font3);
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+div.member-card span.member-name strong {
+  font-weight: 400!important;
+}
+
+div.member-card span.member-name::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(45deg, transparent, var(--co2), transparent);
+  margin-top: 4px;
+}
+
+div.member-card span.member-lastvisit {
+  text-align: center;
+} 
+
+div.member-card span.member-joined {
+  background-color: var(--bg2_transp_5);
+  border-radius: 4px;
+  padding: 4px 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-contrast);
+  transition: var(--transi);
+  text-align: center;
+  width: 100%;
+} 
