@@ -84,7 +84,7 @@ form#editChrono div.formsection h4 span {
 div#geschro-timeline {
   display: grid;
   grid-gap: 24px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column: 1/7;
 }
 
