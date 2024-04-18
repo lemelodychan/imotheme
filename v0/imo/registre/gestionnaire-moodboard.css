@@ -1,0 +1,118 @@
+form#editMood {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+form#editMood div.formsection {
+  padding: 24px;
+  background: var(--bg1_transp_5);
+  border-radius: 16px;
+}
+
+form#editMood > h3 {
+  width: 100%;
+  position: relative;
+  left: 0px;
+  line-height: 40px;
+}
+form#editMood > h3:before {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  top: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  visibility: visible !important;
+}
+form#editMood > h3:after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  bottom: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  transform: rotate(90deg);
+  visibility: visible !important;
+}
+
+form#editMood div.formsection h4 {
+  grid-column: 1/7;
+  background: var(--bg1);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+form#editMood div.formsection h4 span {
+  width: max-content;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-weight: normal !important;
+  font-family: var(--font-titre);
+  font-feature-settings: 'ss02' on;
+  color: var(--text-contrast)!important;
+  background: linear-gradient(45deg, var(--co1), var(--co3), var(--co2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 24px;
+  line-height: 32px;
+  align-self: flex-end;
+}
+
+div#gesmoo-board {
+  grid-column: 1/7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0;
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+div#gesmoo-board > div {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+div#gesmoo-board > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#editMood div.formsection.edit {
+  padding: 16px;
+  background: var(--bg1_transp_5);
+  border-radius: 16px;
+}
+#editMood div.formsection.edit div.field {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  grid-column: 1/7;
+}
+#editMood div.formsection.edit button#confirmButton{
+  grid-column: 1/7;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
