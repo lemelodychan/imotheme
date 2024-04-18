@@ -101,14 +101,21 @@ div#gesmoo-board > div > img {
   padding: 16px;
   background: var(--bg1_transp_5);
   border-radius: 16px;
+  grid-gap: 8px;
 }
 #editMood div.formsection.edit div.field {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 88px auto;
+  grid-gap: 16px;
+  align-items: center;
   grid-column: 1/7;
 }
-#editMood div.formsection.edit button#confirmButton{
+#editMood div.formsection.edit div.field > label {
+  color: var(--text-contrast);
+  font-weight: 500;
+  margin: 0;
+}
+#editMood div.formsection.edit button#editButton{
   grid-column: 1/7;
   align-self: center;
   display: flex;
