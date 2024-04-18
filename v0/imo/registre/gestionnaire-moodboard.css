@@ -20,7 +20,7 @@ div.gesmo h3 {
 }
 form#editMood > h3:before,
 div.gesmo h3:before {
-  opacity: 1;
+  opacity: 1 !important;
   content: "";
   display: block;
   position: absolute;
@@ -35,7 +35,7 @@ div.gesmo h3:before {
   visibility: visible !important;
 }
 form#editMood > h3:after,
-div.gesmo h3:before {
+div.gesmo h3:after {
   opacity: 1;
   content: "";
   display: block;
