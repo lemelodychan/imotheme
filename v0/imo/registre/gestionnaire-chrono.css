@@ -89,9 +89,12 @@ div#geschro-timeline {
 }
 
 #editChrono div.chrono-item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 72px auto;
+  grid-gap: 16px;
+  padding: 16px;
+  background: var(--bg2);
+  border-radius: 8px;
 }
 #editChrono div.chrono-item div.field {
   display: flex;
@@ -103,8 +106,15 @@ div#geschro-timeline {
   color: var(--text-contrast);
   font-weight: 500;
 }
+#editChrono div.chrono-item input[name="ordre"] {
+  font-size: 16px !important;
+  grid-column: 1/2;
+  grid-row: 1/7;
+}
 #editChrono div.chrono-item input[name="timestamp"] {
   font-size: 16px !important;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 #editChrono div.chrono-item div.field textarea {
   width: 100%;
