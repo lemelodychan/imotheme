@@ -61,9 +61,9 @@ div.imo-gesli div.lien-item > span.desc-long::-webkit-scrollbar-button:end:incre
 div.imo-geschro {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   background: var(--bg2);
-  padding: 16px 0;
+  padding: 24px;
   border-radius: 16px;
 }
 div.imo-geschro div.chrono-item {
@@ -71,7 +71,20 @@ div.imo-geschro div.chrono-item {
   grid-template-columns: 112px auto;
   grid-gap: 8px 16px;
   background: var(--bg2);
-  padding: 0 16px;
+  position: relative;
+}
+div.imo-geschro div.chrono-item:after {
+    display: block;
+    width: 1px;
+    height: calc(100% - 16px);
+    content: " ";
+    background: var(--gradient_vert);
+    position: absolute;
+    left: 56px;
+    bottom: -16px;
+}
+div.imo-geschro div.chrono-item:last-of-type:after {
+  height: 100%;
 }
 div.imo-geschro div.chrono-item > span.timestamp {
   grid-row: 1 / 3;
@@ -95,6 +108,12 @@ div.imo-geschro div.chrono-item > span.desc {
   border-radius: 8px;
   max-height: 112px;
   overflow-y: auto;
+}
+div.imo-geschro div.chrono-item > span.desc::-webkit-scrollbar-button:start:decrement,
+div.imo-geschro div.chrono-item > span.desc::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 8px;
+  background: var(--bg1);
 }
 
 
