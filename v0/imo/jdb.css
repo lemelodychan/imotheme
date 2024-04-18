@@ -74,17 +74,18 @@ div.imo-geschro div.chrono-item {
   position: relative;
 }
 div.imo-geschro div.chrono-item:after {
-    display: block;
-    width: 1px;
-    height: calc(100% - 16px);
-    content: " ";
-    background: var(--gradient_vert);
-    position: absolute;
-    left: 56px;
-    bottom: -16px;
+  display: block;
+  width: 1px;
+  height: calc(100% - 16px);
+  content: " ";
+  background: linear-gradient(to bottom, var(--co1), var(--co2), var(--co3), var(--co2), var(--co1));
+  position: absolute;
+  left: 56px;
+  bottom: -16px;
 }
 div.imo-geschro div.chrono-item:last-of-type:after {
-  height: 100%;
+  height: calc(100% - 32px);
+  bottom: 0px;
 }
 div.imo-geschro div.chrono-item > span.timestamp {
   grid-row: 1 / 3;
