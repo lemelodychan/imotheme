@@ -97,10 +97,7 @@ div.imo-geschro div.chrono-item > span.timestamp {
 div.imo-geschro div.chrono-item > span.titre {
   font-weight: 500;
   color: var(--text-contrast);
-  padding: 2px 16px;
-  background: var(--bg1_transp_7);
-  border-radius: 8px;
-  line-height: 32px;
+  align-content: flex-start;
 }
 div.imo-geschro div.chrono-item > span.desc {
   padding: 16px 8px 16px 16px;
