@@ -1,0 +1,179 @@
+form#editChrono {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+form#chronoForm {
+  margin-top: 32px;
+}
+
+form#editChrono div.formsection {
+  padding: 24px;
+  background: var(--bg1_transp_5);
+  border-radius: 16px;
+}
+
+form#editChrono > h3,
+form#chronoForm > h3 {
+  width: 100%;
+  position: relative;
+  left: 0px;
+  line-height: 40px;
+}
+form#editChrono > h3:before,
+form#chronoForm > h3:before {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  top: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  visibility: visible !important;
+}
+form#editChrono > h3:after,
+form#chronoForm > h3:after {
+  opacity: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  height: calc(16px * 2);
+  width: calc(16px * 2);
+  border-bottom: 16px solid var(--bg1);
+  border-left: 16px solid var(--bg1);
+  bottom: -16px;
+  left: -16px;
+  border-radius: 0 0 0 calc(16px*2);
+  transform: rotate(90deg);
+  visibility: visible !important;
+}
+
+form#editChrono div.formsection h4 {
+  grid-column: 1/7;
+  background: var(--bg1);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+form#editChrono div.formsection h4 span {
+  width: max-content;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-weight: normal !important;
+  font-family: var(--font-titre);
+  font-feature-settings: 'ss02' on;
+  color: var(--text-contrast)!important;
+  background: linear-gradient(45deg, var(--co1), var(--co3), var(--co2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 24px;
+  line-height: 32px;
+  align-self: flex-end;
+}
+
+div#geschro-timeline {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/7;
+}
+
+#editChrono div.chrono-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#editChrono div.chrono-item div.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#editChrono div.chrono-item div.field label {
+  font-size: 14px;
+  color: var(--text-contrast);
+  font-weight: 500;
+}
+#editChrono div.chrono-item input[name="timestamp"] {
+  font-size: 16px !important;
+}
+#editChrono div.chrono-item div.field textarea {
+  width: 100%;
+  height: 112px;
+}
+#editChrono div.chrono-item label[for="delete-checkbox"] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+form#editChrono > h3 {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+form#editChrono > h3 > a {
+  font-family: var(--font-texte) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+
+form#chronoForm div.addnew {
+  margin: 24px;
+  justify-items: center;
+}
+form#chronoForm #geschro-addnew {
+  grid-column: 1/7;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  background: var(--bg1_transp_5);
+}
+form#chronoForm #geschro-addnew > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+form#chronoForm #geschro-addnew > div:last-of-type {
+  margin-top: -8px;
+}
+form#chronoForm #geschro-addnew label {
+  font-size: 14px;
+  color: var(--text-contrast);
+  font-weight: 500;
+}
+form#chronoForm #geschro-addnew input[name="timestamp"] {
+  font-size: 16px !important;
+}
+form#chronoForm #geschro-addnew textarea {
+  width: 100%;
+  height: 112px;
+}
+form#chronoForm #geschro-addnew span.hint {
+  margin: 0px !important;
+}
+form#chronoForm button#confirmButton{
+  grid-column: 1/7;
+}
+
+form#editChrono button#editButton,
+form#chronoForm button#confirmButton{
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
