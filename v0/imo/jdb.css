@@ -69,7 +69,7 @@ div.imo-geschro {
 div.imo-geschro div.chrono-item {
   display: grid;
   grid-template-columns: 112px auto;
-  grid-gap: 8px 16px;
+  grid-gap: 8px 24px;
   background: var(--bg2);
   position: relative;
 }
@@ -104,7 +104,7 @@ div.imo-geschro div.chrono-item > span.desc {
   border-right: 8px solid var(--bg1);
   background: var(--bg1);
   border-radius: 8px;
-  max-height: 112px;
+  max-height: 80px;
   overflow-y: auto;
 }
 div.imo-geschro div.chrono-item > span.desc::-webkit-scrollbar-button:start:decrement,
