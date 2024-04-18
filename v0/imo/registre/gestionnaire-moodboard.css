@@ -102,6 +102,7 @@ div#gesmoo-board > div > img {
   background: var(--bg1_transp_5);
   border-radius: 16px;
   grid-gap: 8px;
+  justify-items: center;
 }
 #editMood div.formsection.edit div.field {
   display: grid;
@@ -109,6 +110,7 @@ div#gesmoo-board > div > img {
   grid-gap: 16px;
   align-items: center;
   grid-column: 1/7;
+  width: 100%;
 }
 #editMood div.formsection.edit div.field > label {
   color: var(--text-contrast);
@@ -122,4 +124,29 @@ div#gesmoo-board > div > img {
   align-items: center;
   gap: 8px;
   height: 40px;
+  margin-top: 8px !important;
+}
+
+#editMood #code-snippet {
+  margin: 0 24px 24px 24px;
+  padding: 16px;
+  background: var(--bg1_transp_5);
+  border-radius: 16px;
+}
+#editMood #code-snippet > pre {
+  width: 100%;
+  background: var(--bg1);
+  padding: 16px;
+  border-radius: 8px;
+  position: relative;
+}
+#editMood #code-snippet > pre > code {
+  width: 100%;
+  position: relative;
+  white-space: break-spaces;
+  font-size: 14px;
+  font-family: var(--font-code);
+  display: block;
+  max-height: 240px;
+  overflow-y: auto;
 }
