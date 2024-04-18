@@ -57,6 +57,47 @@ div.imo-gesli div.lien-item > span.desc-long::-webkit-scrollbar-button:end:incre
   background: var(--bg1);
 }
 
+/* ------ CHRONOLOGIE AUTOMATIQUE ----- */
+div.imo-geschro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg2);
+  padding: 16px 0;
+  border-radius: 16px;
+}
+div.imo-geschro div.chrono-item {
+  display: grid;
+  grid-template-columns: 112px auto;
+  grid-gap: 8px 16px;
+  background: var(--bg2);
+  padding: 0 16px;
+}
+div.imo-geschro div.chrono-item > span.timestamp {
+  grid-row: 1 / 3;
+  text-align: center;
+  font-family: var(--font-titre);
+  font-size: 20px;
+  color: var(--text-contrast);
+}
+div.imo-geschro div.chrono-item > span.titre {
+  font-weight: 500;
+  color: var(--text-contrast);
+  padding: 2px 16px;
+  background: var(--bg1_transp_7);
+  border-radius: 8px;
+  line-height: 32px;
+}
+div.imo-geschro div.chrono-item > span.desc {
+  padding: 16px 8px 16px 16px;
+  border-right: 8px solid var(--bg1);
+  background: var(--bg1);
+  border-radius: 8px;
+  max-height: 112px;
+  overflow-y: auto;
+}
+
+
 /* ------ MOODBOARD AUTOMATIQUE ------ */
 div#imo-gesmoo {
   max-width: 540px;
