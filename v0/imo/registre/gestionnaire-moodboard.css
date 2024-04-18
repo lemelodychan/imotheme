@@ -131,7 +131,7 @@ div#gesmoo-board > div > img {
 }
 
 div.gesmo #code-snippet {
-  margin: 0 24px 24px 24px;
+  margin: 24px;
   padding: 16px;
   background: var(--bg1_transp_5);
   border-radius: 16px;
@@ -158,10 +158,9 @@ div.gesmo #code-snippet > pre > code {
   overflow-y: auto;
 }
 div.gesmo #code-snippet button#copyButton {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-family: var(--font-texte);
   color: var(--co2);
   display: flex;
   gap: 4px;
