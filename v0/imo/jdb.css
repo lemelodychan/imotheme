@@ -60,7 +60,7 @@ div.imo-gesli div.lien-item > span.desc-long::-webkit-scrollbar-button:end:incre
 div.imo-geschro {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   background: var(--bg2);
   padding: 24px;
   border-radius: 16px;
