@@ -60,17 +60,34 @@ div.imo-gesli div.lien-item > span.desc-long::-webkit-scrollbar-button:end:incre
 div.imo-geschro {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   background: var(--bg2);
   padding: 24px;
   border-radius: 16px;
 }
+div.imo-geschro div#tabs-list {
+  width: 100%;
+  overflow-y: auto;
+}
+div.imo-geschro div#tabs-list::-webkit-scrollbar-track {
+    background-color: var(--bg1) !important;
+}
+div.imo-geschro div#tabs-list::-webkit-scrollbar-thumb {
+    border: 2px solid var(--bg2) !important;
+    background-image: var(--gradient) !important;
+}
+div.imo-geschro div#tabs-list::-webkit-scrollbar-track {
+    border: 3px solid var(--bg2) !important;
+}
 
-div.imo-geschro div#tabs-container {
+div.imo-geschro div#tabs-list div#tabs-container {
   display: flex;
   gap: 8px;
+  width: fit-content;
+  padding-bottom: 8px;
+  position: relative;
 }
-div.imo-geschro div#tabs-container > button {
+div.imo-geschro div#tabs-list div#tabs-container button {
   font-family: var(--font-texte);
   font-size: 14px;
   font-weight: 500;
@@ -81,12 +98,12 @@ div.imo-geschro div#tabs-container > button {
   color: var(--text);
   border-radius: 8px;
   text-align: center;
-  width: -webkit-fill-available;
+  width: 112px;
 }
-div.imo-geschro div#tabs-container > button.active-tab {
+div.imo-geschro div#tabs-list div#tabs-container button.active-tab {
   background: var(--bg1);
   color: var(--text-contrast);
-  border-bottom: 2px solid var(--co2);
+  border-bottom: 2px solid var(--co2) !important;
 }
 
 div.imo-geschro div.content-div {
