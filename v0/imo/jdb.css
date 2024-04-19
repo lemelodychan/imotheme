@@ -75,7 +75,7 @@ div.imo-geschro div.chrono-item {
 div.imo-geschro div.chrono-item:after {
   display: block;
   width: 1px;
-  height: calc(100% - 16px);
+  height: calc(100% - 44px);
   content: " ";
   background-color: var(--co2);
   position: absolute;
@@ -83,12 +83,24 @@ div.imo-geschro div.chrono-item:after {
   bottom: -16px;
 }
 div.imo-geschro div.chrono-item:last-of-type:after {
-  height: calc(100% - 32px);
+  height: calc(100% - 64px);
   bottom: 0px;
 }
 div.imo-geschro div.chrono-item > span.timestamp {
   grid-row: 1 / 3;
   text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+  justify-content: flex-end;
+}
+div.imo-geschro div.chrono-item > span.timestamp > span.periode {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-texte);
+  color: var(--text);
+}
+div.imo-geschro div.chrono-item > span.timestamp > span.annee {
   font-family: var(--font-titre);
   font-size: 20px;
   color: var(--text-contrast);
