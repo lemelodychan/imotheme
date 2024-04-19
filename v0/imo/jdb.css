@@ -65,6 +65,38 @@ div.imo-geschro {
   padding: 24px;
   border-radius: 16px;
 }
+
+div.imo-geschro div#tabs-container {
+  display: flex;
+  gap: 8px;
+}
+div.imo-geschro div#tabs-container > button {
+  font-family: var(--font-texte);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 4px 8px;
+  background: var(--bg1_transp_5);
+  border: 2px solid var(--bg1);
+  color: var(--text);
+  border-radius: 8px;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+div.imo-geschro div#tabs-container > button.active-tab {
+  background: var(--bg1);
+  color: var(--text-contrast);
+  border-top: 2px solid var(--bg1);
+  border-bottom: 2px solid var(--bg1);
+  border-left: 2px solid var(--co2);
+  border-right: 2px solid var(--co2);
+}
+
+div.imo-geschro div.content-div {
+  flex-direction: column;
+  gap: 24px;
+}
+
 div.imo-geschro div.chrono-item {
   display: grid;
   grid-template-columns: 112px auto;
