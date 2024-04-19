@@ -60,7 +60,7 @@ div.imo-gesli div.lien-item > span.desc-long::-webkit-scrollbar-button:end:incre
 div.imo-geschro {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   background: var(--bg2);
   padding: 24px;
   border-radius: 16px;
@@ -77,7 +77,7 @@ div.imo-geschro div#tabs-container > button {
   line-height: 24px;
   padding: 4px 8px;
   background: var(--bg1_transp_5);
-  border: 2px solid var(--bg1);
+  border: 2px solid var(--bg1_transp_5);
   color: var(--text);
   border-radius: 8px;
   text-align: center;
@@ -86,22 +86,21 @@ div.imo-geschro div#tabs-container > button {
 div.imo-geschro div#tabs-container > button.active-tab {
   background: var(--bg1);
   color: var(--text-contrast);
-  border-top: 2px solid var(--bg1);
-  border-bottom: 2px solid var(--bg1);
-  border-left: 2px solid var(--co2);
-  border-right: 2px solid var(--co2);
+  border-bottom: 2px solid var(--co2);
 }
 
 div.imo-geschro div.content-div {
   flex-direction: column;
   gap: 24px;
+  padding: 16px;
+  background: var(--bg1_transp_5);
+  border-radius: 8px;
 }
 
 div.imo-geschro div.chrono-item {
   display: grid;
   grid-template-columns: 112px auto;
   grid-gap: 8px 24px;
-  background: var(--bg2);
   position: relative;
 }
 div.imo-geschro div.chrono-item:after {
