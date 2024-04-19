@@ -88,6 +88,36 @@ div#geschro-timeline {
   grid-column: 1/7;
 }
 
+div#geschro-timeline div.year-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+div#geschro-timeline div.year-group h4 {
+  background: var(--bg1);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+div#geschro-timeline div.year-group h4 span {
+  width: max-content;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-weight: normal !important;
+  font-family: var(--font-titre);
+  font-feature-settings: 'ss02' on;
+  color: var(--text-contrast)!important;
+  background: linear-gradient(45deg, var(--co1), var(--co3), var(--co2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 24px;
+  line-height: 32px;
+  align-self: flex-end;
+}
+
 #editChrono div.chrono-item {
   display: grid;
   grid-template-columns: 32px auto;
