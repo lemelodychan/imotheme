@@ -165,11 +165,11 @@ div.imo-geschro div.chrono-item > span.titre:last-child {
   width: 100%;
 }
 div.imo-geschro div.chrono-item > span.desc {
-  padding: 16px 8px 16px 16px;
+  padding: 8px 8px 8px 16px;
   border-right: 8px solid var(--bg1);
   background: var(--bg1);
   border-radius: 8px;
-  max-height: 80px;
+  max-height: 72px;
   overflow-y: auto;
 }
 div.imo-geschro div.chrono-item > span.desc::-webkit-scrollbar-button:start:decrement,
