@@ -94,16 +94,14 @@ div.imo-geschro div#tabs-list div#tabs-container button {
   line-height: 24px;
   padding: 4px 8px;
   background: var(--bg1_transp_5);
-  border: 2px solid var(--bg1_transp_5);
   color: var(--text);
   border-radius: 8px;
   text-align: center;
   width: 112px;
 }
 div.imo-geschro div#tabs-list div#tabs-container button.active-tab {
-  background: var(--bg1);
-  color: var(--text-contrast);
-  border-bottom: 2px solid var(--co2) !important;
+  background: linear-gradient(to right, var(--co2), var(--co3));
+  color: white;
 }
 
 div.imo-geschro div.content-div {
